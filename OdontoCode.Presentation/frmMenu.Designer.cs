@@ -31,19 +31,22 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.opcCadastrarDentista = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDetistaNovo = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDentistaAtualizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDentistaBuscar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDentistaDesligar = new System.Windows.Forms.ToolStripMenuItem();
             this.opcCadastrarPaciente = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuPesquisar = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcPesquisarDentista = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcPesquisarPaciente = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAtualizar = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcAtualizarDentista = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcAtualizarPaciente = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuDesligar = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcDesligarDentista = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPacienteNovo = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPacienteAtualizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPacienteBuscar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPacienteDesligar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAgendamento = new System.Windows.Forms.ToolStripMenuItem();
             this.opcNovoAgendamento = new System.Windows.Forms.ToolStripMenuItem();
             this.opcReagendar = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcAgendamentosDoDia = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcAgendamentosBuscar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAgendamentoCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,10 +56,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadastrar,
-            this.menuPesquisar,
-            this.menuAtualizar,
-            this.menuDesligar,
-            this.menuAgendamento});
+            this.menuAgendamento,
+            this.menuSobre,
+            this.menuSair});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(603, 24);
@@ -74,79 +76,81 @@
             // 
             // opcCadastrarDentista
             // 
+            this.opcCadastrarDentista.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuDetistaNovo,
+            this.menuDentistaAtualizar,
+            this.menuDentistaBuscar,
+            this.menuDentistaDesligar});
             this.opcCadastrarDentista.Name = "opcCadastrarDentista";
-            this.opcCadastrarDentista.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarDentista.Size = new System.Drawing.Size(180, 22);
             this.opcCadastrarDentista.Text = "Dentista";
+            // 
+            // menuDetistaNovo
+            // 
+            this.menuDetistaNovo.Name = "menuDetistaNovo";
+            this.menuDetistaNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuDetistaNovo.Text = "Novo";
+            // 
+            // menuDentistaAtualizar
+            // 
+            this.menuDentistaAtualizar.Name = "menuDentistaAtualizar";
+            this.menuDentistaAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaAtualizar.Text = "Atualizar";
+            // 
+            // menuDentistaBuscar
+            // 
+            this.menuDentistaBuscar.Name = "menuDentistaBuscar";
+            this.menuDentistaBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaBuscar.Text = "Buscar";
+            // 
+            // menuDentistaDesligar
+            // 
+            this.menuDentistaDesligar.Name = "menuDentistaDesligar";
+            this.menuDentistaDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaDesligar.Text = "Desligar";
             // 
             // opcCadastrarPaciente
             // 
+            this.opcCadastrarPaciente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPacienteNovo,
+            this.menuPacienteAtualizar,
+            this.menuPacienteBuscar,
+            this.menuPacienteDesligar});
             this.opcCadastrarPaciente.Name = "opcCadastrarPaciente";
-            this.opcCadastrarPaciente.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarPaciente.Size = new System.Drawing.Size(180, 22);
             this.opcCadastrarPaciente.Text = "Paciente";
             // 
-            // menuPesquisar
+            // menuPacienteNovo
             // 
-            this.menuPesquisar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcPesquisarDentista,
-            this.opcPesquisarPaciente});
-            this.menuPesquisar.Name = "menuPesquisar";
-            this.menuPesquisar.Size = new System.Drawing.Size(69, 20);
-            this.menuPesquisar.Text = "Pesquisar";
+            this.menuPacienteNovo.Name = "menuPacienteNovo";
+            this.menuPacienteNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteNovo.Text = "Novo";
             // 
-            // opcPesquisarDentista
+            // menuPacienteAtualizar
             // 
-            this.opcPesquisarDentista.Name = "opcPesquisarDentista";
-            this.opcPesquisarDentista.Size = new System.Drawing.Size(119, 22);
-            this.opcPesquisarDentista.Text = "Dentista";
+            this.menuPacienteAtualizar.Name = "menuPacienteAtualizar";
+            this.menuPacienteAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteAtualizar.Text = "Atualizar";
             // 
-            // opcPesquisarPaciente
+            // menuPacienteBuscar
             // 
-            this.opcPesquisarPaciente.Name = "opcPesquisarPaciente";
-            this.opcPesquisarPaciente.Size = new System.Drawing.Size(119, 22);
-            this.opcPesquisarPaciente.Text = "Paciente";
+            this.menuPacienteBuscar.Name = "menuPacienteBuscar";
+            this.menuPacienteBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteBuscar.Text = "Buscar";
             // 
-            // menuAtualizar
+            // menuPacienteDesligar
             // 
-            this.menuAtualizar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcAtualizarDentista,
-            this.opcAtualizarPaciente});
-            this.menuAtualizar.Name = "menuAtualizar";
-            this.menuAtualizar.Size = new System.Drawing.Size(65, 20);
-            this.menuAtualizar.Text = "Atualizar";
-            // 
-            // opcAtualizarDentista
-            // 
-            this.opcAtualizarDentista.Name = "opcAtualizarDentista";
-            this.opcAtualizarDentista.Size = new System.Drawing.Size(119, 22);
-            this.opcAtualizarDentista.Text = "Dentista";
-            // 
-            // opcAtualizarPaciente
-            // 
-            this.opcAtualizarPaciente.Name = "opcAtualizarPaciente";
-            this.opcAtualizarPaciente.Size = new System.Drawing.Size(119, 22);
-            this.opcAtualizarPaciente.Text = "Paciente";
-            // 
-            // menuDesligar
-            // 
-            this.menuDesligar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcDesligarDentista});
-            this.menuDesligar.Name = "menuDesligar";
-            this.menuDesligar.Size = new System.Drawing.Size(61, 20);
-            this.menuDesligar.Text = "Desligar";
-            this.menuDesligar.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
-            // 
-            // opcDesligarDentista
-            // 
-            this.opcDesligarDentista.Name = "opcDesligarDentista";
-            this.opcDesligarDentista.Size = new System.Drawing.Size(117, 22);
-            this.opcDesligarDentista.Text = "Dentista";
+            this.menuPacienteDesligar.Name = "menuPacienteDesligar";
+            this.menuPacienteDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteDesligar.Text = "Desligar";
             // 
             // menuAgendamento
             // 
             this.menuAgendamento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcNovoAgendamento,
             this.opcReagendar,
-            this.opcAgendamentosDoDia});
+            this.opcAgendamentosBuscar,
+            this.menuAgendamentoCancelar});
             this.menuAgendamento.Name = "menuAgendamento";
             this.menuAgendamento.Size = new System.Drawing.Size(100, 20);
             this.menuAgendamento.Text = "Agendamentos";
@@ -154,20 +158,38 @@
             // opcNovoAgendamento
             // 
             this.opcNovoAgendamento.Name = "opcNovoAgendamento";
-            this.opcNovoAgendamento.Size = new System.Drawing.Size(197, 22);
+            this.opcNovoAgendamento.Size = new System.Drawing.Size(182, 22);
             this.opcNovoAgendamento.Text = "Novo Agendamento";
             // 
             // opcReagendar
             // 
             this.opcReagendar.Name = "opcReagendar";
-            this.opcReagendar.Size = new System.Drawing.Size(197, 22);
+            this.opcReagendar.Size = new System.Drawing.Size(182, 22);
             this.opcReagendar.Text = "Reagendar";
             // 
-            // opcAgendamentosDoDia
+            // opcAgendamentosBuscar
             // 
-            this.opcAgendamentosDoDia.Name = "opcAgendamentosDoDia";
-            this.opcAgendamentosDoDia.Size = new System.Drawing.Size(197, 22);
-            this.opcAgendamentosDoDia.Text = "Agendamentos de hoje";
+            this.opcAgendamentosBuscar.Name = "opcAgendamentosBuscar";
+            this.opcAgendamentosBuscar.Size = new System.Drawing.Size(182, 22);
+            this.opcAgendamentosBuscar.Text = "Buscar";
+            // 
+            // menuAgendamentoCancelar
+            // 
+            this.menuAgendamentoCancelar.Name = "menuAgendamentoCancelar";
+            this.menuAgendamentoCancelar.Size = new System.Drawing.Size(182, 22);
+            this.menuAgendamentoCancelar.Text = "Cancelar";
+            // 
+            // menuSobre
+            // 
+            this.menuSobre.Name = "menuSobre";
+            this.menuSobre.Size = new System.Drawing.Size(49, 20);
+            this.menuSobre.Text = "Sobre";
+            // 
+            // menuSair
+            // 
+            this.menuSair.Name = "menuSair";
+            this.menuSair.Size = new System.Drawing.Size(38, 20);
+            this.menuSair.Text = "Sair";
             // 
             // pictureBox1
             // 
@@ -187,6 +209,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Odonto Code";
@@ -202,20 +225,23 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuCadastrar;
-        private ToolStripMenuItem menuPesquisar;
-        private ToolStripMenuItem menuAtualizar;
-        private ToolStripMenuItem menuDesligar;
         private ToolStripMenuItem opcCadastrarDentista;
         private ToolStripMenuItem opcCadastrarPaciente;
-        private ToolStripMenuItem opcPesquisarDentista;
-        private ToolStripMenuItem opcPesquisarPaciente;
-        private ToolStripMenuItem opcAtualizarDentista;
-        private ToolStripMenuItem opcAtualizarPaciente;
-        private ToolStripMenuItem opcDesligarDentista;
         private ToolStripMenuItem menuAgendamento;
         private ToolStripMenuItem opcNovoAgendamento;
         private ToolStripMenuItem opcReagendar;
-        private ToolStripMenuItem opcAgendamentosDoDia;
+        private ToolStripMenuItem opcAgendamentosBuscar;
         private PictureBox pictureBox1;
+        private ToolStripMenuItem menuSobre;
+        private ToolStripMenuItem menuSair;
+        private ToolStripMenuItem menuDetistaNovo;
+        private ToolStripMenuItem menuDentistaAtualizar;
+        private ToolStripMenuItem menuDentistaBuscar;
+        private ToolStripMenuItem menuDentistaDesligar;
+        private ToolStripMenuItem menuPacienteNovo;
+        private ToolStripMenuItem menuPacienteAtualizar;
+        private ToolStripMenuItem menuPacienteBuscar;
+        private ToolStripMenuItem menuPacienteDesligar;
+        private ToolStripMenuItem menuAgendamentoCancelar;
     }
 }

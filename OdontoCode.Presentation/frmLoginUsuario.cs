@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace OdontoCode.Presentation
 {
-    public partial class frmMenu : Form
+    public partial class frmLoginUsuario : Form
     {
-        public frmMenu()
+        public frmLoginUsuario()
         {
             InitializeComponent();
         }
-
-        
     }
 }
