@@ -52,7 +52,7 @@
             // lblNomeDesligarDentista
             // 
             this.lblNomeDesligarDentista.AutoSize = true;
-            this.lblNomeDesligarDentista.Location = new System.Drawing.Point(47, 152);
+            this.lblNomeDesligarDentista.Location = new System.Drawing.Point(110, 126);
             this.lblNomeDesligarDentista.Name = "lblNomeDesligarDentista";
             this.lblNomeDesligarDentista.Size = new System.Drawing.Size(57, 20);
             this.lblNomeDesligarDentista.TabIndex = 102;
@@ -61,7 +61,7 @@
             // lblCroDesligarDentista
             // 
             this.lblCroDesligarDentista.AutoSize = true;
-            this.lblCroDesligarDentista.Location = new System.Drawing.Point(47, 217);
+            this.lblCroDesligarDentista.Location = new System.Drawing.Point(110, 191);
             this.lblCroDesligarDentista.Name = "lblCroDesligarDentista";
             this.lblCroDesligarDentista.Size = new System.Drawing.Size(45, 20);
             this.lblCroDesligarDentista.TabIndex = 103;
@@ -70,7 +70,7 @@
             // lblTelefoneDesligarDentista
             // 
             this.lblTelefoneDesligarDentista.AutoSize = true;
-            this.lblTelefoneDesligarDentista.Location = new System.Drawing.Point(321, 217);
+            this.lblTelefoneDesligarDentista.Location = new System.Drawing.Point(400, 191);
             this.lblTelefoneDesligarDentista.Name = "lblTelefoneDesligarDentista";
             this.lblTelefoneDesligarDentista.Size = new System.Drawing.Size(73, 20);
             this.lblTelefoneDesligarDentista.TabIndex = 104;
