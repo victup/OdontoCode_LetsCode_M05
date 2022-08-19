@@ -42,7 +42,7 @@
             // lblNomeDentista
             // 
             this.lblNomeDentista.AutoSize = true;
-            this.lblNomeDentista.Location = new System.Drawing.Point(66, 190);
+            this.lblNomeDentista.Location = new System.Drawing.Point(138, 164);
             this.lblNomeDentista.Name = "lblNomeDentista";
             this.lblNomeDentista.Size = new System.Drawing.Size(61, 20);
             this.lblNomeDentista.TabIndex = 0;
@@ -54,14 +54,14 @@
             this.lblAtualizarDentista.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAtualizarDentista.Location = new System.Drawing.Point(201, 60);
             this.lblAtualizarDentista.Name = "lblAtualizarDentista";
-            this.lblAtualizarDentista.Size = new System.Drawing.Size(425, 46);
+            this.lblAtualizarDentista.Size = new System.Drawing.Size(413, 45);
             this.lblAtualizarDentista.TabIndex = 1;
             this.lblAtualizarDentista.Text = "Atualizar Cadastro Dentista";
             // 
             // lablCroDentista
             // 
             this.lablCroDentista.AutoSize = true;
-            this.lablCroDentista.Location = new System.Drawing.Point(66, 270);
+            this.lablCroDentista.Location = new System.Drawing.Point(138, 244);
             this.lablCroDentista.Name = "lablCroDentista";
             this.lablCroDentista.Size = new System.Drawing.Size(49, 20);
             this.lablCroDentista.TabIndex = 2;
@@ -70,7 +70,7 @@
             // lblTelefoneDentista
             // 
             this.lblTelefoneDentista.AutoSize = true;
-            this.lblTelefoneDentista.Location = new System.Drawing.Point(400, 271);
+            this.lblTelefoneDentista.Location = new System.Drawing.Point(483, 244);
             this.lblTelefoneDentista.Name = "lblTelefoneDentista";
             this.lblTelefoneDentista.Size = new System.Drawing.Size(77, 20);
             this.lblTelefoneDentista.TabIndex = 3;
