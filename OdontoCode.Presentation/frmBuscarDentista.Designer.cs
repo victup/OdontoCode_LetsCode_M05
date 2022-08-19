@@ -41,7 +41,7 @@
             // lblNomeBuscarDentista
             // 
             this.lblNomeBuscarDentista.AutoSize = true;
-            this.lblNomeBuscarDentista.Location = new System.Drawing.Point(47, 129);
+            this.lblNomeBuscarDentista.Location = new System.Drawing.Point(127, 103);
             this.lblNomeBuscarDentista.Name = "lblNomeBuscarDentista";
             this.lblNomeBuscarDentista.Size = new System.Drawing.Size(57, 20);
             this.lblNomeBuscarDentista.TabIndex = 0;
@@ -50,7 +50,7 @@
             // lblCroBuscarDentista
             // 
             this.lblCroBuscarDentista.AutoSize = true;
-            this.lblCroBuscarDentista.Location = new System.Drawing.Point(47, 199);
+            this.lblCroBuscarDentista.Location = new System.Drawing.Point(127, 177);
             this.lblCroBuscarDentista.Name = "lblCroBuscarDentista";
             this.lblCroBuscarDentista.Size = new System.Drawing.Size(45, 20);
             this.lblCroBuscarDentista.TabIndex = 1;
@@ -59,7 +59,7 @@
             // lblTelefoneBuscarDentista
             // 
             this.lblTelefoneBuscarDentista.AutoSize = true;
-            this.lblTelefoneBuscarDentista.Location = new System.Drawing.Point(338, 203);
+            this.lblTelefoneBuscarDentista.Location = new System.Drawing.Point(415, 176);
             this.lblTelefoneBuscarDentista.Name = "lblTelefoneBuscarDentista";
             this.lblTelefoneBuscarDentista.Size = new System.Drawing.Size(73, 20);
             this.lblTelefoneBuscarDentista.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.lblBuscarDentista.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblBuscarDentista.Location = new System.Drawing.Point(244, 28);
             this.lblBuscarDentista.Name = "lblBuscarDentista";
-            this.lblBuscarDentista.Size = new System.Drawing.Size(250, 46);
+            this.lblBuscarDentista.Size = new System.Drawing.Size(244, 45);
             this.lblBuscarDentista.TabIndex = 100;
             this.lblBuscarDentista.Text = "Buscar Dentista";
             // 
