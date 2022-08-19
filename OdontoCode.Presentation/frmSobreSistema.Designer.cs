@@ -108,7 +108,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnFechar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnFechar.Location = new System.Drawing.Point(248, 392);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFechar.Name = "btnFechar";
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblNomeIntegrante3);
