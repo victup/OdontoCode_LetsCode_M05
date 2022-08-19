@@ -17,19 +17,6 @@ namespace OdontoCode.Presentation
             InitializeComponent();
         }
 
-        private void txtNomeDentista_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCroDentista_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelDentista_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

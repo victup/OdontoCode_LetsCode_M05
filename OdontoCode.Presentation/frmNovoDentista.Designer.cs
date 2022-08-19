@@ -35,36 +35,34 @@
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.lblTelDentista = new System.Windows.Forms.Label();
             this.lblNovoDentista = new System.Windows.Forms.Label();
+            this.btnCadastrarDentista = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeDentista
             // 
-            this.txtNomeDentista.Location = new System.Drawing.Point(196, 155);
+            this.txtNomeDentista.Location = new System.Drawing.Point(114, 132);
             this.txtNomeDentista.Name = "txtNomeDentista";
             this.txtNomeDentista.Size = new System.Drawing.Size(422, 23);
             this.txtNomeDentista.TabIndex = 0;
-            this.txtNomeDentista.TextChanged += new System.EventHandler(this.txtNomeDentista_TextChanged);
             // 
             // txtCroDentista
             // 
-            this.txtCroDentista.Location = new System.Drawing.Point(196, 218);
+            this.txtCroDentista.Location = new System.Drawing.Point(114, 195);
             this.txtCroDentista.Name = "txtCroDentista";
-            this.txtCroDentista.Size = new System.Drawing.Size(422, 23);
+            this.txtCroDentista.Size = new System.Drawing.Size(190, 23);
             this.txtCroDentista.TabIndex = 1;
-            this.txtCroDentista.TextChanged += new System.EventHandler(this.txtCroDentista_TextChanged);
             // 
             // txtTelDentista
             // 
-            this.txtTelDentista.Location = new System.Drawing.Point(196, 276);
+            this.txtTelDentista.Location = new System.Drawing.Point(373, 198);
             this.txtTelDentista.Name = "txtTelDentista";
-            this.txtTelDentista.Size = new System.Drawing.Size(422, 23);
+            this.txtTelDentista.Size = new System.Drawing.Size(163, 23);
             this.txtTelDentista.TabIndex = 2;
-            this.txtTelDentista.TextChanged += new System.EventHandler(this.txtTelDentista_TextChanged);
             // 
             // lblNomeDentista
             // 
             this.lblNomeDentista.AutoSize = true;
-            this.lblNomeDentista.Location = new System.Drawing.Point(133, 158);
+            this.lblNomeDentista.Location = new System.Drawing.Point(51, 135);
             this.lblNomeDentista.Name = "lblNomeDentista";
             this.lblNomeDentista.Size = new System.Drawing.Size(46, 15);
             this.lblNomeDentista.TabIndex = 3;
@@ -73,7 +71,7 @@
             // lblCroDentista
             // 
             this.lblCroDentista.AutoSize = true;
-            this.lblCroDentista.Location = new System.Drawing.Point(133, 221);
+            this.lblCroDentista.Location = new System.Drawing.Point(51, 198);
             this.lblCroDentista.Name = "lblCroDentista";
             this.lblCroDentista.Size = new System.Drawing.Size(37, 15);
             this.lblCroDentista.TabIndex = 4;
@@ -82,7 +80,7 @@
             // lblTelDentista
             // 
             this.lblTelDentista.AutoSize = true;
-            this.lblTelDentista.Location = new System.Drawing.Point(133, 279);
+            this.lblTelDentista.Location = new System.Drawing.Point(310, 201);
             this.lblTelDentista.Name = "lblTelDentista";
             this.lblTelDentista.Size = new System.Drawing.Size(57, 15);
             this.lblTelDentista.TabIndex = 5;
@@ -92,17 +90,29 @@
             // 
             this.lblNovoDentista.AutoSize = true;
             this.lblNovoDentista.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNovoDentista.Location = new System.Drawing.Point(239, 48);
+            this.lblNovoDentista.Location = new System.Drawing.Point(143, 39);
             this.lblNovoDentista.Name = "lblNovoDentista";
             this.lblNovoDentista.Size = new System.Drawing.Size(300, 37);
             this.lblNovoDentista.TabIndex = 6;
             this.lblNovoDentista.Text = "Cadastro Novo Dentista";
             // 
+            // btnCadastrarDentista
+            // 
+            this.btnCadastrarDentista.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCadastrarDentista.Location = new System.Drawing.Point(197, 276);
+            this.btnCadastrarDentista.Name = "btnCadastrarDentista";
+            this.btnCadastrarDentista.Size = new System.Drawing.Size(192, 33);
+            this.btnCadastrarDentista.TabIndex = 35;
+            this.btnCadastrarDentista.Text = "Cadastrar Dentista";
+            this.btnCadastrarDentista.UseVisualStyleBackColor = false;
+            this.btnCadastrarDentista.Visible = false;
+            // 
             // frmNovoDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(587, 381);
+            this.Controls.Add(this.btnCadastrarDentista);
             this.Controls.Add(this.lblNovoDentista);
             this.Controls.Add(this.lblTelDentista);
             this.Controls.Add(this.lblCroDentista);
@@ -110,8 +120,10 @@
             this.Controls.Add(this.txtTelDentista);
             this.Controls.Add(this.txtCroDentista);
             this.Controls.Add(this.txtNomeDentista);
+            this.MaximizeBox = false;
             this.Name = "frmNovoDentista";
-            this.Text = "frmNovoDentista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastrar Novo Dentista";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +138,6 @@
         private Label lblCroDentista;
         private Label lblTelDentista;
         private Label lblNovoDentista;
+        private Button btnCadastrarDentista;
     }
 }

@@ -36,41 +36,46 @@
             // lblSairSistema
             // 
             this.lblSairSistema.AutoSize = true;
-            this.lblSairSistema.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSairSistema.Location = new System.Drawing.Point(173, 111);
+            this.lblSairSistema.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSairSistema.Location = new System.Drawing.Point(73, 30);
             this.lblSairSistema.Name = "lblSairSistema";
-            this.lblSairSistema.Size = new System.Drawing.Size(446, 37);
+            this.lblSairSistema.Size = new System.Drawing.Size(350, 30);
             this.lblSairSistema.TabIndex = 0;
             this.lblSairSistema.Text = "Você deseja mesmo sair do sistema?";
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(234, 195);
+            this.btnYes.BackColor = System.Drawing.Color.Transparent;
+            this.btnYes.Location = new System.Drawing.Point(128, 121);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(100, 50);
             this.btnYes.TabIndex = 1;
             this.btnYes.Text = "Sim";
-            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.UseVisualStyleBackColor = false;
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(433, 195);
+            this.btnNo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNo.Location = new System.Drawing.Point(268, 121);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(100, 50);
             this.btnNo.TabIndex = 2;
             this.btnNo.Text = "Não";
-            this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.UseVisualStyleBackColor = false;
             // 
             // frmSairSistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(497, 263);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lblSairSistema);
+            this.MaximizeBox = false;
             this.Name = "frmSairSistema";
-            this.Text = "frmSairSistema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Atenção";
             this.ResumeLayout(false);
             this.PerformLayout();
 
