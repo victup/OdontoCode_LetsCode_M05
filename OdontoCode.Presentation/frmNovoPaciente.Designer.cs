@@ -45,6 +45,9 @@
             this.txtCidadePaciente = new System.Windows.Forms.TextBox();
             this.txtNumPaciente = new System.Windows.Forms.TextBox();
             this.lblNovoPaciente = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.btnCadastrarPaciente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomePaciente
@@ -66,7 +69,7 @@
             // lblTelPaciente
             // 
             this.lblTelPaciente.AutoSize = true;
-            this.lblTelPaciente.Location = new System.Drawing.Point(20, 181);
+            this.lblTelPaciente.Location = new System.Drawing.Point(20, 232);
             this.lblTelPaciente.Name = "lblTelPaciente";
             this.lblTelPaciente.Size = new System.Drawing.Size(57, 15);
             this.lblTelPaciente.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // txtTelPaciente
             // 
-            this.txtTelPaciente.Location = new System.Drawing.Point(83, 178);
+            this.txtTelPaciente.Location = new System.Drawing.Point(83, 229);
             this.txtTelPaciente.Name = "txtTelPaciente";
             this.txtTelPaciente.Size = new System.Drawing.Size(192, 23);
             this.txtTelPaciente.TabIndex = 3;
@@ -82,7 +85,7 @@
             // lblCepPaciente
             // 
             this.lblCepPaciente.AutoSize = true;
-            this.lblCepPaciente.Location = new System.Drawing.Point(43, 232);
+            this.lblCepPaciente.Location = new System.Drawing.Point(43, 283);
             this.lblCepPaciente.Name = "lblCepPaciente";
             this.lblCepPaciente.Size = new System.Drawing.Size(34, 15);
             this.lblCepPaciente.TabIndex = 4;
@@ -98,7 +101,7 @@
             // lblUfPaciente
             // 
             this.lblUfPaciente.AutoSize = true;
-            this.lblUfPaciente.Location = new System.Drawing.Point(50, 292);
+            this.lblUfPaciente.Location = new System.Drawing.Point(202, 283);
             this.lblUfPaciente.Name = "lblUfPaciente";
             this.lblUfPaciente.Size = new System.Drawing.Size(27, 15);
             this.lblUfPaciente.TabIndex = 6;
@@ -142,9 +145,9 @@
             // 
             // txtCepPaciente
             // 
-            this.txtCepPaciente.Location = new System.Drawing.Point(83, 229);
+            this.txtCepPaciente.Location = new System.Drawing.Point(83, 280);
             this.txtCepPaciente.Name = "txtCepPaciente";
-            this.txtCepPaciente.Size = new System.Drawing.Size(192, 23);
+            this.txtCepPaciente.Size = new System.Drawing.Size(104, 23);
             this.txtCepPaciente.TabIndex = 11;
             // 
             // txtBairroPaciente
@@ -156,9 +159,9 @@
             // 
             // txtUfPaciente
             // 
-            this.txtUfPaciente.Location = new System.Drawing.Point(83, 289);
+            this.txtUfPaciente.Location = new System.Drawing.Point(235, 280);
             this.txtUfPaciente.Name = "txtUfPaciente";
-            this.txtUfPaciente.Size = new System.Drawing.Size(192, 23);
+            this.txtUfPaciente.Size = new System.Drawing.Size(40, 23);
             this.txtUfPaciente.TabIndex = 13;
             // 
             // txtCidadePaciente
@@ -185,11 +188,41 @@
             this.lblNovoPaciente.TabIndex = 17;
             this.lblNovoPaciente.Text = "Cadastro de novo Paciente";
             // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Location = new System.Drawing.Point(37, 181);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(34, 15);
+            this.lblCpf.TabIndex = 19;
+            this.lblCpf.Text = "CPF :";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(83, 178);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(192, 23);
+            this.txtCpf.TabIndex = 18;
+            // 
+            // btnCadastrarPaciente
+            // 
+            this.btnCadastrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCadastrarPaciente.Location = new System.Drawing.Point(218, 346);
+            this.btnCadastrarPaciente.Name = "btnCadastrarPaciente";
+            this.btnCadastrarPaciente.Size = new System.Drawing.Size(192, 33);
+            this.btnCadastrarPaciente.TabIndex = 36;
+            this.btnCadastrarPaciente.Text = "Cadastrar Paciente";
+            this.btnCadastrarPaciente.UseVisualStyleBackColor = false;
+            this.btnCadastrarPaciente.Visible = false;
+            // 
             // frmNovoPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 450);
+            this.Controls.Add(this.btnCadastrarPaciente);
+            this.Controls.Add(this.lblCpf);
+            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.lblNovoPaciente);
             this.Controls.Add(this.txtNumPaciente);
             this.Controls.Add(this.txtCidadePaciente);
@@ -207,8 +240,10 @@
             this.Controls.Add(this.lblTelPaciente);
             this.Controls.Add(this.lblNomePaciente);
             this.Controls.Add(this.txtNomePaciente);
+            this.MaximizeBox = false;
             this.Name = "frmNovoPaciente";
-            this.Text = "frmCadastroPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastrar Novo Paciente";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +268,8 @@
         private TextBox txtCidadePaciente;
         private TextBox txtNumPaciente;
         private Label lblNovoPaciente;
+        private Label lblCpf;
+        private TextBox txtCpf;
+        private Button btnCadastrarPaciente;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OdontoCode.Presentation
 {
-    public partial class frmReagendarAgendamento : Form
+    public partial class frmAlterarAgendamento : Form
     {
-        public frmReagendarAgendamento()
+        public frmAlterarAgendamento()
         {
             InitializeComponent();
         }

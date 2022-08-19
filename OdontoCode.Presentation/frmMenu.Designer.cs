@@ -42,7 +42,7 @@
             this.menuPacienteDesligar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAgendamento = new System.Windows.Forms.ToolStripMenuItem();
             this.opcNovoAgendamento = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcReagendar = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcAlterarAgendamento = new System.Windows.Forms.ToolStripMenuItem();
             this.opcAgendamentosBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAgendamentoCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSobre = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             this.menuDentistaBuscar,
             this.menuDentistaDesligar});
             this.opcCadastrarDentista.Name = "opcCadastrarDentista";
-            this.opcCadastrarDentista.Size = new System.Drawing.Size(180, 22);
+            this.opcCadastrarDentista.Size = new System.Drawing.Size(119, 22);
             this.opcCadastrarDentista.Text = "Dentista";
             // 
             // menuDetistaNovo
@@ -117,7 +117,7 @@
             this.menuPacienteBuscar,
             this.menuPacienteDesligar});
             this.opcCadastrarPaciente.Name = "opcCadastrarPaciente";
-            this.opcCadastrarPaciente.Size = new System.Drawing.Size(180, 22);
+            this.opcCadastrarPaciente.Size = new System.Drawing.Size(119, 22);
             this.opcCadastrarPaciente.Text = "Paciente";
             // 
             // menuPacienteNovo
@@ -148,7 +148,7 @@
             // 
             this.menuAgendamento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcNovoAgendamento,
-            this.opcReagendar,
+            this.opcAlterarAgendamento,
             this.opcAgendamentosBuscar,
             this.menuAgendamentoCancelar});
             this.menuAgendamento.Name = "menuAgendamento";
@@ -161,11 +161,11 @@
             this.opcNovoAgendamento.Size = new System.Drawing.Size(182, 22);
             this.opcNovoAgendamento.Text = "Novo Agendamento";
             // 
-            // opcReagendar
+            // opcAlterarAgendamento
             // 
-            this.opcReagendar.Name = "opcReagendar";
-            this.opcReagendar.Size = new System.Drawing.Size(182, 22);
-            this.opcReagendar.Text = "Reagendar";
+            this.opcAlterarAgendamento.Name = "opcAlterarAgendamento";
+            this.opcAlterarAgendamento.Size = new System.Drawing.Size(182, 22);
+            this.opcAlterarAgendamento.Text = "Alterar/Reagendar";
             // 
             // opcAgendamentosBuscar
             // 
@@ -229,7 +229,7 @@
         private ToolStripMenuItem opcCadastrarPaciente;
         private ToolStripMenuItem menuAgendamento;
         private ToolStripMenuItem opcNovoAgendamento;
-        private ToolStripMenuItem opcReagendar;
+        private ToolStripMenuItem opcAlterarAgendamento;
         private ToolStripMenuItem opcAgendamentosBuscar;
         private PictureBox pictureBox1;
         private ToolStripMenuItem menuSobre;
