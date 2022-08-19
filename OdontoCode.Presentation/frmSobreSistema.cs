@@ -16,5 +16,10 @@ namespace OdontoCode.Presentation
         {
             InitializeComponent();
         }
+
+        private void lblNomeIntegrante3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
