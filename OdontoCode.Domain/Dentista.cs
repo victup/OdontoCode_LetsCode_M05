@@ -10,8 +10,10 @@ namespace OdontoCode.Domain
     {
         public int Id_dentista { get; set; }
         public string Nome { get; set; }
+        public string CPF { get; set; }
         public string CRO { get; set; }
         public string Telefone { get; set; }
+        public bool Ativo { get; set; } = true;
 
     }
 }

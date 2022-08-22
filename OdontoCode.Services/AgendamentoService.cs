@@ -35,13 +35,13 @@ namespace OdontoCode.Services
                 new Agendamento{Id_agendamento = 20, Data = Convert.ToDateTime("2022-08-07T16:00:00"), Desc_consulta = "CIRURGIA", Id_paciente = 20, Id_dentista = 5},
          };
 
-            private void ImprimirAgendamentos()
+        private void ImprimirAgendamentos()
+        {
+            foreach (var item in listaAgendamento)
             {
-                foreach (var item in listaAgendamento)
-                {
             
-                    Console.WriteLine($"{item.Desc_consulta} {item.Data}");
-                }
+                Console.WriteLine($"{item.Desc_consulta} {item.Data}");
             }
+        }
     }
 }

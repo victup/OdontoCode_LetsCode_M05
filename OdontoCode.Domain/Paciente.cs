@@ -11,8 +11,9 @@ namespace OdontoCode.Domain
 
     public class Paciente
     {
-        public int Id_paciente { get; set; }
+        public int Id_paciente { get; set; } 
         public string Nome { get; set; }
+        public string CPF { get; set; }
         public string Telefone { get; set; }
         public string CEP { get; set; }
         public string UF { get; set; }
@@ -20,8 +21,10 @@ namespace OdontoCode.Domain
         public string Bairro { get; set; }
         public string Rua { get; set; }
         public int Numero { get; set; }
+        public bool Ativo { get; set; } = true;
 
-      
+       
+        
     } 
 
 }
