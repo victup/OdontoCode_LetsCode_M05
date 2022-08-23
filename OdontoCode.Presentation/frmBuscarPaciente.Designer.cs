@@ -237,6 +237,7 @@
             // 
             // txtNomePaciente
             // 
+            this.txtNomePaciente.Enabled = false;
             this.txtNomePaciente.Location = new System.Drawing.Point(185, 131);
             this.txtNomePaciente.Name = "txtNomePaciente";
             this.txtNomePaciente.Size = new System.Drawing.Size(282, 23);

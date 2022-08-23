@@ -33,12 +33,15 @@ namespace OdontoCode.Services
             new Paciente{Id_paciente = 20, Nome = "Calebe Mário Martins", CPF = "835.306.478 - 29", Telefone = "(11) 98633-9447", CEP = "08223-010", UF = "SP", Cidade = "São Paulo", Bairro = "Cidade Antônio Estevão de Carvalho", Rua = "Caxinguelé", Numero = 214},
         };
 
-        public void ImprimirPacientes()
+        public void ImprimirPacientes(string cpf, string nome)
         {
             foreach (var item in listaPaciente)
             {
-
-                Console.WriteLine($"{item.Nome} {item.CPF} {item.Ativo}");
+                if(item.CPF == cpf)
+                {
+                    Console.WriteLine($"{item.Nome} {item.CPF} {item.Ativo}");
+                }
+                
             }
         }
     }

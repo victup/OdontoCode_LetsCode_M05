@@ -15,5 +15,19 @@ namespace OdontoCode.Domain
         public string Telefone { get; set; }
         public bool Ativo { get; set; } = true;
 
+        public Dentista(int id_dentista, string nome, string cPF, string cRO, string telefone, bool ativo)
+        {
+            Id_dentista = id_dentista;
+            Nome = nome;
+            CPF = cPF;
+            CRO = cRO;
+            Telefone = telefone;
+            Ativo = ativo;
+        }
+
+        public Dentista()
+        {
+
+        }
     }
 }
