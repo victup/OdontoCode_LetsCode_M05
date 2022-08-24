@@ -11,7 +11,7 @@ namespace OdontoCode.Services.Interfaces
     {
         public void RegistrarNovoPaciente(Paciente paciente);
 
-        public Paciente PegarPaciente(string nomeOuCpf);
+        public Paciente ObterPaciente(string nomeOuCpf);
 
         public void ApagarPaciente(Paciente paciente);
     }
