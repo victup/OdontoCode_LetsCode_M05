@@ -1,4 +1,7 @@
-﻿using System;
+﻿using OdontoCode.Domain;
+using OdontoCode.Services;
+using OdontoCode.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,18 @@ namespace OdontoCode.Presentation
 {
     public partial class frmNovoPaciente : Form
     {
-        public frmNovoPaciente()
+        private readonly IPacienteService _pacienteService;
+        Paciente paciente;
+        public frmNovoPaciente(IPacienteService _paciente)
         {
             InitializeComponent();
+            _pacienteService = _paciente;
+        }
+
+        private void btnCadastrarPaciente_Click(object sender, EventArgs e)
+        {
+             _pacienteService.RegistrarNovoPaciente(paciente);
+            MessageBox.Show($"Paciente {paciente.Nome} cadastrado com sucesso");
         }
     }
 }

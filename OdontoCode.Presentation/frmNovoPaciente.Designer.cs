@@ -46,7 +46,7 @@
             this.txtNumPaciente = new System.Windows.Forms.TextBox();
             this.lblNovoPaciente = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtCpfPaciente = new System.Windows.Forms.TextBox();
             this.btnCadastrarPaciente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -197,12 +197,12 @@
             this.lblCpf.TabIndex = 19;
             this.lblCpf.Text = "CPF :";
             // 
-            // txtCpf
+            // txtCpfPaciente
             // 
-            this.txtCpf.Location = new System.Drawing.Point(83, 178);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(192, 23);
-            this.txtCpf.TabIndex = 18;
+            this.txtCpfPaciente.Location = new System.Drawing.Point(83, 178);
+            this.txtCpfPaciente.Name = "txtCpfPaciente";
+            this.txtCpfPaciente.Size = new System.Drawing.Size(192, 23);
+            this.txtCpfPaciente.TabIndex = 18;
             // 
             // btnCadastrarPaciente
             // 
@@ -214,6 +214,7 @@
             this.btnCadastrarPaciente.Text = "Cadastrar Paciente";
             this.btnCadastrarPaciente.UseVisualStyleBackColor = false;
             this.btnCadastrarPaciente.Visible = false;
+            this.btnCadastrarPaciente.Click += new System.EventHandler(this.btnCadastrarPaciente_Click);
             // 
             // frmNovoPaciente
             // 
@@ -222,7 +223,7 @@
             this.ClientSize = new System.Drawing.Size(628, 450);
             this.Controls.Add(this.btnCadastrarPaciente);
             this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtCpfPaciente);
             this.Controls.Add(this.lblNovoPaciente);
             this.Controls.Add(this.txtNumPaciente);
             this.Controls.Add(this.txtCidadePaciente);
@@ -269,7 +270,7 @@
         private TextBox txtNumPaciente;
         private Label lblNovoPaciente;
         private Label lblCpf;
-        private TextBox txtCpf;
+        private TextBox txtCpfPaciente;
         private Button btnCadastrarPaciente;
     }
 }
