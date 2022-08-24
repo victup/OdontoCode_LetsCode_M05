@@ -28,9 +28,12 @@ namespace OdontoCode.Presentation
 
             if( entradaValida)
             {
-                _dentistService.RegistrarDentista(new Dentista(_dentistService.GerarId(), txtNomeDentista.Text, txtDentistaCPF.Text, txtCroDentista.Text, txtTelDentista.Text, true));
-
-                MessageBox.Show($"Dentista {txtNomeDentista.Text} cadastrado com sucesso!");
+               bool sucessoCadastro = _dentistService.RegistrarDentista(new Dentista(_dentistService.GerarId(), txtNomeDentista.Text, txtDentistaCPF.Text, txtCroDentista.Text, txtTelDentista.Text, true));
+                
+                if(sucessoCadastro)
+                    MessageBox.Show($"Dentista {txtNomeDentista.Text} cadastrado com sucesso!");
+                else
+                    MessageBox.Show($"Já existe uma pessoa com o CPF {txtDentistaCPF.Text} ou {txtCroDentista.Text} cadastrado!");
 
                 txtNomeDentista.Text = String.Empty;
                 txtDentistaCPF.Text = String.Empty;

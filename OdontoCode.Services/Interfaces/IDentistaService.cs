@@ -9,7 +9,7 @@ namespace OdontoCode.Services.Interfaces
 {
     public interface IDentistaService
     {
-        public void RegistrarDentista(Dentista dentista);
+        public bool RegistrarDentista(Dentista dentista);
 
         public Dentista BuscarDentista(string busca);
 

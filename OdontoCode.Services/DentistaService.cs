@@ -26,11 +26,20 @@ namespace OdontoCode.Services
 
         }
 
-        public void RegistrarDentista(Dentista dentista)
+        public bool RegistrarDentista(Dentista dentista)
         {
-             
+            var possuiDentista = listaDentista.Where(x => x.CPF.Equals(dentista.CPF) || x.CRO.Equals(dentista.CRO));
+           
+            if(possuiDentista.Any())
+                return false;
+           
+            else
+            {
+                listaDentista.Add(dentista);
+                return true;
+            }
 
-            listaDentista.Add(dentista);
+           
         }
 
         public Dentista BuscarDentista(string busca)
@@ -58,7 +67,11 @@ namespace OdontoCode.Services
 
         public void AlterarDentista(string cpfAntigo, Dentista dentista)
         {
-            
+            //listaDentista
+            //   .Where(x => x.CPF.Equals(cpfAntigo))
+            //   .Select(x => x.Nome = dentista.Nome)
+               
+
             foreach (var value in listaDentista)
             {
                 if ((value.CPF == cpfAntigo))
