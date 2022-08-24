@@ -174,7 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBuscarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBuscarDentista";
+            this.Text = "Buscar Dentista";
             this.ResumeLayout(false);
             this.PerformLayout();
 

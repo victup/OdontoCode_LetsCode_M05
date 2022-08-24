@@ -25,7 +25,7 @@ namespace OdontoCode.Presentation
 
         private void btnEncontrarDentista_Click(object sender, EventArgs e)
         {
-
+            
             if ((String.IsNullOrEmpty(txtNomeDentistaAtualizar.Text)) &&
                 (String.IsNullOrEmpty(txtDentistaCpfAtualizar.Text)) &&
                 (String.IsNullOrEmpty(txtCroDentistaAtualizar.Text))
@@ -37,10 +37,7 @@ namespace OdontoCode.Presentation
             }
             else
             {
-                btnEncontrarDentista.Visible = false;
-                btnAtualizarDentista.Visible = true;
-                lblTelefoneDentista.Visible = true;
-                txtTelefoneDentistaAtualizar.Visible = true;
+                
 
                 string busca = "";
 
@@ -56,12 +53,25 @@ namespace OdontoCode.Presentation
 
                 dentista = _dentistaService.BuscarDentista(busca);
 
-                txtCroDentistaAtualizar.Text = dentista.CRO;
-                txtNomeDentistaAtualizar.Text = dentista.Nome;
-                txtTelefoneDentistaAtualizar.Text = dentista.Telefone;
-                txtDentistaCpfAtualizar.Text = dentista.CPF;
+                if (dentista.CPF != null)
+                {
+                    btnEncontrarDentista.Visible = false;
+                    btnAtualizarDentista.Visible = true;
+                    lblTelefoneDentista.Visible = true;
+                    txtTelefoneDentistaAtualizar.Visible = true;
 
-                
+                    txtCroDentistaAtualizar.Text = dentista.CRO;
+                    txtNomeDentistaAtualizar.Text = dentista.Nome;
+                    txtTelefoneDentistaAtualizar.Text = dentista.Telefone;
+                    txtDentistaCpfAtualizar.Text = dentista.CPF;
+                }
+                else
+                {
+                    MessageBox.Show($"Não encontramos nenhum dentista com os valores fornecidos.");
+                    btnEncontrarDentista.Visible = true;
+                    
+                }
+
             }
                 
 
@@ -97,6 +107,6 @@ namespace OdontoCode.Presentation
 
         }
 
-      
+     
     }
 }
