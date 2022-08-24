@@ -77,18 +77,6 @@ namespace OdontoCode.Services
                   x.Telefone = dentista.Telefone;
                   return x;
               }).ToList();
-
-
-            //foreach (var value in listaDentista)
-            //{
-            //    if ((value.CPF == cpfAntigo))
-            //    {
-            //        value.Nome = dentista.Nome;
-            //        value.CRO = dentista.CRO;
-            //        value.CPF = dentista.CPF;
-            //        value.Telefone = dentista.Telefone;
-            //    }
-            //}
         }
 
 
