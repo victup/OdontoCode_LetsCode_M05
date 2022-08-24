@@ -67,21 +67,28 @@ namespace OdontoCode.Services
 
         public void AlterarDentista(string cpfAntigo, Dentista dentista)
         {
-            //listaDentista
-            //   .Where(x => x.CPF.Equals(cpfAntigo))
-            //   .Select(x => x.Nome = dentista.Nome)
-               
+            listaDentista
+              .Where(x => x.CPF.Equals(cpfAntigo))
+              .Select(x =>  
+              {
+                  x.Nome = dentista.Nome;
+                  x.CRO = dentista.CRO;
+                  x.CPF = dentista.CPF;
+                  x.Telefone = dentista.Telefone;
+                  return x;
+              }).ToList();
 
-            foreach (var value in listaDentista)
-            {
-                if ((value.CPF == cpfAntigo))
-                {
-                    value.Nome = dentista.Nome;
-                    value.CRO = dentista.CRO;
-                    value.CPF = dentista.CPF;
-                    value.Telefone = dentista.Telefone;
-                }
-            }
+
+            //foreach (var value in listaDentista)
+            //{
+            //    if ((value.CPF == cpfAntigo))
+            //    {
+            //        value.Nome = dentista.Nome;
+            //        value.CRO = dentista.CRO;
+            //        value.CPF = dentista.CPF;
+            //        value.Telefone = dentista.Telefone;
+            //    }
+            //}
         }
 
 
