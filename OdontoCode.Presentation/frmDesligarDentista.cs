@@ -16,12 +16,12 @@ namespace OdontoCode.Presentation
     {
         private readonly IDentistaService _dentistService;
 
-        Dentista dentist;
-        public frmDesligarDentista(IDentistaService _dentists)
+        Dentista dentista;
+        public frmDesligarDentista(IDentistaService dentistaService)
         {
             InitializeComponent();
 
-            _dentistService = _dentists;
+            _dentistService = dentistaService;
 
         }
 
@@ -29,28 +29,32 @@ namespace OdontoCode.Presentation
         {
             string busca = "";
 
-            if (!String.IsNullOrEmpty(txtCroDesligarDentista.Text))
-                busca = txtCroDesligarDentista.Text;
+            if (!String.IsNullOrEmpty(txtCroDentistaDesligar.Text))
+                busca = txtCroDentistaDesligar.Text;
+            else
+            if (!String.IsNullOrEmpty(txtDentistaCpfDesligar.Text))
+                busca = txtDentistaCpfDesligar.Text;
             else
                 busca = txtNomeDesligarDentista.Text;
 
 
 
-            dentist = _dentistService.GetDentist(busca);
+            dentista = _dentistService.BuscarDentista(busca);
 
-            txtCroDesligarDentista.Text = dentist.CRO;
-            txtNomeDesligarDentista.Text = dentist.Nome;
-            txtTelefoneDesligarDentista.Text = dentist.Telefone;
+            txtCroDentistaDesligar.Text = dentista.CRO;
+            txtNomeDesligarDentista.Text = dentista.Nome;
+            txtTelefoneDesligarDentista.Text = dentista.Telefone;
+            txtDentistaCpfDesligar.Text = dentista.CPF;
 
             btnDesligarDentista.Visible = true;
         }
 
         private void btnDesligarDentista_Click(object sender, EventArgs e)
         {
-            _dentistService.DeleteDentist(dentist);
-            MessageBox.Show($"Dentista {dentist.Nome} desligado com sucesso");
+            _dentistService.DesligarDentista(dentista);
+            MessageBox.Show($"Dentista {dentista.Nome} desligado com sucesso");
 
-            txtCroDesligarDentista.Text = String.Empty;
+            txtCroDentistaDesligar.Text = String.Empty;
             txtNomeDesligarDentista.Text = String.Empty;
             txtTelefoneDesligarDentista.Text = String.Empty;
 

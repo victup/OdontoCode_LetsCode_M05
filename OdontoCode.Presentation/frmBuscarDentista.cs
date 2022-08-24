@@ -17,11 +17,11 @@ namespace OdontoCode.Presentation
     {
 
         private readonly IDentistaService _dentistService;
-        public frmBuscarDentista(IDentistaService _dentists)
+        public frmBuscarDentista(IDentistaService dentistaService)
         {
             InitializeComponent();
           
-            _dentistService = _dentists;
+            _dentistService = dentistaService;
 
 
         }
@@ -34,23 +34,29 @@ namespace OdontoCode.Presentation
 
             string busca = "";
 
-            if (!String.IsNullOrEmpty(txtCroBuscarDentista.Text))
-                busca = txtCroBuscarDentista.Text;
+            if (!String.IsNullOrEmpty(txtCroDentistaBuscar.Text))
+                busca = txtCroDentistaBuscar.Text;
+            else
+            if (!String.IsNullOrEmpty(txtDentistaCpfBuscar.Text))
+                busca = txtDentistaCpfBuscar.Text;
             else
                 busca = txtNomeBuscarDentista.Text;
 
            
 
-            Dentista dentist = _dentistService.GetDentist(busca);
+            Dentista dentist = _dentistService.BuscarDentista(busca);
 
-            txtCroBuscarDentista.Text = dentist.CRO;
-            txtCroBuscarDentista.Enabled = false;
+            txtCroDentistaBuscar.Text = dentist.CRO;
+            txtCroDentistaBuscar.Enabled = false;
 
             txtNomeBuscarDentista.Text = dentist.Nome;
             txtNomeBuscarDentista.Enabled = false;
 
             txtTelefoneBuscarDentista.Text = dentist.Telefone;
             txtTelefoneBuscarDentista.Enabled = false;
+
+            txtDentistaCpfBuscar.Text = dentist.CPF;
+            txtDentistaCpfBuscar.Enabled = false;
 
         }
 
@@ -60,12 +66,14 @@ namespace OdontoCode.Presentation
             btnEncontrarDentista.Visible = true;
 
             txtNomeBuscarDentista.Text = String.Empty;
-            txtCroBuscarDentista.Text = String.Empty;
+            txtCroDentistaBuscar.Text = String.Empty;
             txtTelefoneBuscarDentista.Text = String.Empty;
-
+            txtDentistaCpfBuscar.Text = String.Empty ;
+            
+            txtDentistaCpfBuscar.Enabled = true;
             txtTelefoneBuscarDentista.Enabled = true;
             txtNomeBuscarDentista.Enabled = true;
-            txtCroBuscarDentista.Enabled = true;
+            txtCroDentistaBuscar.Enabled = true;
             
         }
     }

@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.lblNomeBuscarDentista = new System.Windows.Forms.Label();
-            this.lblCroBuscarDentista = new System.Windows.Forms.Label();
             this.lblTelefoneBuscarDentista = new System.Windows.Forms.Label();
             this.txtNomeBuscarDentista = new System.Windows.Forms.TextBox();
-            this.txtCroBuscarDentista = new System.Windows.Forms.TextBox();
             this.txtTelefoneBuscarDentista = new System.Windows.Forms.TextBox();
             this.btnEncontrarDentista = new System.Windows.Forms.Button();
             this.lblBuscarDentista = new System.Windows.Forms.Label();
             this.btnLimparDentista = new System.Windows.Forms.Button();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.txtDentistaCpfBuscar = new System.Windows.Forms.TextBox();
+            this.lblCroDentista = new System.Windows.Forms.Label();
+            this.txtCroDentistaBuscar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNomeBuscarDentista
@@ -47,15 +49,6 @@
             this.lblNomeBuscarDentista.Size = new System.Drawing.Size(46, 15);
             this.lblNomeBuscarDentista.TabIndex = 0;
             this.lblNomeBuscarDentista.Text = "Nome :";
-            // 
-            // lblCroBuscarDentista
-            // 
-            this.lblCroBuscarDentista.AutoSize = true;
-            this.lblCroBuscarDentista.Location = new System.Drawing.Point(111, 133);
-            this.lblCroBuscarDentista.Name = "lblCroBuscarDentista";
-            this.lblCroBuscarDentista.Size = new System.Drawing.Size(37, 15);
-            this.lblCroBuscarDentista.TabIndex = 1;
-            this.lblCroBuscarDentista.Text = "CRO :";
             // 
             // lblTelefoneBuscarDentista
             // 
@@ -72,15 +65,7 @@
             this.txtNomeBuscarDentista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomeBuscarDentista.Name = "txtNomeBuscarDentista";
             this.txtNomeBuscarDentista.Size = new System.Drawing.Size(445, 23);
-            this.txtNomeBuscarDentista.TabIndex = 3;
-            // 
-            // txtCroBuscarDentista
-            // 
-            this.txtCroBuscarDentista.Location = new System.Drawing.Point(111, 150);
-            this.txtCroBuscarDentista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCroBuscarDentista.Name = "txtCroBuscarDentista";
-            this.txtCroBuscarDentista.Size = new System.Drawing.Size(172, 23);
-            this.txtCroBuscarDentista.TabIndex = 4;
+            this.txtNomeBuscarDentista.TabIndex = 1;
             // 
             // txtTelefoneBuscarDentista
             // 
@@ -88,7 +73,7 @@
             this.txtTelefoneBuscarDentista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefoneBuscarDentista.Name = "txtTelefoneBuscarDentista";
             this.txtTelefoneBuscarDentista.Size = new System.Drawing.Size(191, 23);
-            this.txtTelefoneBuscarDentista.TabIndex = 6;
+            this.txtTelefoneBuscarDentista.TabIndex = 4;
             // 
             // btnEncontrarDentista
             // 
@@ -117,28 +102,63 @@
             this.btnLimparDentista.Location = new System.Drawing.Point(590, 94);
             this.btnLimparDentista.Name = "btnLimparDentista";
             this.btnLimparDentista.Size = new System.Drawing.Size(75, 23);
-            this.btnLimparDentista.TabIndex = 101;
+            this.btnLimparDentista.TabIndex = 5;
             this.btnLimparDentista.Text = "Limpar";
             this.btnLimparDentista.UseVisualStyleBackColor = false;
             this.btnLimparDentista.Visible = false;
             this.btnLimparDentista.Click += new System.EventHandler(this.btnLimparDentista_Click);
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Location = new System.Drawing.Point(111, 131);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(34, 15);
+            this.lblCPF.TabIndex = 105;
+            this.lblCPF.Text = "CPF :";
+            // 
+            // txtDentistaCpfBuscar
+            // 
+            this.txtDentistaCpfBuscar.Location = new System.Drawing.Point(111, 149);
+            this.txtDentistaCpfBuscar.Name = "txtDentistaCpfBuscar";
+            this.txtDentistaCpfBuscar.Size = new System.Drawing.Size(114, 23);
+            this.txtDentistaCpfBuscar.TabIndex = 2;
+            // 
+            // lblCroDentista
+            // 
+            this.lblCroDentista.AutoSize = true;
+            this.lblCroDentista.Location = new System.Drawing.Point(240, 131);
+            this.lblCroDentista.Name = "lblCroDentista";
+            this.lblCroDentista.Size = new System.Drawing.Size(37, 15);
+            this.lblCroDentista.TabIndex = 103;
+            this.lblCroDentista.Text = "CRO :";
+            // 
+            // txtCroDentistaBuscar
+            // 
+            this.txtCroDentistaBuscar.Location = new System.Drawing.Point(240, 149);
+            this.txtCroDentistaBuscar.Name = "txtCroDentistaBuscar";
+            this.txtCroDentistaBuscar.Size = new System.Drawing.Size(114, 23);
+            this.txtCroDentistaBuscar.TabIndex = 3;
             // 
             // frmBuscarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.lblCPF);
+            this.Controls.Add(this.txtDentistaCpfBuscar);
+            this.Controls.Add(this.lblCroDentista);
+            this.Controls.Add(this.txtCroDentistaBuscar);
             this.Controls.Add(this.btnLimparDentista);
             this.Controls.Add(this.lblBuscarDentista);
             this.Controls.Add(this.btnEncontrarDentista);
             this.Controls.Add(this.txtTelefoneBuscarDentista);
-            this.Controls.Add(this.txtCroBuscarDentista);
             this.Controls.Add(this.txtNomeBuscarDentista);
             this.Controls.Add(this.lblTelefoneBuscarDentista);
-            this.Controls.Add(this.lblCroBuscarDentista);
             this.Controls.Add(this.lblNomeBuscarDentista);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBuscarDentista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarDentista";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,13 +168,15 @@
         #endregion
 
         private Label lblNomeBuscarDentista;
-        private Label lblCroBuscarDentista;
         private Label lblTelefoneBuscarDentista;
         private TextBox txtNomeBuscarDentista;
-        private TextBox txtCroBuscarDentista;
         private TextBox txtTelefoneBuscarDentista;
         private Button btnEncontrarDentista;
         private Label lblBuscarDentista;
         private Button btnLimparDentista;
+        private Label lblCPF;
+        private TextBox txtDentistaCpfBuscar;
+        private Label lblCroDentista;
+        private TextBox txtCroDentistaBuscar;
     }
 }

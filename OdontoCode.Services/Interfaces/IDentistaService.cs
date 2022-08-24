@@ -9,11 +9,14 @@ namespace OdontoCode.Services.Interfaces
 {
     public interface IDentistaService
     {
-        public void RegisterNewDentist(Dentista dentista);
+        public void RegistrarDentista(Dentista dentista);
 
+        public Dentista BuscarDentista(string busca);
 
-        public Dentista GetDentist(string nameOrCro);
+        public void DesligarDentista(Dentista dentista);
 
-        public void DeleteDentist(Dentista dentist);
+        public void AlterarDentista(string cpfAntigo, Dentista dentista);
+
+        public int GerarId();
     }
 }

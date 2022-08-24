@@ -90,12 +90,14 @@
             this.menuDetistaNovo.Name = "menuDetistaNovo";
             this.menuDetistaNovo.Size = new System.Drawing.Size(180, 22);
             this.menuDetistaNovo.Text = "Novo";
+            this.menuDetistaNovo.Click += new System.EventHandler(this.menuDetistaNovo_Click);
             // 
             // menuDentistaAtualizar
             // 
             this.menuDentistaAtualizar.Name = "menuDentistaAtualizar";
             this.menuDentistaAtualizar.Size = new System.Drawing.Size(180, 22);
             this.menuDentistaAtualizar.Text = "Atualizar";
+            this.menuDentistaAtualizar.Click += new System.EventHandler(this.menuDentistaAtualizar_Click);
             // 
             // menuDentistaBuscar
             // 
