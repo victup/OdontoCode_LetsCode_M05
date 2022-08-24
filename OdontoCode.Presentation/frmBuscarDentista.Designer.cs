@@ -39,6 +39,7 @@
             this.txtDentistaCpfBuscar = new System.Windows.Forms.TextBox();
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaBuscar = new System.Windows.Forms.TextBox();
+            this.lblVerificaEntradas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNomeBuscarDentista
@@ -58,6 +59,7 @@
             this.lblTelefoneBuscarDentista.Size = new System.Drawing.Size(57, 15);
             this.lblTelefoneBuscarDentista.TabIndex = 2;
             this.lblTelefoneBuscarDentista.Text = "Telefone :";
+            this.lblTelefoneBuscarDentista.Visible = false;
             // 
             // txtNomeBuscarDentista
             // 
@@ -74,6 +76,7 @@
             this.txtTelefoneBuscarDentista.Name = "txtTelefoneBuscarDentista";
             this.txtTelefoneBuscarDentista.Size = new System.Drawing.Size(191, 23);
             this.txtTelefoneBuscarDentista.TabIndex = 4;
+            this.txtTelefoneBuscarDentista.Visible = false;
             // 
             // btnEncontrarDentista
             // 
@@ -140,11 +143,23 @@
             this.txtCroDentistaBuscar.Size = new System.Drawing.Size(114, 23);
             this.txtCroDentistaBuscar.TabIndex = 3;
             // 
+            // lblVerificaEntradas
+            // 
+            this.lblVerificaEntradas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVerificaEntradas.Location = new System.Drawing.Point(1, 193);
+            this.lblVerificaEntradas.Name = "lblVerificaEntradas";
+            this.lblVerificaEntradas.Size = new System.Drawing.Size(687, 15);
+            this.lblVerificaEntradas.TabIndex = 106;
+            this.lblVerificaEntradas.Text = "label1";
+            this.lblVerificaEntradas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblVerificaEntradas.Visible = false;
+            // 
             // frmBuscarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.lblVerificaEntradas);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtDentistaCpfBuscar);
             this.Controls.Add(this.lblCroDentista);
@@ -178,5 +193,6 @@
         private TextBox txtDentistaCpfBuscar;
         private Label lblCroDentista;
         private TextBox txtCroDentistaBuscar;
+        private Label lblVerificaEntradas;
     }
 }
