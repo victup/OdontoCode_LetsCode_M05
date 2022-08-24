@@ -174,7 +174,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAtualizarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAtualizarDentista";
+            this.Text = "Atualizar Dentista";
             this.ResumeLayout(false);
             this.PerformLayout();
 

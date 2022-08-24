@@ -27,26 +27,57 @@ namespace OdontoCode.Presentation
 
         private void btnEncontrarDentista_Click(object sender, EventArgs e)
         {
-            string busca = "";
+            if (!String.IsNullOrEmpty(txtNomeDesligarDentista.Text) ||
+                !String.IsNullOrEmpty(txtCroDentistaDesligar.Text) ||
+                !String.IsNullOrEmpty(txtDentistaCpfDesligar.Text)
+                )
+            {
+                btnEncontrarDentista.Visible = false;
+                btnDesligarDentista.Visible = true;
+                lblVerificaEntradas.Visible = false;
+                lblTelefoneDesligarDentista.Visible = true;
+                txtTelefoneDesligarDentista.Visible = true;
 
-            if (!String.IsNullOrEmpty(txtCroDentistaDesligar.Text))
-                busca = txtCroDentistaDesligar.Text;
+                string busca = "";
+
+                if (!String.IsNullOrEmpty(txtCroDentistaDesligar.Text))
+                    busca = txtCroDentistaDesligar.Text;
+                else
+                if (!String.IsNullOrEmpty(txtDentistaCpfDesligar.Text))
+                    busca = txtDentistaCpfDesligar.Text;
+                else
+                    busca = txtNomeDesligarDentista.Text;
+
+
+
+                dentista = _dentistService.BuscarDentista(busca);
+
+                if (dentista.CPF != null)
+                {
+
+                    txtCroDentistaDesligar.Text = dentista.CRO;
+                    txtNomeDesligarDentista.Text = dentista.Nome;
+                    txtTelefoneDesligarDentista.Text = dentista.Telefone;
+                    txtDentistaCpfDesligar.Text = dentista.CPF;
+
+                    btnDesligarDentista.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show($"Não encontramos nenhum dentista com os valores fornecidos.");
+                    btnEncontrarDentista.Visible = true;
+                    btnDesligarDentista.Visible = false;
+                }
+
+            }
             else
-            if (!String.IsNullOrEmpty(txtDentistaCpfDesligar.Text))
-                busca = txtDentistaCpfDesligar.Text;
-            else
-                busca = txtNomeDesligarDentista.Text;
-
-
-
-            dentista = _dentistService.BuscarDentista(busca);
-
-            txtCroDentistaDesligar.Text = dentista.CRO;
-            txtNomeDesligarDentista.Text = dentista.Nome;
-            txtTelefoneDesligarDentista.Text = dentista.Telefone;
-            txtDentistaCpfDesligar.Text = dentista.CPF;
-
-            btnDesligarDentista.Visible = true;
+            {
+                lblVerificaEntradas.Visible = true;
+                lblVerificaEntradas.Text = $"Espera-se pelo menos um campo preenchido para realizar a busca.";
+                lblVerificaEntradas.ForeColor = Color.Red;
+                lblTelefoneDesligarDentista.Visible = false;
+                txtTelefoneDesligarDentista.Visible = false;
+            }
         }
 
         private void btnDesligarDentista_Click(object sender, EventArgs e)
@@ -57,6 +88,10 @@ namespace OdontoCode.Presentation
             txtCroDentistaDesligar.Text = String.Empty;
             txtNomeDesligarDentista.Text = String.Empty;
             txtTelefoneDesligarDentista.Text = String.Empty;
+            txtDentistaCpfDesligar.Text = String.Empty;
+            btnDesligarDentista.Visible = false;
+            btnEncontrarDentista.Visible = true;
+            
 
        
         }

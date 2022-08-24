@@ -33,7 +33,7 @@ namespace OdontoCode.Presentation
                 if(sucessoCadastro)
                     MessageBox.Show($"Dentista {txtNomeDentista.Text} cadastrado com sucesso!");
                 else
-                    MessageBox.Show($"Já existe uma pessoa com o CPF {txtDentistaCPF.Text} ou {txtCroDentista.Text} cadastrado!");
+                    MessageBox.Show($"Já existe uma pessoa com o CPF {txtDentistaCPF.Text} ou CRO {txtCroDentista.Text} cadastrado!");
 
                 txtNomeDentista.Text = String.Empty;
                 txtDentistaCPF.Text = String.Empty;

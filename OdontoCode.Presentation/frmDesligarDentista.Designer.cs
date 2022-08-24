@@ -39,6 +39,7 @@
             this.txtDentistaCpfDesligar = new System.Windows.Forms.TextBox();
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaDesligar = new System.Windows.Forms.TextBox();
+            this.lblVerificaEntradas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDesligarDentista
@@ -140,11 +141,23 @@
             this.txtCroDentistaDesligar.Size = new System.Drawing.Size(114, 23);
             this.txtCroDentistaDesligar.TabIndex = 3;
             // 
+            // lblVerificaEntradas
+            // 
+            this.lblVerificaEntradas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVerificaEntradas.Location = new System.Drawing.Point(-2, 196);
+            this.lblVerificaEntradas.Name = "lblVerificaEntradas";
+            this.lblVerificaEntradas.Size = new System.Drawing.Size(687, 15);
+            this.lblVerificaEntradas.TabIndex = 114;
+            this.lblVerificaEntradas.Text = "label1";
+            this.lblVerificaEntradas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblVerificaEntradas.Visible = false;
+            // 
             // frmDesligarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(697, 338);
+            this.Controls.Add(this.lblVerificaEntradas);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtDentistaCpfDesligar);
             this.Controls.Add(this.lblCroDentista);
@@ -159,7 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDesligarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDesligarDentista";
+            this.Text = "Desligar Dentista";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +191,6 @@
         private TextBox txtDentistaCpfDesligar;
         private Label lblCroDentista;
         private TextBox txtCroDentistaDesligar;
+        private Label lblVerificaEntradas;
     }
 }
