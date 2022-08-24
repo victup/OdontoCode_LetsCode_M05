@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OdontoCode.Domain;
+using OdontoCode.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,89 @@ namespace OdontoCode.Presentation
 {
     public partial class frmAtualizarDentista : Form
     {
-        public frmAtualizarDentista()
+        private readonly IDentistaService _dentistaService;
+        Dentista dentista;
+
+        public frmAtualizarDentista(IDentistaService dentistaService)
         {
             InitializeComponent();
+            _dentistaService = dentistaService;
         }
+
+        private void btnEncontrarDentista_Click(object sender, EventArgs e)
+        {
+
+            if ((String.IsNullOrEmpty(txtNomeDentistaAtualizar.Text)) &&
+                (String.IsNullOrEmpty(txtDentistaCpfAtualizar.Text)) &&
+                (String.IsNullOrEmpty(txtCroDentistaAtualizar.Text))
+                )
+            {
+                lblValidaEntradas.Visible = true;
+                lblValidaEntradas.Text = "Pelo menos um campo deve ser preenchido";
+                lblValidaEntradas.ForeColor = Color.Red;
+            }
+            else
+            {
+                btnEncontrarDentista.Visible = false;
+                btnAtualizarDentista.Visible = true;
+                lblTelefoneDentista.Visible = true;
+                txtTelefoneDentistaAtualizar.Visible = true;
+
+                string busca = "";
+
+                if (!String.IsNullOrEmpty(txtCroDentistaAtualizar.Text))
+                    busca = txtCroDentistaAtualizar.Text;
+                else
+                if (!String.IsNullOrEmpty(txtDentistaCpfAtualizar.Text))
+                    busca = txtDentistaCpfAtualizar.Text;
+                else
+                    busca = txtNomeDentistaAtualizar.Text;
+
+
+
+                dentista = _dentistaService.BuscarDentista(busca);
+
+                txtCroDentistaAtualizar.Text = dentista.CRO;
+                txtNomeDentistaAtualizar.Text = dentista.Nome;
+                txtTelefoneDentistaAtualizar.Text = dentista.Telefone;
+                txtDentistaCpfAtualizar.Text = dentista.CPF;
+
+                
+            }
+                
+
+           
+            
+        }
+
+        private void btnAtualizarDentista_Click(object sender, EventArgs e)
+        {
+            if (dentista != null)
+            {
+                string cpfAntigo = dentista.CPF;
+                
+                dentista.Nome = txtNomeDentistaAtualizar.Text;
+                dentista.CRO = txtCroDentistaAtualizar.Text;
+                dentista.CPF = txtDentistaCpfAtualizar.Text;
+                dentista.Telefone = txtTelefoneDentistaAtualizar.Text;
+
+                btnAtualizarDentista.Visible = false;
+                btnEncontrarDentista.Visible = true;
+
+                _dentistaService.AlterarDentista(cpfAntigo, dentista);
+
+                MessageBox.Show($"Dentista {dentista.Nome} atualizado com sucesso!");
+
+                txtNomeDentistaAtualizar.Text = String.Empty;
+                txtCroDentistaAtualizar.Text = String.Empty;
+                txtTelefoneDentistaAtualizar.Text = String.Empty;
+                txtDentistaCpfAtualizar.Text = String.Empty;
+
+                
+            }
+
+        }
+
+      
     }
 }
