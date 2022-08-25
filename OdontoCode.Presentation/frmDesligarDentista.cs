@@ -35,8 +35,7 @@ namespace OdontoCode.Presentation
                 btnEncontrarDentista.Visible = false;
                 btnDesligarDentista.Visible = true;
                 lblVerificaEntradas.Visible = false;
-                lblTelefoneDesligarDentista.Visible = true;
-                txtTelefoneDesligarDentista.Visible = true;
+                
 
                 string busca = "";
 
@@ -54,7 +53,8 @@ namespace OdontoCode.Presentation
 
                 if (dentista.CPF != null)
                 {
-
+                    lblTelefoneDesligarDentista.Visible = true;
+                    txtTelefoneDesligarDentista.Visible = true;
                     txtCroDentistaDesligar.Text = dentista.CRO;
                     txtNomeDesligarDentista.Text = dentista.Nome;
                     txtTelefoneDesligarDentista.Text = dentista.Telefone;
