@@ -54,6 +54,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadastrar,
             this.menuAgendamento,
@@ -61,7 +62,8 @@
             this.menuSair});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(689, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +73,7 @@
             this.opcCadastrarDentista,
             this.opcCadastrarPaciente});
             this.menuCadastrar.Name = "menuCadastrar";
-            this.menuCadastrar.Size = new System.Drawing.Size(66, 20);
+            this.menuCadastrar.Size = new System.Drawing.Size(82, 24);
             this.menuCadastrar.Text = "Cadastro";
             // 
             // opcCadastrarDentista
@@ -82,34 +84,34 @@
             this.menuDentistaBuscar,
             this.menuDentistaDesligar});
             this.opcCadastrarDentista.Name = "opcCadastrarDentista";
-            this.opcCadastrarDentista.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarDentista.Size = new System.Drawing.Size(147, 26);
             this.opcCadastrarDentista.Text = "Dentista";
             // 
             // menuDetistaNovo
             // 
             this.menuDetistaNovo.Name = "menuDetistaNovo";
-            this.menuDetistaNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuDetistaNovo.Size = new System.Drawing.Size(151, 26);
             this.menuDetistaNovo.Text = "Novo";
             this.menuDetistaNovo.Click += new System.EventHandler(this.menuDetistaNovo_Click);
             // 
             // menuDentistaAtualizar
             // 
             this.menuDentistaAtualizar.Name = "menuDentistaAtualizar";
-            this.menuDentistaAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaAtualizar.Size = new System.Drawing.Size(151, 26);
             this.menuDentistaAtualizar.Text = "Atualizar";
             this.menuDentistaAtualizar.Click += new System.EventHandler(this.menuDentistaAtualizar_Click);
             // 
             // menuDentistaBuscar
             // 
             this.menuDentistaBuscar.Name = "menuDentistaBuscar";
-            this.menuDentistaBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaBuscar.Size = new System.Drawing.Size(151, 26);
             this.menuDentistaBuscar.Text = "Buscar";
             this.menuDentistaBuscar.Click += new System.EventHandler(this.menuDentistaBuscar_Click);
             // 
             // menuDentistaDesligar
             // 
             this.menuDentistaDesligar.Name = "menuDentistaDesligar";
-            this.menuDentistaDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaDesligar.Size = new System.Drawing.Size(151, 26);
             this.menuDentistaDesligar.Text = "Desligar";
             this.menuDentistaDesligar.Click += new System.EventHandler(this.menuDentistaDesligar_Click);
             // 
@@ -121,31 +123,31 @@
             this.menuPacienteBuscar,
             this.menuPacienteDesligar});
             this.opcCadastrarPaciente.Name = "opcCadastrarPaciente";
-            this.opcCadastrarPaciente.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarPaciente.Size = new System.Drawing.Size(147, 26);
             this.opcCadastrarPaciente.Text = "Paciente";
             // 
             // menuPacienteNovo
             // 
             this.menuPacienteNovo.Name = "menuPacienteNovo";
-            this.menuPacienteNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteNovo.Size = new System.Drawing.Size(151, 26);
             this.menuPacienteNovo.Text = "Novo";
             // 
             // menuPacienteAtualizar
             // 
             this.menuPacienteAtualizar.Name = "menuPacienteAtualizar";
-            this.menuPacienteAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteAtualizar.Size = new System.Drawing.Size(151, 26);
             this.menuPacienteAtualizar.Text = "Atualizar";
             // 
             // menuPacienteBuscar
             // 
             this.menuPacienteBuscar.Name = "menuPacienteBuscar";
-            this.menuPacienteBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteBuscar.Size = new System.Drawing.Size(151, 26);
             this.menuPacienteBuscar.Text = "Buscar";
             // 
             // menuPacienteDesligar
             // 
             this.menuPacienteDesligar.Name = "menuPacienteDesligar";
-            this.menuPacienteDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteDesligar.Size = new System.Drawing.Size(151, 26);
             this.menuPacienteDesligar.Text = "Desligar";
             // 
             // menuAgendamento
@@ -156,51 +158,53 @@
             this.opcAgendamentosBuscar,
             this.menuAgendamentoCancelar});
             this.menuAgendamento.Name = "menuAgendamento";
-            this.menuAgendamento.Size = new System.Drawing.Size(100, 20);
+            this.menuAgendamento.Size = new System.Drawing.Size(124, 24);
             this.menuAgendamento.Text = "Agendamentos";
             // 
             // opcNovoAgendamento
             // 
             this.opcNovoAgendamento.Name = "opcNovoAgendamento";
-            this.opcNovoAgendamento.Size = new System.Drawing.Size(182, 22);
+            this.opcNovoAgendamento.Size = new System.Drawing.Size(227, 26);
             this.opcNovoAgendamento.Text = "Novo Agendamento";
+            this.opcNovoAgendamento.Click += new System.EventHandler(this.opcNovoAgendamento_Click);
             // 
             // opcAlterarAgendamento
             // 
             this.opcAlterarAgendamento.Name = "opcAlterarAgendamento";
-            this.opcAlterarAgendamento.Size = new System.Drawing.Size(182, 22);
+            this.opcAlterarAgendamento.Size = new System.Drawing.Size(227, 26);
             this.opcAlterarAgendamento.Text = "Alterar/Reagendar";
             // 
             // opcAgendamentosBuscar
             // 
             this.opcAgendamentosBuscar.Name = "opcAgendamentosBuscar";
-            this.opcAgendamentosBuscar.Size = new System.Drawing.Size(182, 22);
+            this.opcAgendamentosBuscar.Size = new System.Drawing.Size(227, 26);
             this.opcAgendamentosBuscar.Text = "Buscar";
             // 
             // menuAgendamentoCancelar
             // 
             this.menuAgendamentoCancelar.Name = "menuAgendamentoCancelar";
-            this.menuAgendamentoCancelar.Size = new System.Drawing.Size(182, 22);
+            this.menuAgendamentoCancelar.Size = new System.Drawing.Size(227, 26);
             this.menuAgendamentoCancelar.Text = "Cancelar";
             // 
             // menuSobre
             // 
             this.menuSobre.Name = "menuSobre";
-            this.menuSobre.Size = new System.Drawing.Size(49, 20);
+            this.menuSobre.Size = new System.Drawing.Size(62, 24);
             this.menuSobre.Text = "Sobre";
             this.menuSobre.Click += new System.EventHandler(this.menuSobre_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
-            this.menuSair.Size = new System.Drawing.Size(38, 20);
+            this.menuSair.Size = new System.Drawing.Size(48, 24);
             this.menuSair.Text = "Sair";
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::OdontoCode.Presentation.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 191);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(350, 164);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -209,12 +213,13 @@
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 450);
+            this.ClientSize = new System.Drawing.Size(689, 600);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

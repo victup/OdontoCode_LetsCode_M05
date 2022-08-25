@@ -15,34 +15,36 @@ namespace OdontoCode.Presentation
     public partial class frmMenu : Form
     {
         private readonly IDentistaService _dentistService;
-        public frmMenu(IDentistaService _dentists)
+        private readonly IAgendamentoService _agendamentoService;
+        public frmMenu(IDentistaService _dentists, IAgendamentoService agendamentoService)
         {
             InitializeComponent();
 
             _dentistService = _dentists;
+            _agendamentoService = agendamentoService;
         }
 
         private void menuDentistaBuscar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmBuscarDentista frmBuscar = new frmBuscarDentista(_dentistService);
-            frmBuscar.ShowDialog();
+            frmBuscarDentista frmBuscarDentista = new frmBuscarDentista(_dentistService);
+            frmBuscarDentista.ShowDialog();
             this.Show();
         }
 
         private void menuDentistaDesligar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmDesligarDentista frmDesligar = new frmDesligarDentista(_dentistService);
-            frmDesligar.ShowDialog();
+            frmDesligarDentista frmDesligarDentista = new frmDesligarDentista(_dentistService);
+            frmDesligarDentista.ShowDialog();
             this.Show();
         }
 
         private void menuDetistaNovo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmNovoDentista frmNovo = new frmNovoDentista(_dentistService);
-            frmNovo.ShowDialog();
+            frmNovoDentista frmNovoDentista = new frmNovoDentista(_dentistService);
+            frmNovoDentista.ShowDialog();
             this.Show();
 
         }
@@ -50,23 +52,13 @@ namespace OdontoCode.Presentation
         private void menuDentistaAtualizar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAtualizarDentista frmAtualizar = new frmAtualizarDentista(_dentistService);
-            frmAtualizar.ShowDialog();
+            frmAtualizarDentista frmAtualizarDentista = new frmAtualizarDentista(_dentistService);
+            frmAtualizarDentista.ShowDialog();
             this.Show();
         }
 
-        private void menuSobre_Click(object sender, EventArgs e)
+        private void opcNovoAgendamento_Click(object sender, EventArgs e)
         {
-            frmSobreSistema frmSobre = new frmSobreSistema();
-            frmSobre.ShowDialog();
-        }
-
-        private void menuSair_Click(object sender, EventArgs e)
-        {
-            DialogResult resultado =  MessageBox.Show("Tem certeza que deseja sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (resultado == DialogResult.Yes)
-                this.Close();
 
         }
     }
