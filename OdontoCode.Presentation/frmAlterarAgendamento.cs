@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OdontoCode.Domain;
+using OdontoCode.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,15 @@ using System.Windows.Forms;
 
 namespace OdontoCode.Presentation
 {
+    
     public partial class frmAlterarAgendamento : Form
     {
-        public frmAlterarAgendamento()
+        private readonly IAgendamentoService _agendamentoService;
+        Agendamento agendamento;
+        public frmAlterarAgendamento(IAgendamentoService _agendamento)
         {
             InitializeComponent();
+            _agendamentoService = _agendamento;
         }
     }
 }

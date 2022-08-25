@@ -37,6 +37,7 @@ namespace OdontoCode.Presentation
             //id_paciente = aService.SearchPacientIDForName(nomePaciente)
             //var nomeDentista = (forms campo nome dentista)
             //id_dentista = aService.SearchDentistID(nomeDentista)
+            
         }
 
         private void NewApointment()

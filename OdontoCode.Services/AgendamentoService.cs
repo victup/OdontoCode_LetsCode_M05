@@ -280,6 +280,7 @@ namespace OdontoCode.Services
             return name;
         }
 
+        
         public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag)
         {
             var busca = new AgendamentoService();
