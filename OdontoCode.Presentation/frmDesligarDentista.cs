@@ -35,8 +35,7 @@ namespace OdontoCode.Presentation
                 btnEncontrarDentista.Visible = false;
                 btnDesligarDentista.Visible = true;
                 lblVerificaEntradas.Visible = false;
-                lblTelefoneDesligarDentista.Visible = true;
-                txtTelefoneDesligarDentista.Visible = true;
+                
 
                 string busca = "";
 
@@ -54,7 +53,8 @@ namespace OdontoCode.Presentation
 
                 if (dentista.CPF != null)
                 {
-
+                    lblTelefoneDesligarDentista.Visible = true;
+                    txtTelefoneDesligarDentista.Visible = true;
                     txtCroDentistaDesligar.Text = dentista.CRO;
                     txtNomeDesligarDentista.Text = dentista.Nome;
                     txtTelefoneDesligarDentista.Text = dentista.Telefone;
@@ -94,6 +94,13 @@ namespace OdontoCode.Presentation
             
 
        
+        }
+
+        private void menuHomePage_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(resposta == DialogResult.Yes)
+                this.Close();
         }
     }
 }

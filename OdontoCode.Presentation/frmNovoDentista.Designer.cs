@@ -42,6 +42,9 @@
             this.lblVerificaCpf = new System.Windows.Forms.Label();
             this.lblVerificaCro = new System.Windows.Forms.Label();
             this.lblVerificaTelefone = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuPaginaInicial = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNomeDentista
@@ -174,6 +177,23 @@
             this.lblVerificaTelefone.Text = "label1";
             this.lblVerificaTelefone.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPaginaInicial});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
+            this.menuStrip1.TabIndex = 43;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuPaginaInicial
+            // 
+            this.menuPaginaInicial.Name = "menuPaginaInicial";
+            this.menuPaginaInicial.Size = new System.Drawing.Size(89, 20);
+            this.menuPaginaInicial.Text = "Página Inicial";
+            this.menuPaginaInicial.Click += new System.EventHandler(this.menuPaginaInicial_Click);
+            // 
             // frmNovoDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -193,10 +213,14 @@
             this.Controls.Add(this.txtTelDentista);
             this.Controls.Add(this.txtCroDentista);
             this.Controls.Add(this.txtNomeDentista);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmNovoDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Novo Dentista";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +242,7 @@
         private Label lblVerificaCpf;
         private Label lblVerificaCro;
         private Label lblVerificaTelefone;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuPaginaInicial;
     }
 }

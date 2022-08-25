@@ -40,6 +40,9 @@
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaDesligar = new System.Windows.Forms.TextBox();
             this.lblVerificaEntradas = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuHomePage = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDesligarDentista
@@ -69,6 +72,7 @@
             this.lblTelefoneDesligarDentista.Size = new System.Drawing.Size(57, 15);
             this.lblTelefoneDesligarDentista.TabIndex = 104;
             this.lblTelefoneDesligarDentista.Text = "Telefone :";
+            this.lblTelefoneDesligarDentista.Visible = false;
             // 
             // txtNomeDesligarDentista
             // 
@@ -85,6 +89,7 @@
             this.txtTelefoneDesligarDentista.Name = "txtTelefoneDesligarDentista";
             this.txtTelefoneDesligarDentista.Size = new System.Drawing.Size(191, 23);
             this.txtTelefoneDesligarDentista.TabIndex = 4;
+            this.txtTelefoneDesligarDentista.Visible = false;
             // 
             // btnEncontrarDentista
             // 
@@ -152,6 +157,23 @@
             this.lblVerificaEntradas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblVerificaEntradas.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuHomePage});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(697, 24);
+            this.menuStrip1.TabIndex = 115;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuHomePage
+            // 
+            this.menuHomePage.Name = "menuHomePage";
+            this.menuHomePage.Size = new System.Drawing.Size(89, 20);
+            this.menuHomePage.Text = "Página Inicial";
+            this.menuHomePage.Click += new System.EventHandler(this.menuHomePage_Click);
+            // 
             // frmDesligarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -169,10 +191,14 @@
             this.Controls.Add(this.lblTelefoneDesligarDentista);
             this.Controls.Add(this.lblNomeDesligarDentista);
             this.Controls.Add(this.lblDesligarDentista);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDesligarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Desligar Dentista";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +218,7 @@
         private Label lblCroDentista;
         private TextBox txtCroDentistaDesligar;
         private Label lblVerificaEntradas;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuHomePage;
     }
 }

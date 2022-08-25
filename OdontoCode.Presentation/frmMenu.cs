@@ -54,5 +54,20 @@ namespace OdontoCode.Presentation
             frmAtualizar.ShowDialog();
             this.Show();
         }
+
+        private void menuSobre_Click(object sender, EventArgs e)
+        {
+            frmSobreSistema frmSobre = new frmSobreSistema();
+            frmSobre.ShowDialog();
+        }
+
+        private void menuSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado =  MessageBox.Show("Tem certeza que deseja sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+                this.Close();
+
+        }
     }
 }
