@@ -16,16 +16,11 @@ namespace OdontoCode.Presentation
     {
         private readonly IDentistaService _dentistService;
         private readonly IPacienteService _pacienteService;
-        public frmMenu(IDentistaService _dentists)
+        public frmMenu(IDentistaService _dentists, IPacienteService _paciente)
         {
             InitializeComponent();
 
             _dentistService = _dentists;
-        }
-        public frmMenu(IPacienteService _paciente)
-        {
-            InitializeComponent();
-
             _pacienteService = _paciente;
         }
 
