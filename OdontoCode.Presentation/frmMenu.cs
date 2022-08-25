@@ -27,24 +27,24 @@ namespace OdontoCode.Presentation
         private void menuDentistaBuscar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmBuscarDentista frmBuscar = new frmBuscarDentista(_dentistService);
-            frmBuscar.ShowDialog();
+            frmBuscarDentista frmBuscarDentista = new frmBuscarDentista(_dentistService);
+            frmBuscarDentista.ShowDialog();
             this.Show();
         }
 
         private void menuDentistaDesligar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmDesligarDentista frmDesligar = new frmDesligarDentista(_dentistService);
-            frmDesligar.ShowDialog();
+            frmDesligarDentista frmDesligarDentista = new frmDesligarDentista(_dentistService);
+            frmDesligarDentista.ShowDialog();
             this.Show();
         }
 
         private void menuDetistaNovo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmNovoDentista frmNovo = new frmNovoDentista(_dentistService);
-            frmNovo.ShowDialog();
+            frmNovoDentista frmNovoDentista = new frmNovoDentista(_dentistService);
+            frmNovoDentista.ShowDialog();
             this.Show();
 
         }
@@ -52,8 +52,8 @@ namespace OdontoCode.Presentation
         private void menuDentistaAtualizar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAtualizarDentista frmAtualizar = new frmAtualizarDentista(_dentistService);
-            frmAtualizar.ShowDialog();
+            frmAtualizarDentista frmAtualizarDentista = new frmAtualizarDentista(_dentistService);
+            frmAtualizarDentista.ShowDialog();
             this.Show();
         }
 

@@ -110,9 +110,11 @@ namespace OdontoCode.Presentation
             
         }
 
-        private void frmBuscarDentista_Load(object sender, EventArgs e)
+        private void menuPaginaInicial_Click(object sender, EventArgs e)
         {
-
+            DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resposta == DialogResult.Yes)
+                this.Close();
         }
     }
 }

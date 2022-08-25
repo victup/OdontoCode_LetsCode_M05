@@ -40,6 +40,9 @@
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaBuscar = new System.Windows.Forms.TextBox();
             this.lblVerificaEntradas = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuPaginaInicial = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNomeBuscarDentista
@@ -156,6 +159,23 @@
             this.lblVerificaEntradas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblVerificaEntradas.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPaginaInicial});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(700, 24);
+            this.menuStrip1.TabIndex = 107;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuPaginaInicial
+            // 
+            this.menuPaginaInicial.Name = "menuPaginaInicial";
+            this.menuPaginaInicial.Size = new System.Drawing.Size(89, 20);
+            this.menuPaginaInicial.Text = "Página Inicial";
+            this.menuPaginaInicial.Click += new System.EventHandler(this.menuPaginaInicial_Click);
+            // 
             // frmBuscarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -173,10 +193,14 @@
             this.Controls.Add(this.txtNomeBuscarDentista);
             this.Controls.Add(this.lblTelefoneBuscarDentista);
             this.Controls.Add(this.lblNomeBuscarDentista);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBuscarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Dentista";
-            this.Load += new System.EventHandler(this.frmBuscarDentista_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +220,7 @@
         private Label lblCroDentista;
         private TextBox txtCroDentistaBuscar;
         private Label lblVerificaEntradas;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuPaginaInicial;
     }
 }

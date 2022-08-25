@@ -191,12 +191,14 @@
             this.menuSobre.Name = "menuSobre";
             this.menuSobre.Size = new System.Drawing.Size(62, 24);
             this.menuSobre.Text = "Sobre";
+            this.menuSobre.Click += new System.EventHandler(this.menuSobre_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
             this.menuSair.Size = new System.Drawing.Size(48, 24);
             this.menuSair.Text = "Sair";
+            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // pictureBox1
             // 
