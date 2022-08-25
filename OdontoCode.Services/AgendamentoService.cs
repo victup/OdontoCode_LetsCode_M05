@@ -238,17 +238,15 @@ namespace OdontoCode.Services
         #endregion
 
         #region Gerar id
-        public int GerarId()
+        public int GerarNovoId()
         {
-            int idDisponivel = 0;
-
+            int novoID = 0;
             foreach (var item in listaAgendamento)
             {
-                if (item.Id_agendamento > idDisponivel)
-                    idDisponivel = item.Id_agendamento + 1;
+                novoID = Math.Max(novoID, item.Id_agendamento);
             }
 
-            return idDisponivel;
+            return novoID + 1;
         }
         #endregion
 
@@ -278,6 +276,29 @@ namespace OdontoCode.Services
                 }
             }
             return name;
+        }
+
+        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta)
+        {
+            var busca = new AgendamentoService();
+            var listaImp = new List<int>();
+            var listForDentistName = busca.SearchApointmentForDentistID(busca.SearchDentistID(nomeDentista));
+            var listForPacientCPF = busca.SearchApointmentForPacientID(busca.SearchPacientIDForCPF(cpfPaciente));
+            var listForPacientName = busca.SearchApointmentForPacientID(busca.SearchPacientIDForName(nomePaciente));
+            var listForConsultDS = busca.SearchApointmentID(ds_consulta);
+
+            var list = new List<Agendamento>();
+            foreach (var item in listaAgendamento)
+            {
+                if ((listForDentistName.Contains(item.Id_agendamento) || nomeDentista == "") &&
+                    (listForPacientCPF.Contains(item.Id_agendamento) || cpfPaciente == "") &&
+                    (listForDentistName.Contains(item.Id_agendamento) || nomePaciente == "") &&
+                    (listForConsultDS.Contains(item.Id_agendamento) || ds_consulta == ""))
+                {
+                    list.Add(item);
+                }
+            }
+            return list;    
         }
     }
 }

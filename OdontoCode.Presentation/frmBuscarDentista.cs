@@ -110,6 +110,9 @@ namespace OdontoCode.Presentation
             
         }
 
-       
+        private void frmBuscarDentista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
