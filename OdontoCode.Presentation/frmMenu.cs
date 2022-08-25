@@ -15,11 +15,18 @@ namespace OdontoCode.Presentation
     public partial class frmMenu : Form
     {
         private readonly IDentistaService _dentistService;
+        private readonly IPacienteService _pacienteService;
         public frmMenu(IDentistaService _dentists)
         {
             InitializeComponent();
 
             _dentistService = _dentists;
+        }
+        public frmMenu(IPacienteService _paciente)
+        {
+            InitializeComponent();
+
+            _pacienteService = _paciente;
         }
 
         private void menuDentistaBuscar_Click(object sender, EventArgs e)
@@ -68,6 +75,38 @@ namespace OdontoCode.Presentation
             if (resultado == DialogResult.Yes)
                 this.Close();
 
+        }
+
+        private void menuPacienteNovo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmNovoPaciente frmNovo = new frmNovoPaciente(_pacienteService);
+            frmNovo.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteAtualizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAtualizarPaciente frmAtualizar = new frmAtualizarPaciente(_pacienteService);
+            frmAtualizar.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteBuscar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmBuscarPaciente frmBuscar = new frmBuscarPaciente(_pacienteService);
+            frmBuscar.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteDesligar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDesligarPaciente frmDesligar = new frmDesligarPaciente(_pacienteService);
+            frmDesligar.ShowDialog();
+            this.Show();
         }
     }
 }

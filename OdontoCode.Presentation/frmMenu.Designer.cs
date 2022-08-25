@@ -82,34 +82,34 @@
             this.menuDentistaBuscar,
             this.menuDentistaDesligar});
             this.opcCadastrarDentista.Name = "opcCadastrarDentista";
-            this.opcCadastrarDentista.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarDentista.Size = new System.Drawing.Size(180, 22);
             this.opcCadastrarDentista.Text = "Dentista";
             // 
             // menuDetistaNovo
             // 
             this.menuDetistaNovo.Name = "menuDetistaNovo";
-            this.menuDetistaNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuDetistaNovo.Size = new System.Drawing.Size(180, 22);
             this.menuDetistaNovo.Text = "Novo";
             this.menuDetistaNovo.Click += new System.EventHandler(this.menuDetistaNovo_Click);
             // 
             // menuDentistaAtualizar
             // 
             this.menuDentistaAtualizar.Name = "menuDentistaAtualizar";
-            this.menuDentistaAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaAtualizar.Size = new System.Drawing.Size(180, 22);
             this.menuDentistaAtualizar.Text = "Atualizar";
             this.menuDentistaAtualizar.Click += new System.EventHandler(this.menuDentistaAtualizar_Click);
             // 
             // menuDentistaBuscar
             // 
             this.menuDentistaBuscar.Name = "menuDentistaBuscar";
-            this.menuDentistaBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaBuscar.Size = new System.Drawing.Size(180, 22);
             this.menuDentistaBuscar.Text = "Buscar";
             this.menuDentistaBuscar.Click += new System.EventHandler(this.menuDentistaBuscar_Click);
             // 
             // menuDentistaDesligar
             // 
             this.menuDentistaDesligar.Name = "menuDentistaDesligar";
-            this.menuDentistaDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuDentistaDesligar.Size = new System.Drawing.Size(180, 22);
             this.menuDentistaDesligar.Text = "Desligar";
             this.menuDentistaDesligar.Click += new System.EventHandler(this.menuDentistaDesligar_Click);
             // 
@@ -121,32 +121,36 @@
             this.menuPacienteBuscar,
             this.menuPacienteDesligar});
             this.opcCadastrarPaciente.Name = "opcCadastrarPaciente";
-            this.opcCadastrarPaciente.Size = new System.Drawing.Size(119, 22);
+            this.opcCadastrarPaciente.Size = new System.Drawing.Size(180, 22);
             this.opcCadastrarPaciente.Text = "Paciente";
             // 
             // menuPacienteNovo
             // 
             this.menuPacienteNovo.Name = "menuPacienteNovo";
-            this.menuPacienteNovo.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteNovo.Size = new System.Drawing.Size(180, 22);
             this.menuPacienteNovo.Text = "Novo";
+            this.menuPacienteNovo.Click += new System.EventHandler(this.menuPacienteNovo_Click);
             // 
             // menuPacienteAtualizar
             // 
             this.menuPacienteAtualizar.Name = "menuPacienteAtualizar";
-            this.menuPacienteAtualizar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteAtualizar.Size = new System.Drawing.Size(180, 22);
             this.menuPacienteAtualizar.Text = "Atualizar";
+            this.menuPacienteAtualizar.Click += new System.EventHandler(this.menuPacienteAtualizar_Click);
             // 
             // menuPacienteBuscar
             // 
             this.menuPacienteBuscar.Name = "menuPacienteBuscar";
-            this.menuPacienteBuscar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteBuscar.Size = new System.Drawing.Size(180, 22);
             this.menuPacienteBuscar.Text = "Buscar";
+            this.menuPacienteBuscar.Click += new System.EventHandler(this.menuPacienteBuscar_Click);
             // 
             // menuPacienteDesligar
             // 
             this.menuPacienteDesligar.Name = "menuPacienteDesligar";
-            this.menuPacienteDesligar.Size = new System.Drawing.Size(120, 22);
+            this.menuPacienteDesligar.Size = new System.Drawing.Size(180, 22);
             this.menuPacienteDesligar.Text = "Desligar";
+            this.menuPacienteDesligar.Click += new System.EventHandler(this.menuPacienteDesligar_Click);
             // 
             // menuAgendamento
             // 
