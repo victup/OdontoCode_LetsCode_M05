@@ -40,6 +40,9 @@
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaAtualizar = new System.Windows.Forms.TextBox();
             this.lblValidaEntradas = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuPaginaInicial = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNomeDentista
@@ -154,6 +157,23 @@
             this.lblValidaEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblValidaEntradas.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPaginaInicial});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 64;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuPaginaInicial
+            // 
+            this.menuPaginaInicial.Name = "menuPaginaInicial";
+            this.menuPaginaInicial.Size = new System.Drawing.Size(89, 20);
+            this.menuPaginaInicial.Text = "Página Inicial";
+            this.menuPaginaInicial.Click += new System.EventHandler(this.menuPaginaInicial_Click);
+            // 
             // frmAtualizarDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -171,10 +191,14 @@
             this.Controls.Add(this.lblTelefoneDentista);
             this.Controls.Add(this.lblAtualizarDentista);
             this.Controls.Add(this.lblNomeDentista);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmAtualizarDentista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualizar Dentista";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +218,7 @@
         private Label lblCroDentista;
         private TextBox txtCroDentistaAtualizar;
         private Label lblValidaEntradas;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuPaginaInicial;
     }
 }
