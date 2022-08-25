@@ -76,6 +76,7 @@ namespace OdontoCode.Services
         {
 
         }
+        #region Imprimir Agendamentos
         private void ImprimirAgendamentos()
         {
             foreach (var item in listaAgendamento)
@@ -84,6 +85,7 @@ namespace OdontoCode.Services
                 Console.WriteLine($"{item.Desc_consulta} {item.Data}");
             }
         }
+        #endregion
 
         #region Buscar por dentista
         public List<int> SearchApointmentForDentistID(List<int> listDentistID)
@@ -278,7 +280,7 @@ namespace OdontoCode.Services
             return name;
         }
 
-        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta)
+        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag)
         {
             var busca = new AgendamentoService();
             var listaImp = new List<int>();
@@ -286,6 +288,7 @@ namespace OdontoCode.Services
             var listForPacientCPF = busca.SearchApointmentForPacientID(busca.SearchPacientIDForCPF(cpfPaciente));
             var listForPacientName = busca.SearchApointmentForPacientID(busca.SearchPacientIDForName(nomePaciente));
             var listForConsultDS = busca.SearchApointmentID(ds_consulta);
+            var listForConsultData = busca.SearchApointmentID(data_ag);
 
             var list = new List<Agendamento>();
             foreach (var item in listaAgendamento)
@@ -293,7 +296,8 @@ namespace OdontoCode.Services
                 if ((listForDentistName.Contains(item.Id_agendamento) || nomeDentista == "") &&
                     (listForPacientCPF.Contains(item.Id_agendamento) || cpfPaciente == "") &&
                     (listForDentistName.Contains(item.Id_agendamento) || nomePaciente == "") &&
-                    (listForConsultDS.Contains(item.Id_agendamento) || ds_consulta == ""))
+                    (listForConsultDS.Contains(item.Id_agendamento) || ds_consulta == "") &&
+                    (listForConsultData.Equals(item.Id_agendamento) || data_ag == DateTime.MinValue))
                 {
                     list.Add(item);
                 }

@@ -15,11 +15,13 @@ namespace OdontoCode.Presentation
     public partial class frmMenu : Form
     {
         private readonly IDentistaService _dentistService;
-        public frmMenu(IDentistaService _dentists)
+        private readonly IAgendamentoService _agendamentoService;
+        public frmMenu(IDentistaService _dentists, IAgendamentoService agendamentoService)
         {
             InitializeComponent();
 
             _dentistService = _dentists;
+            _agendamentoService = agendamentoService;
         }
 
         private void menuDentistaBuscar_Click(object sender, EventArgs e)
@@ -53,6 +55,11 @@ namespace OdontoCode.Presentation
             frmAtualizarDentista frmAtualizar = new frmAtualizarDentista(_dentistService);
             frmAtualizar.ShowDialog();
             this.Show();
+        }
+
+        private void opcNovoAgendamento_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
