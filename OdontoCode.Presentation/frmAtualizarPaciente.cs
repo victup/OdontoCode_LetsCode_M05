@@ -35,7 +35,7 @@ namespace OdontoCode.Presentation
                 paciente.Bairro = txtBairroPaciente.Text;
                 paciente.CEP = txtCepPaciente.Text;
                 paciente.Cidade = txtCidadePaciente.Text;
-                paciente.Numero = txtNumPaciente.Text;
+                paciente.Numero = int.Parse(txtNumPaciente.Text);
                 paciente.Rua = txtRuaPaciente.Text;
                 paciente.UF = txtUfPaciente.Text;
 
@@ -124,7 +124,7 @@ namespace OdontoCode.Presentation
 
                 }
 
-            }
+            //}
         }
     }
 }
