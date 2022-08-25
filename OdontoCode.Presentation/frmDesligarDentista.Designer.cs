@@ -69,6 +69,7 @@
             this.lblTelefoneDesligarDentista.Size = new System.Drawing.Size(57, 15);
             this.lblTelefoneDesligarDentista.TabIndex = 104;
             this.lblTelefoneDesligarDentista.Text = "Telefone :";
+            this.lblTelefoneDesligarDentista.Visible = false;
             // 
             // txtNomeDesligarDentista
             // 
@@ -85,6 +86,7 @@
             this.txtTelefoneDesligarDentista.Name = "txtTelefoneDesligarDentista";
             this.txtTelefoneDesligarDentista.Size = new System.Drawing.Size(191, 23);
             this.txtTelefoneDesligarDentista.TabIndex = 4;
+            this.txtTelefoneDesligarDentista.Visible = false;
             // 
             // btnEncontrarDentista
             // 
