@@ -17,6 +17,10 @@ namespace OdontoCode.Presentation
             InitializeComponent();
         }
 
-      
+        private void frmNovoAgendamento_Load(object sender, EventArgs e)
+        {
+            
+        }
+       
     }
 }
