@@ -44,7 +44,7 @@
             this.lblTelPaciente = new System.Windows.Forms.Label();
             this.btnEncontrarPaciente = new System.Windows.Forms.Button();
             this.lblCpfPaciente = new System.Windows.Forms.Label();
-            this.txbCpfPaciente = new System.Windows.Forms.TextBox();
+            this.txtCpfPaciente = new System.Windows.Forms.TextBox();
             this.lblBuscarPaciente = new System.Windows.Forms.Label();
             this.lblNomePaciente = new System.Windows.Forms.Label();
             this.txtNomePaciente = new System.Windows.Forms.TextBox();
@@ -199,6 +199,7 @@
             this.btnEncontrarPaciente.TabIndex = 98;
             this.btnEncontrarPaciente.Text = "Buscar";
             this.btnEncontrarPaciente.UseVisualStyleBackColor = false;
+            this.btnEncontrarPaciente.Click += new System.EventHandler(this.btnEncontrarPaciente_Click);
             // 
             // lblCpfPaciente
             // 
@@ -209,12 +210,12 @@
             this.lblCpfPaciente.TabIndex = 97;
             this.lblCpfPaciente.Text = "CPF :";
             // 
-            // txbCpfPaciente
+            // txtCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(46, 131);
-            this.txbCpfPaciente.Name = "txbCpfPaciente";
-            this.txbCpfPaciente.Size = new System.Drawing.Size(114, 23);
-            this.txbCpfPaciente.TabIndex = 96;
+            this.txtCpfPaciente.Location = new System.Drawing.Point(46, 131);
+            this.txtCpfPaciente.Name = "txtCpfPaciente";
+            this.txtCpfPaciente.Size = new System.Drawing.Size(114, 23);
+            this.txtCpfPaciente.TabIndex = 96;
             // 
             // lblBuscarPaciente
             // 
@@ -237,6 +238,7 @@
             // 
             // txtNomePaciente
             // 
+            this.txtNomePaciente.Enabled = false;
             this.txtNomePaciente.Location = new System.Drawing.Point(185, 131);
             this.txtNomePaciente.Name = "txtNomePaciente";
             this.txtNomePaciente.Size = new System.Drawing.Size(282, 23);
@@ -263,7 +265,7 @@
             this.Controls.Add(this.lblTelPaciente);
             this.Controls.Add(this.btnEncontrarPaciente);
             this.Controls.Add(this.lblCpfPaciente);
-            this.Controls.Add(this.txbCpfPaciente);
+            this.Controls.Add(this.txtCpfPaciente);
             this.Controls.Add(this.lblBuscarPaciente);
             this.Controls.Add(this.lblNomePaciente);
             this.Controls.Add(this.txtNomePaciente);
@@ -294,7 +296,7 @@
         private Label lblTelPaciente;
         private Button btnEncontrarPaciente;
         private Label lblCpfPaciente;
-        private TextBox txbCpfPaciente;
+        private TextBox txtCpfPaciente;
         private Label lblBuscarPaciente;
         private Label lblNomePaciente;
         private TextBox txtNomePaciente;
