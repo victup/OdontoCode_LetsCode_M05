@@ -14,5 +14,20 @@ namespace OdontoCode.Domain
             public int Id_paciente { get; set; }
             public int Id_dentista { get; set; }
 
-    }
+        public Agendamento (int id_agendamento,DateTime data, string desc_consulta,int id_paciente,int id_dentista)
+        {
+            Id_agendamento = id_agendamento;
+            Data = data;
+            Desc_consulta = desc_consulta;
+            Id_paciente = id_paciente;
+            Id_dentista = id_dentista;
+        } 
+
+        public Agendamento()
+        {
+
+        }
+
+
+        }
 }

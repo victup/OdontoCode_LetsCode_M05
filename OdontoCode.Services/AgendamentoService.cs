@@ -1,5 +1,8 @@
-﻿using OdontoCode.Domain;
+﻿
+using OdontoCode.Domain;
+using OdontoCode.Services.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace OdontoCode.Services
 {
-    public class AgendamentoService
+    public class AgendamentoService : IAgendamentoService
         
     {
 
@@ -34,7 +37,11 @@ namespace OdontoCode.Services
                 new Agendamento{Id_agendamento = 19, Data = Convert.ToDateTime("2022-08-07T14:00:00"), Desc_consulta = "BOTOX", Id_paciente = 19, Id_dentista = 5},
                 new Agendamento{Id_agendamento = 20, Data = Convert.ToDateTime("2022-08-07T16:00:00"), Desc_consulta = "CIRURGIA", Id_paciente = 20, Id_dentista = 5},
          };
+        // teste
+        public AgendamentoService()
+        {
 
+        }
         private void ImprimirAgendamentos()
         {
             foreach (var item in listaAgendamento)
@@ -43,5 +50,52 @@ namespace OdontoCode.Services
                 Console.WriteLine($"{item.Desc_consulta} {item.Data}");
             }
         }
+
+
+        public List<Agendamento> FindAppointment(string info)
+        {
+             return listaAgendamento.Where(agnd => agnd.Desc_consulta == info).ToList();
+        }
+
+        public List<Agendamento> FindAppointment (DateTime data)
+        {
+
+           return listaAgendamento.Where(agnd => agnd.Data == data).ToList();
+            
+        }
+
+        public List<Agendamento> FindAppointment(string info,DateTime data)
+        {
+
+            return listaAgendamento.Where(agnd => agnd.Desc_consulta == info || agnd.Data == data).ToList();
+
+        }
+
+        public void NewAppointment(Agendamento agendamento)
+        {
+            if (!listaAgendamento.Contains(agendamento))
+            {
+                listaAgendamento.Add(agendamento);
+            }
+        }
+
+        public void CancelAppointment(Agendamento agendamento)
+        {
+            listaAgendamento.Remove(agendamento);
+        }
+
+        public void ChangeAppointment(string info, DateTime data)
+        {
+            var lista = listaAgendamento.Where(agnd => agnd.Desc_consulta == info || agnd.Data == data).ToList();
+            if (lista.Exists (agnd => agnd.Desc_consulta == info || agnd.Data == data))
+            {
+                foreach (var agendamento in listaAgendamento)
+                {
+                    agendamento.Desc_consulta = info;
+                    agendamento.Data = data;
+                }
+            }
+        }
+
     }
 }
