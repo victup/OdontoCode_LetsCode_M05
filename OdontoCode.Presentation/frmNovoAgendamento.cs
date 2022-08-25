@@ -41,10 +41,7 @@ namespace OdontoCode.Presentation
         private void NewApointment()
         {
 
-            var aService = new AgendamentoService();
-            var id = aService.GerarNovoID();
-
-            var agendamento = new Agendamento(id, data, ds_consulta, id_paciente, id_dentista);
+            
         }
     }
 }
