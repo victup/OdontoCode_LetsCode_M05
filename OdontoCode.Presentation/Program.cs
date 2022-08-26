@@ -20,17 +20,18 @@ namespace OdontoCode.Presentation
 
             var serviceProvider = services.BuildServiceProvider();
             var dentists = serviceProvider.GetService<IDentistaService>();
+            var agendamento = serviceProvider.GetService<IAgendamentoService>();
             var paciente = serviceProvider.GetService<IPacienteService>();
 
-           
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmMenu(dentists, paciente));
+            Application.Run(new frmMenu(dentists, agendamento, paciente));
 
         }
         public static void ConfigureServices(IServiceCollection services)
         {
             services
                 .AddScoped<IDentistaService, DentistaService>()
+                .AddScoped<IAgendamentoService, AgendamentoService>()
                 .AddScoped<IPacienteService, PacienteService>();
         }
     }
