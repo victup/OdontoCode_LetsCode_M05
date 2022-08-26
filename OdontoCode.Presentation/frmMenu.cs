@@ -72,14 +72,13 @@ namespace OdontoCode.Presentation
                 this.Close();
         }
 
-        private void opcNovoAgendamento_Click(object sender, EventArgs e)
+        private void opcNovoAgendamento_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             frmNovoAgendamento frmNovoAgendamento = new frmNovoAgendamento(_agendamentoService);
             frmNovoAgendamento.ShowDialog();
             this.Show();
         }
-
         private void opcAgendamentosBuscar_Click(object sender, EventArgs e)
         {
             this.Hide();

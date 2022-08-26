@@ -168,6 +168,7 @@
             this.opcNovoAgendamento.Name = "opcNovoAgendamento";
             this.opcNovoAgendamento.Size = new System.Drawing.Size(182, 22);
             this.opcNovoAgendamento.Text = "Novo Agendamento";
+            this.opcNovoAgendamento.Click += new System.EventHandler(this.opcNovoAgendamento_Click_1);
             // 
             // opcAlterarAgendamento
             // 
