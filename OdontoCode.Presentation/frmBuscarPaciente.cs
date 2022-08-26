@@ -99,7 +99,7 @@ namespace OdontoCode.Presentation
                 }
                 else
                 {
-                    MessageBox.Show($"Não encontramos nenhum dentista com os valores fornecidos.");
+                    MessageBox.Show($"Não encontramos nenhum paciente com os valores fornecidos.");
                     btnEncontrarPaciente.Visible = true;
                     btnLimparPaciente.Visible = false;
                 }

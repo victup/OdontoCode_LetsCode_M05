@@ -49,6 +49,7 @@
             this.lblDesligarPaciente = new System.Windows.Forms.Label();
             this.lblNomePaciente = new System.Windows.Forms.Label();
             this.txtNomePaciente = new System.Windows.Forms.TextBox();
+            this.lblaviso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNumPaciente
@@ -256,11 +257,22 @@
             this.txtNomePaciente.Size = new System.Drawing.Size(282, 23);
             this.txtNomePaciente.TabIndex = 72;
             // 
+            // lblaviso
+            // 
+            this.lblaviso.AutoSize = true;
+            this.lblaviso.Location = new System.Drawing.Point(51, 343);
+            this.lblaviso.Name = "lblaviso";
+            this.lblaviso.Size = new System.Drawing.Size(38, 15);
+            this.lblaviso.TabIndex = 93;
+            this.lblaviso.Text = "label1";
+            this.lblaviso.Visible = false;
+            // 
             // frmDesligarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 450);
+            this.Controls.Add(this.lblaviso);
             this.Controls.Add(this.txtNumPaciente);
             this.Controls.Add(this.txtCidadePaciente);
             this.Controls.Add(this.txtUfPaciente);
@@ -314,5 +326,6 @@
         private Label lblDesligarPaciente;
         private Label lblNomePaciente;
         private TextBox txtNomePaciente;
+        private Label lblaviso;
     }
 }
