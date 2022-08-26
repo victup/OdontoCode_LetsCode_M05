@@ -73,7 +73,7 @@
             this.lblDataAgendamento.Name = "lblDataAgendamento";
             this.lblDataAgendamento.Size = new System.Drawing.Size(263, 20);
             this.lblDataAgendamento.TabIndex = 70;
-            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-dd  hh:mm:ss) :";
+            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss) :";
             // 
             // lblDentista
             // 

@@ -41,12 +41,14 @@
             this.txtNomeDentista = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lstAgendamento = new System.Windows.Forms.ListBox();
+            this.lblAgendamentoEncontrado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEncontrarPaciente
             // 
             this.btnEncontrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEncontrarPaciente.Location = new System.Drawing.Point(491, 153);
+            this.btnEncontrarPaciente.Location = new System.Drawing.Point(504, 155);
             this.btnEncontrarPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEncontrarPaciente.Name = "btnEncontrarPaciente";
             this.btnEncontrarPaciente.Size = new System.Drawing.Size(86, 31);
@@ -70,9 +72,9 @@
             this.lblDataAgendamento.AutoSize = true;
             this.lblDataAgendamento.Location = new System.Drawing.Point(73, 268);
             this.lblDataAgendamento.Name = "lblDataAgendamento";
-            this.lblDataAgendamento.Size = new System.Drawing.Size(48, 20);
+            this.lblDataAgendamento.Size = new System.Drawing.Size(267, 20);
             this.lblDataAgendamento.TabIndex = 41;
-            this.lblDataAgendamento.Text = "Data :";
+            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss)  :";
             this.lblDataAgendamento.Visible = false;
             // 
             // lblDentista
@@ -88,7 +90,7 @@
             // lblCpfPaciente
             // 
             this.lblCpfPaciente.AutoSize = true;
-            this.lblCpfPaciente.Location = new System.Drawing.Point(331, 133);
+            this.lblCpfPaciente.Location = new System.Drawing.Point(355, 133);
             this.lblCpfPaciente.Name = "lblCpfPaciente";
             this.lblCpfPaciente.Size = new System.Drawing.Size(99, 20);
             this.lblCpfPaciente.TabIndex = 38;
@@ -96,7 +98,7 @@
             // 
             // txbCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(331, 157);
+            this.txbCpfPaciente.Location = new System.Drawing.Point(355, 157);
             this.txbCpfPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCpfPaciente.Name = "txbCpfPaciente";
             this.txbCpfPaciente.Size = new System.Drawing.Size(130, 27);
@@ -126,13 +128,13 @@
             this.txtNomePaciente.Location = new System.Drawing.Point(73, 157);
             this.txtNomePaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomePaciente.Name = "txtNomePaciente";
-            this.txtNomePaciente.Size = new System.Drawing.Size(231, 27);
+            this.txtNomePaciente.Size = new System.Drawing.Size(267, 27);
             this.txtNomePaciente.TabIndex = 34;
             // 
             // btnAlterarAgendamento
             // 
             this.btnAlterarAgendamento.BackColor = System.Drawing.Color.Gold;
-            this.btnAlterarAgendamento.Location = new System.Drawing.Point(208, 429);
+            this.btnAlterarAgendamento.Location = new System.Drawing.Point(343, 597);
             this.btnAlterarAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAlterarAgendamento.Name = "btnAlterarAgendamento";
             this.btnAlterarAgendamento.Size = new System.Drawing.Size(219, 44);
@@ -147,15 +149,16 @@
             this.txtNomeDentista.Location = new System.Drawing.Point(73, 228);
             this.txtNomeDentista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomeDentista.Name = "txtNomeDentista";
-            this.txtNomeDentista.Size = new System.Drawing.Size(231, 27);
+            this.txtNomeDentista.Size = new System.Drawing.Size(272, 27);
             this.txtNomeDentista.TabIndex = 49;
             // 
             // txtData
             // 
+            this.txtData.Enabled = false;
             this.txtData.Location = new System.Drawing.Point(73, 292);
             this.txtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(231, 27);
+            this.txtData.Size = new System.Drawing.Size(272, 27);
             this.txtData.TabIndex = 50;
             // 
             // txtDescricao
@@ -163,14 +166,36 @@
             this.txtDescricao.Location = new System.Drawing.Point(73, 357);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(231, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(272, 27);
             this.txtDescricao.TabIndex = 51;
+            // 
+            // lstAgendamento
+            // 
+            this.lstAgendamento.FormattingEnabled = true;
+            this.lstAgendamento.ItemHeight = 20;
+            this.lstAgendamento.Location = new System.Drawing.Point(73, 436);
+            this.lstAgendamento.Name = "lstAgendamento";
+            this.lstAgendamento.Size = new System.Drawing.Size(795, 104);
+            this.lstAgendamento.TabIndex = 52;
+            // 
+            // lblAgendamentoEncontrado
+            // 
+            this.lblAgendamentoEncontrado.AutoSize = true;
+            this.lblAgendamentoEncontrado.Enabled = false;
+            this.lblAgendamentoEncontrado.Location = new System.Drawing.Point(73, 413);
+            this.lblAgendamentoEncontrado.Name = "lblAgendamentoEncontrado";
+            this.lblAgendamentoEncontrado.Size = new System.Drawing.Size(195, 20);
+            this.lblAgendamentoEncontrado.TabIndex = 82;
+            this.lblAgendamentoEncontrado.Text = "Agendamento Encontrado : ";
+            this.lblAgendamentoEncontrado.Visible = false;
             // 
             // frmAlterarAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 519);
+            this.ClientSize = new System.Drawing.Size(924, 654);
+            this.Controls.Add(this.lblAgendamentoEncontrado);
+            this.Controls.Add(this.lstAgendamento);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.txtNomeDentista);
@@ -210,5 +235,7 @@
         private TextBox txtNomeDentista;
         private TextBox txtData;
         private TextBox txtDescricao;
+        private ListBox lstAgendamento;
+        private Label lblAgendamentoEncontrado;
     }
 }

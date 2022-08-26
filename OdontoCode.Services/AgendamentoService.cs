@@ -257,6 +257,7 @@ namespace OdontoCode.Services
         }
         #endregion
 
+        #region Retornar Nome Paciente
         public string GetPacientName(int id)
         {
             string name = "";
@@ -270,7 +271,9 @@ namespace OdontoCode.Services
             }
             return name;
         }
+        #endregion
 
+        #region Retornar Nome Dentista
         public string GetDentistName(int id)
         {
             string name = "";
@@ -284,8 +287,9 @@ namespace OdontoCode.Services
             }
             return name;
         }
+        #endregion
 
-
+        #region Busca por Agendamento
         public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta)
         {
             var busca = new AgendamentoService();
@@ -309,13 +313,16 @@ namespace OdontoCode.Services
             }
             return list;
         }
+        #endregion
 
-  
+        #region Método para Contagem (teste para add ou remover da lista)
         public string AgendamentoCount()
         {
             return listaAgendamento.Count().ToString();
         }
+        #endregion
 
+        #region Busca por Agendamento (com data)
         /*public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag)
         {
             var busca = new AgendamentoService();
@@ -340,6 +347,7 @@ namespace OdontoCode.Services
             }
             return list;
       }*/
+        #endregion
     }
 
 }

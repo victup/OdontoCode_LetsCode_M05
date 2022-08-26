@@ -66,6 +66,14 @@ namespace OdontoCode.Presentation
 
             var id_dentista = SetDentist();
             txtNomeDentista.Text = _agendamentoService.GetDentistName(id_dentista);
+
+            lblDentista.Visible = true;
+            txtNomeDentista.Visible = true;
+            lblDataAgendamento.Visible = true;
+            txtData.Visible = true;
+            lblDescricaoAgendamento.Visible = true;
+            txtDescricao.Visible = true;
+            btnCancelarAgendamento.Visible = true;
         }
 
         private void btnCancelarAgendamento_Click(object sender, EventArgs e)

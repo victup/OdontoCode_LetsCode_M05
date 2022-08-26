@@ -60,7 +60,7 @@
             // btnEncontrarPaciente
             // 
             this.btnEncontrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEncontrarPaciente.Location = new System.Drawing.Point(471, 151);
+            this.btnEncontrarPaciente.Location = new System.Drawing.Point(497, 153);
             this.btnEncontrarPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEncontrarPaciente.Name = "btnEncontrarPaciente";
             this.btnEncontrarPaciente.Size = new System.Drawing.Size(86, 31);
@@ -86,9 +86,9 @@
             this.lblDataAgendamento.Enabled = false;
             this.lblDataAgendamento.Location = new System.Drawing.Point(73, 265);
             this.lblDataAgendamento.Name = "lblDataAgendamento";
-            this.lblDataAgendamento.Size = new System.Drawing.Size(93, 20);
+            this.lblDataAgendamento.Size = new System.Drawing.Size(263, 20);
             this.lblDataAgendamento.TabIndex = 56;
-            this.lblDataAgendamento.Text = "Data e Hora:";
+            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss) :";
             this.lblDataAgendamento.Visible = false;
             // 
             // lblDentista
@@ -105,7 +105,7 @@
             // lblCpfPaciente
             // 
             this.lblCpfPaciente.AutoSize = true;
-            this.lblCpfPaciente.Location = new System.Drawing.Point(335, 127);
+            this.lblCpfPaciente.Location = new System.Drawing.Point(352, 129);
             this.lblCpfPaciente.Name = "lblCpfPaciente";
             this.lblCpfPaciente.Size = new System.Drawing.Size(40, 20);
             this.lblCpfPaciente.TabIndex = 53;
@@ -113,7 +113,7 @@
             // 
             // txbCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(335, 153);
+            this.txbCpfPaciente.Location = new System.Drawing.Point(352, 153);
             this.txbCpfPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCpfPaciente.Name = "txbCpfPaciente";
             this.txbCpfPaciente.Size = new System.Drawing.Size(130, 27);
@@ -143,7 +143,7 @@
             this.txtNomePaciente.Location = new System.Drawing.Point(73, 151);
             this.txtNomePaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomePaciente.Name = "txtNomePaciente";
-            this.txtNomePaciente.Size = new System.Drawing.Size(231, 27);
+            this.txtNomePaciente.Size = new System.Drawing.Size(263, 27);
             this.txtNomePaciente.TabIndex = 49;
             // 
             // txtNomeDentista
@@ -151,7 +151,7 @@
             this.txtNomeDentista.Location = new System.Drawing.Point(73, 225);
             this.txtNomeDentista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomeDentista.Name = "txtNomeDentista";
-            this.txtNomeDentista.Size = new System.Drawing.Size(231, 27);
+            this.txtNomeDentista.Size = new System.Drawing.Size(263, 27);
             this.txtNomeDentista.TabIndex = 64;
             // 
             // txtData
@@ -159,7 +159,7 @@
             this.txtData.Location = new System.Drawing.Point(73, 289);
             this.txtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(231, 27);
+            this.txtData.Size = new System.Drawing.Size(263, 27);
             this.txtData.TabIndex = 65;
             // 
             // txtDescricao
@@ -167,7 +167,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(73, 355);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(231, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(263, 27);
             this.txtDescricao.TabIndex = 66;
             // 
             // btncount

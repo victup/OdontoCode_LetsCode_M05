@@ -1,4 +1,5 @@
 ﻿using OdontoCode.Domain;
+using OdontoCode.Services;
 using OdontoCode.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,9 @@ namespace OdontoCode.Presentation
         {
 
         }
+
+        
+
 
         private int SetName()
         {
@@ -58,12 +62,37 @@ namespace OdontoCode.Presentation
 
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
-            var id_paciente = SetName();
-            txbCpfPaciente.Text = _agendamentoService.SearchPacintCPFForID(id_paciente);
-            txtNomePaciente.Text = _agendamentoService.GetPacientName(id_paciente);
+            string busca = " ";
+            string buscaPNome = " ";
+            string buscaPcpf = "";
+            string buscaDNome = " ";
+            string buscaDC = " ";
 
-            var id_dentista = SetDentist();
-            txtNomeDentista.Text = _agendamentoService.GetDentistName(id_dentista);
+            //DateTime buscaDH = Convert.ToDateTime("2022-08-05T10:00:00");
+
+            buscaPNome = txtNomePaciente.Text;
+
+            buscaPcpf = txbCpfPaciente.Text;
+
+            buscaDNome = txtNomeDentista.Text;
+
+            buscaDC = txtDescricao.Text;
+
+            //buscaDH = Convert.ToDateTime(txtDataEHora.Text);
+            var x = new AgendamentoService();
+            var agendamento = _agendamentoService.SearchForApointment(buscaPcpf, buscaPNome, buscaDNome, buscaDC);
+            foreach (var item in agendamento)
+            {
+                lstAgendamento.Items.Add($"{item.Show()} | Paciente: {x.GetPacientName(item.Id_paciente)} | Dentista: {x.GetDentistName(item.Id_dentista)}");
+            }
+            
+            lblDentista.Visible = true;
+            txtNomeDentista.Visible = true;
+            lblDataAgendamento.Visible = true;
+            txtData.Visible = true;
+            lblDescricaoAgendamento.Visible = true;
+            txtDescricao.Visible = true;
+            btnAlterarAgendamento.Visible = true;
         }
 
         private void btnAlterarAgendamento_Click(object sender, EventArgs e)

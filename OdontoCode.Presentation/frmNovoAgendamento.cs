@@ -72,7 +72,7 @@ namespace OdontoCode.Presentation
             return agendamento = new Agendamento(id, data, ds_consulta, id_paciente[0], id_dentista[0]);
 
         }
-
+         
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
             var id_paciente = SetName();
@@ -81,13 +81,21 @@ namespace OdontoCode.Presentation
 
             var id_dentista = SetDentist();
             txtNomeDentista.Text = _agendamentoService.GetDentistName(id_dentista);
+
+            lblDentista.Visible = true;
+            txtNomeDentista.Visible = true;
+            lblDataAgendamento.Visible = true;
+            txtData.Visible = true;
+            lblDescricaoAgendamento.Visible = true;
+            txtDescricao.Visible = true;    
+            btnAgendar.Visible = true;
         }
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
             var agendamento = NewApointment();
             _agendamentoService.NewAppointment(agendamento);
-
+           
             MessageBox.Show("Agendamento confirmado!");
         }
 

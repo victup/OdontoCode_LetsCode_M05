@@ -68,21 +68,21 @@
             this.txtNomePaciente.Location = new System.Drawing.Point(94, 157);
             this.txtNomePaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomePaciente.Name = "txtNomePaciente";
-            this.txtNomePaciente.Size = new System.Drawing.Size(231, 27);
+            this.txtNomePaciente.Size = new System.Drawing.Size(254, 27);
             this.txtNomePaciente.TabIndex = 18;
             // 
             // txbCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(345, 159);
+            this.txbCpfPaciente.Location = new System.Drawing.Point(376, 159);
             this.txbCpfPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCpfPaciente.Name = "txbCpfPaciente";
-            this.txbCpfPaciente.Size = new System.Drawing.Size(130, 27);
+            this.txbCpfPaciente.Size = new System.Drawing.Size(159, 27);
             this.txbCpfPaciente.TabIndex = 21;
             // 
             // lblCpfPaciente
             // 
             this.lblCpfPaciente.AutoSize = true;
-            this.lblCpfPaciente.Location = new System.Drawing.Point(345, 133);
+            this.lblCpfPaciente.Location = new System.Drawing.Point(376, 133);
             this.lblCpfPaciente.Name = "lblCpfPaciente";
             this.lblCpfPaciente.Size = new System.Drawing.Size(40, 20);
             this.lblCpfPaciente.TabIndex = 22;
@@ -101,11 +101,11 @@
             // lblDataAgendamento
             // 
             this.lblDataAgendamento.AutoSize = true;
-            this.lblDataAgendamento.Location = new System.Drawing.Point(94, 268);
+            this.lblDataAgendamento.Location = new System.Drawing.Point(94, 278);
             this.lblDataAgendamento.Name = "lblDataAgendamento";
-            this.lblDataAgendamento.Size = new System.Drawing.Size(101, 20);
+            this.lblDataAgendamento.Size = new System.Drawing.Size(263, 20);
             this.lblDataAgendamento.TabIndex = 25;
-            this.lblDataAgendamento.Text = "Data e Hora  :";
+            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss) :";
             this.lblDataAgendamento.Visible = false;
             // 
             // lblDescricaoAgendamento
@@ -121,7 +121,7 @@
             // btnEncontrarPaciente
             // 
             this.btnEncontrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEncontrarPaciente.Location = new System.Drawing.Point(541, 157);
+            this.btnEncontrarPaciente.Location = new System.Drawing.Point(561, 155);
             this.btnEncontrarPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEncontrarPaciente.Name = "btnEncontrarPaciente";
             this.btnEncontrarPaciente.Size = new System.Drawing.Size(86, 31);
@@ -148,24 +148,27 @@
             this.txtNomeDentista.Location = new System.Drawing.Point(94, 228);
             this.txtNomeDentista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNomeDentista.Name = "txtNomeDentista";
-            this.txtNomeDentista.Size = new System.Drawing.Size(231, 27);
+            this.txtNomeDentista.Size = new System.Drawing.Size(254, 27);
             this.txtNomeDentista.TabIndex = 35;
+            this.txtNomeDentista.Visible = false;
             // 
             // txtData
             // 
             this.txtData.Location = new System.Drawing.Point(94, 302);
             this.txtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(231, 27);
+            this.txtData.Size = new System.Drawing.Size(254, 27);
             this.txtData.TabIndex = 36;
+            this.txtData.Visible = false;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(94, 369);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(231, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(254, 27);
             this.txtDescricao.TabIndex = 37;
+            this.txtDescricao.Visible = false;
             // 
             // btncount
             // 
