@@ -58,19 +58,18 @@ namespace OdontoCode.Presentation
             frmAtualizarDentista.ShowDialog();
             this.Show();
         }
-        private void menuSobre_Click(object sender, EventArgs e)
+        private void menuSobre_Click_1(object sender, EventArgs e)
         {
             frmSobreSistema frmSobre = new frmSobreSistema();
             frmSobre.ShowDialog();
         }
 
-        private void menuSair_Click(object sender, EventArgs e)
+        private void menuSair_Click_1(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Tem certeza que deseja sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resultado == DialogResult.Yes)
                 this.Close();
-
         }
 
         private void opcNovoAgendamento_Click(object sender, EventArgs e)
@@ -136,5 +135,7 @@ namespace OdontoCode.Presentation
             frmDesligar.ShowDialog();
             this.Show();
         }
+
+        
     }
 }
