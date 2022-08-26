@@ -16,12 +16,14 @@ namespace OdontoCode.Presentation
     {
         private readonly IDentistaService _dentistService;
         private readonly IAgendamentoService _agendamentoService;
-        public frmMenu(IDentistaService _dentists, IAgendamentoService agendamentoService)
+        private readonly IPacienteService _pacienteService;
+        public frmMenu(IDentistaService _dentists, IAgendamentoService agendamentoService, IPacienteService _paciente)
         {
             InitializeComponent();
 
             _dentistService = _dentists;
             _agendamentoService = agendamentoService;
+            _pacienteService = _paciente;
         }
 
         private void menuDentistaBuscar_Click(object sender, EventArgs e)
@@ -56,10 +58,56 @@ namespace OdontoCode.Presentation
             frmAtualizarDentista.ShowDialog();
             this.Show();
         }
+        private void menuSobre_Click(object sender, EventArgs e)
+        {
+            frmSobreSistema frmSobre = new frmSobreSistema();
+            frmSobre.ShowDialog();
+        }
+
+        private void menuSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+                this.Close();
+
+        }
 
         private void opcNovoAgendamento_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuPacienteNovo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmNovoPaciente frmNovo = new frmNovoPaciente(_pacienteService);
+            frmNovo.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteAtualizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAtualizarPaciente frmAtualizar = new frmAtualizarPaciente(_pacienteService);
+            frmAtualizar.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteBuscar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmBuscarPaciente frmBuscar = new frmBuscarPaciente(_pacienteService);
+            frmBuscar.ShowDialog();
+            this.Show();
+        }
+
+        private void menuPacienteDesligar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDesligarPaciente frmDesligar = new frmDesligarPaciente(_pacienteService);
+            frmDesligar.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -31,7 +31,7 @@
             this.btnAtualizarPaciente = new System.Windows.Forms.Button();
             this.btnEncontrarPaciente = new System.Windows.Forms.Button();
             this.lblCpfPaciente = new System.Windows.Forms.Label();
-            this.txbCpfPaciente = new System.Windows.Forms.TextBox();
+            this.txtCpfPaciente = new System.Windows.Forms.TextBox();
             this.lblAtualizarPaciente = new System.Windows.Forms.Label();
             this.lblNomePaciente = new System.Windows.Forms.Label();
             this.txtNomePaciente = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.btnAtualizarPaciente.Text = "Atualizar Cadastro do Paciente";
             this.btnAtualizarPaciente.UseVisualStyleBackColor = false;
             this.btnAtualizarPaciente.Visible = false;
+            this.btnAtualizarPaciente.Click += new System.EventHandler(this.btnAtualizarPaciente_Click);
             // 
             // btnEncontrarPaciente
             // 
@@ -71,6 +72,7 @@
             this.btnEncontrarPaciente.TabIndex = 54;
             this.btnEncontrarPaciente.Text = "Buscar";
             this.btnEncontrarPaciente.UseVisualStyleBackColor = false;
+            this.btnEncontrarPaciente.Click += new System.EventHandler(this.btnEncontrarPaciente_Click);
             // 
             // lblCpfPaciente
             // 
@@ -81,12 +83,12 @@
             this.lblCpfPaciente.TabIndex = 53;
             this.lblCpfPaciente.Text = "CPF :";
             // 
-            // txbCpfPaciente
+            // txtCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(54, 114);
-            this.txbCpfPaciente.Name = "txbCpfPaciente";
-            this.txbCpfPaciente.Size = new System.Drawing.Size(114, 23);
-            this.txbCpfPaciente.TabIndex = 52;
+            this.txtCpfPaciente.Location = new System.Drawing.Point(54, 114);
+            this.txtCpfPaciente.Name = "txtCpfPaciente";
+            this.txtCpfPaciente.Size = new System.Drawing.Size(114, 23);
+            this.txtCpfPaciente.TabIndex = 52;
             // 
             // lblAtualizarPaciente
             // 
@@ -262,7 +264,7 @@
             this.Controls.Add(this.btnAtualizarPaciente);
             this.Controls.Add(this.btnEncontrarPaciente);
             this.Controls.Add(this.lblCpfPaciente);
-            this.Controls.Add(this.txbCpfPaciente);
+            this.Controls.Add(this.txtCpfPaciente);
             this.Controls.Add(this.lblAtualizarPaciente);
             this.Controls.Add(this.lblNomePaciente);
             this.Controls.Add(this.txtNomePaciente);
@@ -280,7 +282,7 @@
         private Button btnAtualizarPaciente;
         private Button btnEncontrarPaciente;
         private Label lblCpfPaciente;
-        private TextBox txbCpfPaciente;
+        private TextBox txtCpfPaciente;
         private Label lblAtualizarPaciente;
         private Label lblNomePaciente;
         private TextBox txtNomePaciente;
