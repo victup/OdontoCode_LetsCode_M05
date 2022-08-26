@@ -52,52 +52,50 @@
             // 
             this.lblNovoAgendamento.AutoSize = true;
             this.lblNovoAgendamento.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNovoAgendamento.Location = new System.Drawing.Point(131, 40);
+            this.lblNovoAgendamento.Location = new System.Drawing.Point(115, 30);
             this.lblNovoAgendamento.Name = "lblNovoAgendamento";
-            this.lblNovoAgendamento.Size = new System.Drawing.Size(447, 46);
+            this.lblNovoAgendamento.Size = new System.Drawing.Size(357, 37);
             this.lblNovoAgendamento.TabIndex = 20;
             this.lblNovoAgendamento.Text = "Realizar Novo Agendamento";
             // 
             // lblNomePaciente
             // 
             this.lblNomePaciente.AutoSize = true;
-            this.lblNomePaciente.Location = new System.Drawing.Point(152, 133);
+            this.lblNomePaciente.Location = new System.Drawing.Point(133, 100);
             this.lblNomePaciente.Name = "lblNomePaciente";
-            this.lblNomePaciente.Size = new System.Drawing.Size(116, 20);
+            this.lblNomePaciente.Size = new System.Drawing.Size(94, 15);
             this.lblNomePaciente.TabIndex = 19;
             this.lblNomePaciente.Text = "Nome Paciente :";
             // 
             // txtNomePaciente
             // 
-            this.txtNomePaciente.Location = new System.Drawing.Point(152, 159);
-            this.txtNomePaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNomePaciente.Location = new System.Drawing.Point(133, 119);
             this.txtNomePaciente.Name = "txtNomePaciente";
-            this.txtNomePaciente.Size = new System.Drawing.Size(254, 27);
+            this.txtNomePaciente.Size = new System.Drawing.Size(223, 23);
             this.txtNomePaciente.TabIndex = 18;
             // 
             // txbCpfPaciente
             // 
-            this.txbCpfPaciente.Location = new System.Drawing.Point(436, 157);
-            this.txbCpfPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbCpfPaciente.Location = new System.Drawing.Point(382, 118);
             this.txbCpfPaciente.Name = "txbCpfPaciente";
-            this.txbCpfPaciente.Size = new System.Drawing.Size(159, 27);
+            this.txbCpfPaciente.Size = new System.Drawing.Size(140, 23);
             this.txbCpfPaciente.TabIndex = 21;
             // 
             // lblCpfPaciente
             // 
             this.lblCpfPaciente.AutoSize = true;
-            this.lblCpfPaciente.Location = new System.Drawing.Point(436, 133);
+            this.lblCpfPaciente.Location = new System.Drawing.Point(382, 100);
             this.lblCpfPaciente.Name = "lblCpfPaciente";
-            this.lblCpfPaciente.Size = new System.Drawing.Size(101, 20);
+            this.lblCpfPaciente.Size = new System.Drawing.Size(82, 15);
             this.lblCpfPaciente.TabIndex = 22;
             this.lblCpfPaciente.Text = "CPF  paciente:";
             // 
             // lblDentista
             // 
             this.lblDentista.AutoSize = true;
-            this.lblDentista.Location = new System.Drawing.Point(152, 204);
+            this.lblDentista.Location = new System.Drawing.Point(133, 153);
             this.lblDentista.Name = "lblDentista";
-            this.lblDentista.Size = new System.Drawing.Size(116, 20);
+            this.lblDentista.Size = new System.Drawing.Size(92, 15);
             this.lblDentista.TabIndex = 23;
             this.lblDentista.Text = "Nome Dentista :";
             this.lblDentista.Visible = false;
@@ -105,9 +103,9 @@
             // lblDataAgendamento
             // 
             this.lblDataAgendamento.AutoSize = true;
-            this.lblDataAgendamento.Location = new System.Drawing.Point(152, 278);
+            this.lblDataAgendamento.Location = new System.Drawing.Point(133, 208);
             this.lblDataAgendamento.Name = "lblDataAgendamento";
-            this.lblDataAgendamento.Size = new System.Drawing.Size(263, 20);
+            this.lblDataAgendamento.Size = new System.Drawing.Size(214, 15);
             this.lblDataAgendamento.TabIndex = 25;
             this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss) :";
             this.lblDataAgendamento.Visible = false;
@@ -115,9 +113,9 @@
             // lblDescricaoAgendamento
             // 
             this.lblDescricaoAgendamento.AutoSize = true;
-            this.lblDescricaoAgendamento.Location = new System.Drawing.Point(152, 345);
+            this.lblDescricaoAgendamento.Location = new System.Drawing.Point(133, 259);
             this.lblDescricaoAgendamento.Name = "lblDescricaoAgendamento";
-            this.lblDescricaoAgendamento.Size = new System.Drawing.Size(180, 20);
+            this.lblDescricaoAgendamento.Size = new System.Drawing.Size(144, 15);
             this.lblDescricaoAgendamento.TabIndex = 31;
             this.lblDescricaoAgendamento.Text = "Descrição/Procedimento: ";
             this.lblDescricaoAgendamento.Visible = false;
@@ -125,10 +123,9 @@
             // btnEncontrarPaciente
             // 
             this.btnEncontrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEncontrarPaciente.Location = new System.Drawing.Point(628, 224);
-            this.btnEncontrarPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEncontrarPaciente.Location = new System.Drawing.Point(550, 168);
             this.btnEncontrarPaciente.Name = "btnEncontrarPaciente";
-            this.btnEncontrarPaciente.Size = new System.Drawing.Size(86, 31);
+            this.btnEncontrarPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnEncontrarPaciente.TabIndex = 33;
             this.btnEncontrarPaciente.Text = "Buscar";
             this.btnEncontrarPaciente.UseVisualStyleBackColor = false;
@@ -137,10 +134,9 @@
             // btnAgendar
             // 
             this.btnAgendar.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnAgendar.Location = new System.Drawing.Point(212, 459);
-            this.btnAgendar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAgendar.Location = new System.Drawing.Point(186, 344);
             this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(219, 44);
+            this.btnAgendar.Size = new System.Drawing.Size(192, 33);
             this.btnAgendar.TabIndex = 34;
             this.btnAgendar.Text = "Confirmar Agendamento";
             this.btnAgendar.UseVisualStyleBackColor = false;
@@ -149,36 +145,33 @@
             // 
             // txtNomeDentista
             // 
-            this.txtNomeDentista.Location = new System.Drawing.Point(152, 228);
-            this.txtNomeDentista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNomeDentista.Location = new System.Drawing.Point(133, 171);
             this.txtNomeDentista.Name = "txtNomeDentista";
-            this.txtNomeDentista.Size = new System.Drawing.Size(254, 27);
+            this.txtNomeDentista.Size = new System.Drawing.Size(223, 23);
             this.txtNomeDentista.TabIndex = 35;
-            this.txtNomeDentista.Visible = false;
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(152, 302);
-            this.txtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtData.Location = new System.Drawing.Point(133, 226);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(254, 27);
+            this.txtData.Size = new System.Drawing.Size(223, 23);
             this.txtData.TabIndex = 36;
             this.txtData.Visible = false;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(152, 369);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescricao.Location = new System.Drawing.Point(133, 277);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(254, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(223, 23);
             this.txtDescricao.TabIndex = 37;
             this.txtDescricao.Visible = false;
             // 
             // btncount
             // 
-            this.btncount.Location = new System.Drawing.Point(541, 323);
+            this.btncount.Location = new System.Drawing.Point(473, 242);
+            this.btncount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncount.Name = "btncount";
-            this.btncount.Size = new System.Drawing.Size(94, 29);
+            this.btncount.Size = new System.Drawing.Size(82, 22);
             this.btncount.TabIndex = 38;
             this.btncount.Text = "count";
             this.btncount.UseVisualStyleBackColor = true;
@@ -188,18 +181,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 133);
+            this.label1.Location = new System.Drawing.Point(0, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 39;
             this.label1.Text = "Busca por paciente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 204);
+            this.label2.Location = new System.Drawing.Point(0, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
+            this.label2.Size = new System.Drawing.Size(104, 15);
             this.label2.TabIndex = 40;
             this.label2.Text = "Busca por dentista";
             // 
@@ -208,9 +201,9 @@
             this.lblCampoObrigatorio.AutoSize = true;
             this.lblCampoObrigatorio.BackColor = System.Drawing.Color.OrangeRed;
             this.lblCampoObrigatorio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCampoObrigatorio.Location = new System.Drawing.Point(3, 305);
+            this.lblCampoObrigatorio.Location = new System.Drawing.Point(3, 229);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            this.lblCampoObrigatorio.Size = new System.Drawing.Size(143, 20);
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(112, 15);
             this.lblCampoObrigatorio.TabIndex = 41;
             this.lblCampoObrigatorio.Text = "Campo Obrigatório";
             this.lblCampoObrigatorio.Visible = false;
@@ -218,9 +211,10 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
-            this.btnLimpar.Location = new System.Drawing.Point(530, 511);
+            this.btnLimpar.Location = new System.Drawing.Point(464, 383);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(94, 29);
+            this.btnLimpar.Size = new System.Drawing.Size(82, 22);
             this.btnLimpar.TabIndex = 90;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -229,9 +223,9 @@
             // 
             // frmNovoAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 552);
+            this.ClientSize = new System.Drawing.Size(710, 414);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.lblCampoObrigatorio);
             this.Controls.Add(this.label2);
@@ -250,7 +244,6 @@
             this.Controls.Add(this.lblNovoAgendamento);
             this.Controls.Add(this.lblNomePaciente);
             this.Controls.Add(this.txtNomePaciente);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmNovoAgendamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
