@@ -16,7 +16,7 @@ namespace OdontoCode.Presentation
     public partial class frmDesligarPaciente : Form
     {
         private readonly IPacienteService _pacienteService;
-        Paciente paciente;
+        Paciente paciente = new Paciente();
         public frmDesligarPaciente(IPacienteService _paciente)
         {
             InitializeComponent();
@@ -51,10 +51,31 @@ namespace OdontoCode.Presentation
 
             txtNumPaciente.Text = paciente.Numero.ToString();
 
+            txtCpfPaciente.Visible = true;
+
+            txtNomePaciente.Visible = true;
+
+            txtTelPaciente.Visible = true;
+
+            txtCepPaciente.Visible = true;
+
+            txtUfPaciente.Visible = true;
+
+            txtCidadePaciente.Visible = true;
+
+            txtBairroPaciente.Visible = true;
+
+            txtRuaPaciente.Visible = true;
+
+            txtNumPaciente.Visible = true;
+
+            btnAtualizarPaciente.Visible = true;
+
         }
 
         private void btnAtualizarPaciente_Click(object sender, EventArgs e)
         {
+
             _pacienteService.ApagarPaciente(paciente);
             MessageBox.Show($"Paciente {paciente.Nome} desligado com sucesso");
         }

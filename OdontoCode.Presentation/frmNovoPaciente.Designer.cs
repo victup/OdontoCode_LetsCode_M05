@@ -213,7 +213,6 @@
             this.btnCadastrarPaciente.TabIndex = 36;
             this.btnCadastrarPaciente.Text = "Cadastrar Paciente";
             this.btnCadastrarPaciente.UseVisualStyleBackColor = false;
-            this.btnCadastrarPaciente.Visible = false;
             this.btnCadastrarPaciente.Click += new System.EventHandler(this.btnCadastrarPaciente_Click);
             // 
             // frmNovoPaciente

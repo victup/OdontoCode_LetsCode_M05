@@ -21,7 +21,7 @@ namespace OdontoCode.Domain
         public string Bairro { get; set; }
         public string Rua { get; set; }
         public int Numero { get; set; }
-        public bool Ativo { get; set; } = true;
+        public bool Ativo { get; set; }
 
         public Paciente(int id_paciente, string nome, string cPF, string telefone, string cEP, string uF, string cidade, string bairro, string rua, int numero, bool ativo)
         {

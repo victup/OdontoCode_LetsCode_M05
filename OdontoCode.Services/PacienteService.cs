@@ -40,7 +40,7 @@ namespace OdontoCode.Services
         }
         public bool RegistrarNovoPaciente(Paciente paciente)
         {
-            var possuiPaciente = listaPaciente.Where(x => x.CPF.Equals(paciente.CPF) || x.CPF.Equals(paciente.CPF));
+            var possuiPaciente = listaPaciente.Where(x => x.CPF == paciente.CPF);
 
             if (possuiPaciente.Any())
                 return false;

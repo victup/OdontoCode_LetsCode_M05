@@ -16,7 +16,6 @@ namespace OdontoCode.Presentation
     public partial class frmNovoPaciente : Form
     {
         private readonly IPacienteService _pacienteService;
-        Paciente paciente;
         public frmNovoPaciente(IPacienteService _paciente)
         {
             InitializeComponent();
@@ -25,8 +24,8 @@ namespace OdontoCode.Presentation
 
         private void btnCadastrarPaciente_Click(object sender, EventArgs e)
         {
-             _pacienteService.RegistrarNovoPaciente(paciente);
-            MessageBox.Show($"Paciente {paciente.Nome} cadastrado com sucesso");
+            _pacienteService.RegistrarNovoPaciente(new Paciente(_pacienteService.GerarId(), txtNomePaciente.Text, txtCpfPaciente.Text, txtTelPaciente.Text, txtCepPaciente.Text, txtUfPaciente.Text, txtCidadePaciente.Text, txtBairroPaciente.Text, txtRuaPaciente.Text, int.Parse(txtNumPaciente.Text), true));
+            MessageBox.Show($"Paciente {txtNomePaciente.Text} cadastrado com sucesso");
         }
     }
 }
