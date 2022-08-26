@@ -24,8 +24,27 @@ namespace OdontoCode.Presentation
 
         private void btnCadastrarPaciente_Click(object sender, EventArgs e)
         {
-            _pacienteService.RegistrarNovoPaciente(new Paciente(_pacienteService.GerarId(), txtNomePaciente.Text, txtCpfPaciente.Text, txtTelPaciente.Text, txtCepPaciente.Text, txtUfPaciente.Text, txtCidadePaciente.Text, txtBairroPaciente.Text, txtRuaPaciente.Text, int.Parse(txtNumPaciente.Text), true));
-            MessageBox.Show($"Paciente {txtNomePaciente.Text} cadastrado com sucesso");
+            if(!String.IsNullOrEmpty(txtNomePaciente.Text) &&
+               !String.IsNullOrEmpty(txtCpfPaciente.Text) &&
+               !String.IsNullOrEmpty(txtTelPaciente.Text) &&
+               !String.IsNullOrEmpty(txtCepPaciente.Text) &&
+               !String.IsNullOrEmpty(txtUfPaciente.Text) &&
+               !String.IsNullOrEmpty(txtCidadePaciente.Text) &&
+               !String.IsNullOrEmpty(txtBairroPaciente.Text) &&
+               !String.IsNullOrEmpty(txtRuaPaciente.Text) &&
+               !String.IsNullOrEmpty(txtRuaPaciente.Text)
+               )
+                {
+                    _pacienteService.RegistrarNovoPaciente(new Paciente(_pacienteService.GerarId(), txtNomePaciente.Text, txtCpfPaciente.Text, txtTelPaciente.Text, txtCepPaciente.Text, txtUfPaciente.Text, txtCidadePaciente.Text, txtBairroPaciente.Text, txtRuaPaciente.Text, int.Parse(txtNumPaciente.Text), true));
+                    MessageBox.Show($"Paciente {txtNomePaciente.Text} cadastrado com sucesso");
+                }
+             else
+            {
+                MessageBox.Show($"Existem campos em branco, todos devem ser preenchidos.", "Parâmetros faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+               
+                
+           
         }
     }
 }
