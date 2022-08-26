@@ -46,42 +46,51 @@ namespace OdontoCode.Presentation
 
                 MessageBox.Show($"Paciente {paciente.Nome} atualizado com sucesso!");
 
-                txtNomePaciente.Text = String.Empty;
                 txtCpfPaciente.Text = String.Empty;
+
+                txtNomePaciente.Text = String.Empty;
+
                 txtTelPaciente.Text = String.Empty;
-                txtBairroPaciente.Text = String.Empty;
+                txtTelPaciente.Visible = false;
+                lblTelPaciente.Visible = false;
+
                 txtCepPaciente.Text = String.Empty;
-                txtCidadePaciente.Text = String.Empty;
-                txtNumPaciente.Text = String.Empty;
-                txtRuaPaciente.Text = String.Empty;
+                txtCepPaciente.Visible = false;
+                lblCepPaciente.Visible = false;
+
                 txtUfPaciente.Text = String.Empty;
+                txtUfPaciente.Visible = false;
+                lblUfPaciente.Visible = false;
+
+                txtCidadePaciente.Text = String.Empty;
+                txtCidadePaciente.Visible = false;
+                lblCidadePaciente.Visible = false;
+
+                txtBairroPaciente.Text = String.Empty;
+                txtBairroPaciente.Visible = false;
+                lblBairroPaciente.Visible = false;
+
+                txtRuaPaciente.Text = String.Empty;
+                txtRuaPaciente.Visible = false;
+                lblRuaPaciente.Visible = false;
+
+                txtNumPaciente.Text = String.Empty;
+                txtNumPaciente.Visible = false;
+                lblNumPaciente.Visible = false;
             }
         }
 
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
-            //if ((String.IsNullOrEmpty(txtNomePaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtCpfPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtTelPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtBairroPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtCepPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtCidadePaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtNumPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtRuaPaciente.Text)) &&
-            //    (String.IsNullOrEmpty(txtUfPaciente.Text))
-            //    )
-            //{
-            //    lblValidaEntradas.Visible = true;
-            //    lblValidaEntradas.Text = "Pelo menos um campo deve ser preenchido";
-            //    lblValidaEntradas.ForeColor = Color.Red;
-            //}
-            //else
-            //{
+            if (!String.IsNullOrEmpty(txtNomePaciente.Text) ||
+                !String.IsNullOrEmpty(txtCpfPaciente.Text)
+               )
+            {
+                lblaviso.Visible = false;
+
                 string busca = "";
 
-                if (!String.IsNullOrEmpty(txtTelPaciente.Text))
-                    busca = txtTelPaciente.Text;
-                else if (!String.IsNullOrEmpty(txtCpfPaciente.Text))
+                if (!String.IsNullOrEmpty(txtCpfPaciente.Text))
                     busca = txtCpfPaciente.Text;
                 else
                     busca = txtNomePaciente.Text;
@@ -90,41 +99,53 @@ namespace OdontoCode.Presentation
 
                 if (paciente.CPF != null)
                 {
-                    btnEncontrarPaciente.Visible = false;
-                    btnAtualizarPaciente.Visible = true;
-                    lblTelPaciente.Visible = true;
-                    txtTelPaciente.Visible = true;
-                    lblBairroPaciente.Visible = true;
-                    txtBairroPaciente.Visible = true;
-                    lblCepPaciente.Visible = true;
-                    txtCepPaciente.Visible = true;
-                    lblUfPaciente.Visible = true;
-                    txtUfPaciente.Visible = true;
-                    lblCidadePaciente.Visible = true;
-                    txtCidadePaciente.Visible = true;
-                    lblRuaPaciente.Visible = true;
-                    txtRuaPaciente.Visible = true;
-                    lblNumPaciente.Visible = true;
-                    txtNumPaciente.Visible = true;
+                    txtCpfPaciente.Text = paciente.CPF;
+                    txtCpfPaciente.Visible = true;
+                    lblCpfPaciente.Visible = true;
 
                     txtNomePaciente.Text = paciente.Nome;
-                    txtCpfPaciente.Text = paciente.CPF;
+                    txtNomePaciente.Visible = true;
+                    lblNomePaciente.Visible = true;
+
                     txtTelPaciente.Text = paciente.Telefone;
-                    txtBairroPaciente.Text = paciente.Bairro;
+                    txtTelPaciente.Visible = true;
+                    lblTelPaciente.Visible = true;
+
                     txtCepPaciente.Text = paciente.CEP;
-                    txtCidadePaciente.Text = paciente.Cidade;
-                    txtNumPaciente.Text = paciente.Numero.ToString();
-                    txtRuaPaciente.Text = paciente.Rua;
+                    txtCepPaciente.Visible = true;
+                    lblCepPaciente.Visible = true;
+
                     txtUfPaciente.Text = paciente.UF;
+                    txtUfPaciente.Visible = true;
+                    lblUfPaciente.Visible = true;
+
+                    txtCidadePaciente.Text = paciente.Cidade;
+                    txtCidadePaciente.Visible = true;
+                    lblCidadePaciente.Visible = true;
+
+                    txtBairroPaciente.Text = paciente.Bairro;
+                    txtBairroPaciente.Visible = true;
+                    lblBairroPaciente.Visible = true;
+
+                    txtRuaPaciente.Text = paciente.Rua;
+                    txtRuaPaciente.Visible = true;
+                    lblRuaPaciente.Visible = true;
+
+                    txtNumPaciente.Text = paciente.Numero.ToString();
+                    txtNumPaciente.Visible = true;
+                    lblNumPaciente.Visible = true;
+                    btnAtualizarPaciente.Visible = true;
+
                 }
                 else
-                {
-                    MessageBox.Show($"Não encontramos nenhum dentista com os valores fornecidos.");
-                    btnEncontrarPaciente.Visible = true;
-
-                }
-
-            //}
+                    MessageBox.Show($"Não encontramos nenhum paciente com os valores fornecidos.");
+            }
+            else
+            {
+                lblaviso.Visible = true;
+                lblaviso.Text = $"Espera-se pelo menos um campo preenchido para realizar a busca.";
+                lblaviso.ForeColor = Color.Red;
+            }
         }
     }
 }
