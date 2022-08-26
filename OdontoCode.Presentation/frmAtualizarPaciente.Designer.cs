@@ -49,6 +49,7 @@
             this.lblCepPaciente = new System.Windows.Forms.Label();
             this.txtTelPaciente = new System.Windows.Forms.TextBox();
             this.lblTelPaciente = new System.Windows.Forms.Label();
+            this.lblaviso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAtualizarPaciente
@@ -242,11 +243,22 @@
             this.lblTelPaciente.Text = "Telefone :";
             this.lblTelPaciente.Visible = false;
             // 
+            // lblaviso
+            // 
+            this.lblaviso.AutoSize = true;
+            this.lblaviso.Location = new System.Drawing.Point(54, 317);
+            this.lblaviso.Name = "lblaviso";
+            this.lblaviso.Size = new System.Drawing.Size(38, 15);
+            this.lblaviso.TabIndex = 72;
+            this.lblaviso.Text = "label1";
+            this.lblaviso.Visible = false;
+            // 
             // frmAtualizarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 435);
+            this.Controls.Add(this.lblaviso);
             this.Controls.Add(this.txtNumPaciente);
             this.Controls.Add(this.txtCidadePaciente);
             this.Controls.Add(this.txtUfPaciente);
@@ -300,5 +312,6 @@
         private Label lblCepPaciente;
         private TextBox txtTelPaciente;
         private Label lblTelPaciente;
+        private Label lblaviso;
     }
 }
