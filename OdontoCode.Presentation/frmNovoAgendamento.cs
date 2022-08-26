@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace OdontoCode.Presentation
 {
@@ -59,6 +60,7 @@ namespace OdontoCode.Presentation
 
         private Agendamento NewApointment()
         {
+             
             var aService = new AgendamentoService();
             var data = Convert.ToDateTime(txtData.Text);
             var ds_consulta = txtDescricao.Text;
@@ -72,6 +74,16 @@ namespace OdontoCode.Presentation
             return agendamento = new Agendamento(id, data, ds_consulta, id_paciente[0], id_dentista[0]);
 
         }
+        /*private DateTime DataValidacao(DateTime data)
+        {
+            DateTime teste = DateTime.MinValue;
+            var datateste = DateTime.TryParse(txtData.Text, out teste);
+            if (!datateste)
+            {
+                MessageBox.Show("Data inválida");
+            }
+            return teste;
+        }*/
          
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
@@ -86,9 +98,11 @@ namespace OdontoCode.Presentation
             txtNomeDentista.Visible = true;
             lblDataAgendamento.Visible = true;
             txtData.Visible = true;
+            lblCampoObrigatorio.Visible = true;
             lblDescricaoAgendamento.Visible = true;
             txtDescricao.Visible = true;    
             btnAgendar.Visible = true;
+            btnLimpar.Visible = true;
         }
 
         private void btnAgendar_Click(object sender, EventArgs e)
@@ -103,6 +117,16 @@ namespace OdontoCode.Presentation
         {
             string x = _agendamentoService.AgendamentoCount();
             MessageBox.Show(x);
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNomePaciente.Text = String.Empty;
+            txbCpfPaciente.Text = String.Empty;
+            txtNomeDentista.Text = String.Empty;
+            txtData.Text = String.Empty;
+            txtDescricao.Text = String.Empty;
+            
         }
     }
 }

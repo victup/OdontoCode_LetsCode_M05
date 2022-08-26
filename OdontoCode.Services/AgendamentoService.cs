@@ -227,20 +227,37 @@ namespace OdontoCode.Services
         #endregion
 
         #region Cancelar agendamento
-        public void CancelAppointment(Agendamento agendamento)
+        public bool CancelAppointment(int id_agendamento)
         {
-            listaAgendamento.Remove(agendamento);
+            bool flag = false;
+            for (int i = 0; i < listaAgendamento.Count; i++)
+            {
+                if (listaAgendamento[i].Id_agendamento == id_agendamento)
+                {
+                    listaAgendamento.Remove(listaAgendamento[i]);
+                    flag = true;
+                }
+
+            }
+            return flag;
         }
         #endregion
 
         #region Alterar agendamento
-        public void ChangeAppointment(string info, DateTime data)
+        public bool ChangeAppointment(int id_agendamento, DateTime data, string desc_consulta)
         {
-            foreach (var agendamento in listaAgendamento)
+            bool flag = false;
+            foreach (var item in listaAgendamento)
             {
-                agendamento.Desc_consulta = info;
-                agendamento.Data = data;
+                if (item.Id_agendamento == id_agendamento)
+                {
+                    item.Data = data;
+                    item.Desc_consulta = desc_consulta;
+                    flag = true;
+                }
+
             }
+            return flag;
         }
         #endregion
 
@@ -312,6 +329,21 @@ namespace OdontoCode.Services
                 }
             }
             return list;
+        }
+        #endregion
+
+        #region Busca Agendamento pod ID
+        public Agendamento BuscarAgendamentoPorID(int id)
+        {
+            var agendamento = new Agendamento();
+            foreach (var item in listaAgendamento)
+            {
+                if (item.Id_agendamento == id)
+                {
+                    agendamento = item;
+                }
+            }
+            return agendamento;
         }
         #endregion
 

@@ -14,7 +14,7 @@ namespace OdontoCode.Domain
             public int Id_paciente { get; set; }
             public int Id_dentista { get; set; }
 
-        public string Show() => $"{Id_agendamento} Data: {Data} Ds Consulta: {Desc_consulta}";
+        public string Show() => $" ID: {Id_agendamento} | Data e Hora: {Data} | Descrição Consulta: {Desc_consulta}";
 
         public Agendamento (int id_agendamento,DateTime data, string desc_consulta,int id_paciente,int id_dentista)
         {

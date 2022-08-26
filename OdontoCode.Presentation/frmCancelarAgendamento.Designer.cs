@@ -41,13 +41,17 @@
             this.txtNomeDentista = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.btncount = new System.Windows.Forms.Button();
+            this.lstAgendamento = new System.Windows.Forms.ListBox();
+            this.lblAgendamentoEncontrado = new System.Windows.Forms.Label();
+            this.lbld = new System.Windows.Forms.Label();
+            this.txtIdAgendamento = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancelarAgendamento
             // 
             this.btnCancelarAgendamento.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnCancelarAgendamento.Location = new System.Drawing.Point(208, 427);
+            this.btnCancelarAgendamento.Location = new System.Drawing.Point(649, 565);
             this.btnCancelarAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelarAgendamento.Name = "btnCancelarAgendamento";
             this.btnCancelarAgendamento.Size = new System.Drawing.Size(219, 44);
@@ -94,13 +98,11 @@
             // lblDentista
             // 
             this.lblDentista.AutoSize = true;
-            this.lblDentista.Enabled = false;
             this.lblDentista.Location = new System.Drawing.Point(73, 201);
             this.lblDentista.Name = "lblDentista";
             this.lblDentista.Size = new System.Drawing.Size(116, 20);
             this.lblDentista.TabIndex = 54;
             this.lblDentista.Text = "Nome Dentista :";
-            this.lblDentista.Visible = false;
             // 
             // lblCpfPaciente
             // 
@@ -161,6 +163,7 @@
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(263, 27);
             this.txtData.TabIndex = 65;
+            this.txtData.Visible = false;
             // 
             // txtDescricao
             // 
@@ -169,22 +172,70 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(263, 27);
             this.txtDescricao.TabIndex = 66;
+            this.txtDescricao.Visible = false;
             // 
-            // btncount
+            // lstAgendamento
             // 
-            this.btncount.Location = new System.Drawing.Point(463, 322);
-            this.btncount.Name = "btncount";
-            this.btncount.Size = new System.Drawing.Size(94, 29);
-            this.btncount.TabIndex = 67;
-            this.btncount.Text = "count";
-            this.btncount.UseVisualStyleBackColor = true;
+            this.lstAgendamento.FormattingEnabled = true;
+            this.lstAgendamento.ItemHeight = 20;
+            this.lstAgendamento.Location = new System.Drawing.Point(73, 433);
+            this.lstAgendamento.Name = "lstAgendamento";
+            this.lstAgendamento.Size = new System.Drawing.Size(795, 104);
+            this.lstAgendamento.TabIndex = 67;
+            this.lstAgendamento.Visible = false;
+            // 
+            // lblAgendamentoEncontrado
+            // 
+            this.lblAgendamentoEncontrado.AutoSize = true;
+            this.lblAgendamentoEncontrado.Enabled = false;
+            this.lblAgendamentoEncontrado.Location = new System.Drawing.Point(73, 410);
+            this.lblAgendamentoEncontrado.Name = "lblAgendamentoEncontrado";
+            this.lblAgendamentoEncontrado.Size = new System.Drawing.Size(195, 20);
+            this.lblAgendamentoEncontrado.TabIndex = 83;
+            this.lblAgendamentoEncontrado.Text = "Agendamento Encontrado : ";
+            this.lblAgendamentoEncontrado.Visible = false;
+            // 
+            // lbld
+            // 
+            this.lbld.AutoSize = true;
+            this.lbld.Location = new System.Drawing.Point(73, 577);
+            this.lbld.Name = "lbld";
+            this.lbld.Size = new System.Drawing.Size(123, 20);
+            this.lbld.TabIndex = 87;
+            this.lbld.Text = "ID Agendamento";
+            this.lbld.Visible = false;
+            // 
+            // txtIdAgendamento
+            // 
+            this.txtIdAgendamento.Location = new System.Drawing.Point(73, 601);
+            this.txtIdAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdAgendamento.Name = "txtIdAgendamento";
+            this.txtIdAgendamento.Size = new System.Drawing.Size(116, 27);
+            this.txtIdAgendamento.TabIndex = 88;
+            this.txtIdAgendamento.Visible = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpar.Location = new System.Drawing.Point(774, 659);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(94, 29);
+            this.btnLimpar.TabIndex = 89;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Visible = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmCancelarAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 539);
-            this.Controls.Add(this.btncount);
+            this.ClientSize = new System.Drawing.Size(1008, 727);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.txtIdAgendamento);
+            this.Controls.Add(this.lbld);
+            this.Controls.Add(this.lblAgendamentoEncontrado);
+            this.Controls.Add(this.lstAgendamento);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.txtNomeDentista);
@@ -224,6 +275,10 @@
         private TextBox txtNomeDentista;
         private TextBox txtData;
         private TextBox txtDescricao;
-        private Button btncount;
+        private ListBox lstAgendamento;
+        private Label lblAgendamentoEncontrado;
+        private Label lbld;
+        private TextBox txtIdAgendamento;
+        private Button btnLimpar;
     }
 }
