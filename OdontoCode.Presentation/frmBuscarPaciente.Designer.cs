@@ -48,6 +48,8 @@
             this.lblBuscarPaciente = new System.Windows.Forms.Label();
             this.lblNomePaciente = new System.Windows.Forms.Label();
             this.txtNomePaciente = new System.Windows.Forms.TextBox();
+            this.btnLimparPaciente = new System.Windows.Forms.Button();
+            this.lblaviso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNumPaciente
@@ -238,17 +240,40 @@
             // 
             // txtNomePaciente
             // 
-            this.txtNomePaciente.Enabled = false;
             this.txtNomePaciente.Location = new System.Drawing.Point(185, 131);
             this.txtNomePaciente.Name = "txtNomePaciente";
             this.txtNomePaciente.Size = new System.Drawing.Size(282, 23);
             this.txtNomePaciente.TabIndex = 93;
+            // 
+            // btnLimparPaciente
+            // 
+            this.btnLimparPaciente.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimparPaciente.Location = new System.Drawing.Point(478, 167);
+            this.btnLimparPaciente.Name = "btnLimparPaciente";
+            this.btnLimparPaciente.Size = new System.Drawing.Size(75, 23);
+            this.btnLimparPaciente.TabIndex = 113;
+            this.btnLimparPaciente.Text = "Limpar";
+            this.btnLimparPaciente.UseVisualStyleBackColor = false;
+            this.btnLimparPaciente.Visible = false;
+            this.btnLimparPaciente.Click += new System.EventHandler(this.btnLimparPaciente_Click);
+            // 
+            // lblaviso
+            // 
+            this.lblaviso.AutoSize = true;
+            this.lblaviso.Location = new System.Drawing.Point(45, 342);
+            this.lblaviso.Name = "lblaviso";
+            this.lblaviso.Size = new System.Drawing.Size(38, 15);
+            this.lblaviso.TabIndex = 114;
+            this.lblaviso.Text = "label1";
+            this.lblaviso.Visible = false;
             // 
             // frmBuscarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 396);
+            this.Controls.Add(this.lblaviso);
+            this.Controls.Add(this.btnLimparPaciente);
             this.Controls.Add(this.txtNumPaciente);
             this.Controls.Add(this.txtCidadePaciente);
             this.Controls.Add(this.txtUfPaciente);
@@ -300,5 +325,7 @@
         private Label lblBuscarPaciente;
         private Label lblNomePaciente;
         private TextBox txtNomePaciente;
+        private Button btnLimparPaciente;
+        private Label lblaviso;
     }
 }

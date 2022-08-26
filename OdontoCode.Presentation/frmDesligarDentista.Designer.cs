@@ -39,7 +39,7 @@
             this.txtDentistaCpfDesligar = new System.Windows.Forms.TextBox();
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaDesligar = new System.Windows.Forms.TextBox();
-            this.lblVerificaEntradas = new System.Windows.Forms.Label();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuHomePage = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -146,16 +146,16 @@
             this.txtCroDentistaDesligar.Size = new System.Drawing.Size(114, 23);
             this.txtCroDentistaDesligar.TabIndex = 3;
             // 
-            // lblVerificaEntradas
+            // lblMensagem
             // 
-            this.lblVerificaEntradas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVerificaEntradas.Location = new System.Drawing.Point(-2, 196);
-            this.lblVerificaEntradas.Name = "lblVerificaEntradas";
-            this.lblVerificaEntradas.Size = new System.Drawing.Size(687, 15);
-            this.lblVerificaEntradas.TabIndex = 114;
-            this.lblVerificaEntradas.Text = "label1";
-            this.lblVerificaEntradas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblVerificaEntradas.Visible = false;
+            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensagem.Location = new System.Drawing.Point(-2, 196);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(687, 15);
+            this.lblMensagem.TabIndex = 114;
+            this.lblMensagem.Text = "label1";
+            this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMensagem.Visible = false;
             // 
             // menuStrip1
             // 
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 338);
-            this.Controls.Add(this.lblVerificaEntradas);
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtDentistaCpfDesligar);
             this.Controls.Add(this.lblCroDentista);
@@ -217,7 +217,7 @@
         private TextBox txtDentistaCpfDesligar;
         private Label lblCroDentista;
         private TextBox txtCroDentistaDesligar;
-        private Label lblVerificaEntradas;
+        private Label lblMensagem;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuHomePage;
     }

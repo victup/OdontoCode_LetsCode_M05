@@ -9,10 +9,14 @@ namespace OdontoCode.Services.Interfaces
 {
     public interface IPacienteService
     {
-        public void RegistrarNovoPaciente(Paciente paciente);
+        public bool RegistrarNovoPaciente(Paciente paciente);
 
         public Paciente ObterPaciente(string nomeOuCpf);
 
         public void ApagarPaciente(Paciente paciente);
+
+        public void AlterarPaciente(string cpfAntigo, Paciente paciente);
+
+        public int GerarId();
     }
 }

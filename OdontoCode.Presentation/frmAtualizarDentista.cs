@@ -23,7 +23,7 @@ namespace OdontoCode.Presentation
             _dentistaService = dentistaService;
         }
 
-        private void btnEncontrarDentista_Click(object sender, EventArgs e)
+        private async void btnEncontrarDentista_Click(object sender, EventArgs e)
         {
             
             if ((String.IsNullOrEmpty(txtNomeDentistaAtualizar.Text)) &&
@@ -31,9 +31,7 @@ namespace OdontoCode.Presentation
                 (String.IsNullOrEmpty(txtCroDentistaAtualizar.Text))
                 )
             {
-                lblValidaEntradas.Visible = true;
-                lblValidaEntradas.Text = "Pelo menos um campo deve ser preenchido";
-                lblValidaEntradas.ForeColor = Color.Red;
+                MessageBox.Show($"Espera-se pelo menos um campo preenchido para realizar a busca.", "Nenhum parâmetro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -50,7 +48,7 @@ namespace OdontoCode.Presentation
                     busca = txtNomeDentistaAtualizar.Text;
 
 
-
+                await CarregarBusca();
                 dentista = _dentistaService.BuscarDentista(busca);
 
                 if (dentista.CPF != null)
@@ -79,7 +77,7 @@ namespace OdontoCode.Presentation
             
         }
 
-        private void btnAtualizarDentista_Click(object sender, EventArgs e)
+        private async void btnAtualizarDentista_Click(object sender, EventArgs e)
         {
             if (dentista != null)
             {
@@ -95,7 +93,7 @@ namespace OdontoCode.Presentation
 
                 _dentistaService.AlterarDentista(cpfAntigo, dentista);
 
-                MessageBox.Show($"Dentista {dentista.Nome} atualizado com sucesso!");
+                await CarregarAtualizacao(dentista.Nome);
 
                 txtNomeDentistaAtualizar.Text = String.Empty;
                 txtCroDentistaAtualizar.Text = String.Empty;
@@ -112,6 +110,37 @@ namespace OdontoCode.Presentation
             DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resposta == DialogResult.Yes)
                 this.Close();
+        }
+
+        public async Task CarregarAtualizacao(string dentista)
+        {
+            lblMensagem.Visible = true;
+
+            lblMensagem.Text = $"Aguarde enquanto atualizamos o dentista {dentista}!";
+            lblMensagem.ForeColor = Color.Red;
+
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+            MessageBox.Show($"Dentista {dentista} atualizado com sucesso");
+
+            lblMensagem.Visible = false;
+        }
+
+        public async Task CarregarBusca()
+        {
+            lblMensagem.Visible = true;
+
+            lblMensagem.Text = $"Aguarde enquanto realizamos sua busca!";
+            lblMensagem.ForeColor = Color.Red;
+
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+            lblMensagem.Text = $"Busca finalizada!";
+            lblMensagem.ForeColor = Color.Green;
+            await Task.Delay(TimeSpan.FromSeconds(1));
+            lblMensagem.Visible = false;
         }
     }
 }
