@@ -11,9 +11,17 @@ namespace OdontoCode.Services.Interfaces
     {
         public List<int> SearchApointmentForDentistID(List<int> listDentistID);
 
+        public List<int> SearchDentistID(string busca);
+
         public List<int> SearchApointmentForPacientID(List<int> listPacientID);
 
+        public string SearchPacintCPFForID(int id);
+
         public List<int> SearchApointmentID(string busca);
+
+        public List<int> SearchPacientIDForName(string busca);
+
+        public List<int> SearchPacientIDForCPF(string busca);
 
         public List<int> SearchApointmentID(DateTime busca);
 
@@ -29,7 +37,10 @@ namespace OdontoCode.Services.Interfaces
 
         public int GerarNovoId();
 
-        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag);
+        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta);
 
+        public string AgendamentoCount();
+
+        
     }
 }
