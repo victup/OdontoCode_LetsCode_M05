@@ -27,9 +27,9 @@ namespace OdontoCode.Services.Interfaces
 
         public void NewAppointment(Agendamento agendamento);
 
-        public void CancelAppointment(Agendamento agendamento);
+        public bool CancelAppointment(int id_agendamento);
 
-        public void ChangeAppointment(string info, DateTime data);
+        public bool ChangeAppointment(int id_agendamento, DateTime data, string desc_consulta);
 
         public string GetPacientName(int id);
 
@@ -40,6 +40,8 @@ namespace OdontoCode.Services.Interfaces
         public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta);
 
         public string AgendamentoCount();
+
+        public Agendamento BuscarAgendamentoPorID(int id);
 
         
     }

@@ -30,23 +30,16 @@ namespace OdontoCode.Presentation
 
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
-
             string busca = " ";
             string buscaPNome = " ";
             string buscaPcpf = "";
             string buscaDNome = " ";
             string buscaDC = " ";
-
             //DateTime buscaDH = Convert.ToDateTime("2022-08-05T10:00:00");
-
             buscaPNome = txtNomePaciente.Text;
-
             buscaPcpf = txtCpfPaciente.Text;
-
             buscaDNome = txtNomeDentista.Text;
-
             buscaDC = txtDescricao.Text;
-
             //buscaDH = Convert.ToDateTime(txtDataEHora.Text);
             var x = new AgendamentoService();
             var agendamento = _agendamentoService.SearchForApointment(buscaPcpf, buscaPNome, buscaDNome, buscaDC);
@@ -58,8 +51,8 @@ namespace OdontoCode.Presentation
             listAgendamento.Visible = true;
             btnLimpar.Visible = true;
             
-        }   
-        
+        }
+
         void label1_Click(object sender, EventArgs e)
         {
 

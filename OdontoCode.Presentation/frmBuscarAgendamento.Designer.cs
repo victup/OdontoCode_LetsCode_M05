@@ -43,6 +43,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblAgendamentoEncontrado = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEncontrarPaciente
@@ -134,7 +135,7 @@
             this.listAgendamento.ItemHeight = 20;
             this.listAgendamento.Location = new System.Drawing.Point(62, 432);
             this.listAgendamento.Name = "listAgendamento";
-            this.listAgendamento.Size = new System.Drawing.Size(927, 104);
+            this.listAgendamento.Size = new System.Drawing.Size(1003, 104);
             this.listAgendamento.TabIndex = 77;
             this.listAgendamento.Visible = false;
             // 
@@ -187,11 +188,22 @@
             this.btnLimpar.Visible = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click_1);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(565, 338);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(49, 20);
+            this.lblStatus.TabIndex = 83;
+            this.lblStatus.Text = "Status";
+            this.lblStatus.Visible = false;
+            // 
             // frmBuscarAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 675);
+            this.ClientSize = new System.Drawing.Size(1077, 675);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.lblAgendamentoEncontrado);
             this.Controls.Add(this.txtDescricao);
@@ -235,5 +247,6 @@
         private TextBox txtDescricao;
         private Label lblAgendamentoEncontrado;
         private Button btnLimpar;
+        private Label lblStatus;
     }
 }

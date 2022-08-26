@@ -43,6 +43,9 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lstAgendamento = new System.Windows.Forms.ListBox();
             this.lblAgendamentoEncontrado = new System.Windows.Forms.Label();
+            this.txtIdAgendamento = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEncontrarPaciente
@@ -85,7 +88,6 @@
             this.lblDentista.Size = new System.Drawing.Size(116, 20);
             this.lblDentista.TabIndex = 39;
             this.lblDentista.Text = "Nome Dentista :";
-            this.lblDentista.Visible = false;
             // 
             // lblCpfPaciente
             // 
@@ -133,13 +135,13 @@
             // 
             // btnAlterarAgendamento
             // 
-            this.btnAlterarAgendamento.BackColor = System.Drawing.Color.Gold;
-            this.btnAlterarAgendamento.Location = new System.Drawing.Point(343, 597);
+            this.btnAlterarAgendamento.BackColor = System.Drawing.Color.Orange;
+            this.btnAlterarAgendamento.Location = new System.Drawing.Point(404, 580);
             this.btnAlterarAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAlterarAgendamento.Name = "btnAlterarAgendamento";
             this.btnAlterarAgendamento.Size = new System.Drawing.Size(219, 44);
             this.btnAlterarAgendamento.TabIndex = 48;
-            this.btnAlterarAgendamento.Text = "Confirmar Agendamento";
+            this.btnAlterarAgendamento.Text = "Alterar Agendamento";
             this.btnAlterarAgendamento.UseVisualStyleBackColor = false;
             this.btnAlterarAgendamento.Visible = false;
             this.btnAlterarAgendamento.Click += new System.EventHandler(this.btnAlterarAgendamento_Click);
@@ -154,12 +156,12 @@
             // 
             // txtData
             // 
-            this.txtData.Enabled = false;
             this.txtData.Location = new System.Drawing.Point(73, 292);
             this.txtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(272, 27);
             this.txtData.TabIndex = 50;
+            this.txtData.Visible = false;
             // 
             // txtDescricao
             // 
@@ -168,6 +170,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(272, 27);
             this.txtDescricao.TabIndex = 51;
+            this.txtDescricao.Visible = false;
             // 
             // lstAgendamento
             // 
@@ -177,6 +180,7 @@
             this.lstAgendamento.Name = "lstAgendamento";
             this.lstAgendamento.Size = new System.Drawing.Size(795, 104);
             this.lstAgendamento.TabIndex = 52;
+            this.lstAgendamento.Visible = false;
             // 
             // lblAgendamentoEncontrado
             // 
@@ -189,11 +193,45 @@
             this.lblAgendamentoEncontrado.Text = "Agendamento Encontrado : ";
             this.lblAgendamentoEncontrado.Visible = false;
             // 
+            // txtIdAgendamento
+            // 
+            this.txtIdAgendamento.Location = new System.Drawing.Point(73, 597);
+            this.txtIdAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdAgendamento.Name = "txtIdAgendamento";
+            this.txtIdAgendamento.Size = new System.Drawing.Size(123, 27);
+            this.txtIdAgendamento.TabIndex = 85;
+            this.txtIdAgendamento.Visible = false;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(73, 573);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(123, 20);
+            this.lblId.TabIndex = 86;
+            this.lblId.Text = "ID Agendamento";
+            this.lblId.Visible = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpar.Location = new System.Drawing.Point(774, 595);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(94, 29);
+            this.btnLimpar.TabIndex = 90;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Visible = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmAlterarAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 654);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtIdAgendamento);
             this.Controls.Add(this.lblAgendamentoEncontrado);
             this.Controls.Add(this.lstAgendamento);
             this.Controls.Add(this.txtDescricao);
@@ -237,5 +275,8 @@
         private TextBox txtDescricao;
         private ListBox lstAgendamento;
         private Label lblAgendamentoEncontrado;
+        private TextBox txtIdAgendamento;
+        private Label lblId;
+        private Button btnLimpar;
     }
 }

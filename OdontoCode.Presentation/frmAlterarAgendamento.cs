@@ -28,38 +28,6 @@ namespace OdontoCode.Presentation
         {
 
         }
-
-        
-
-
-        private int SetName()
-        {
-            var id_paciente = new List<int>() { 0 };
-            if (txbCpfPaciente.Text != "")
-            {
-                var CPFPaciente = txbCpfPaciente.Text;
-                id_paciente = _agendamentoService.SearchPacientIDForCPF(CPFPaciente);
-            }
-            if (txtNomePaciente.Text != "")
-            {
-                var nomePaciente = txtNomePaciente.Text;
-                id_paciente = _agendamentoService.SearchPacientIDForName(nomePaciente);
-            }
-            return id_paciente[0];
-        }
-
-        private int SetDentist()
-        {
-            var id_dentista = new List<int>() { 0 };
-            if (txtNomeDentista.Text != "")
-            {
-                var nomeDentista = txtNomeDentista.Text;
-                id_dentista = _agendamentoService.SearchDentistID(nomeDentista);
-            }
-
-            return id_dentista[0];
-        }
-
         private void btnEncontrarPaciente_Click(object sender, EventArgs e)
         {
             string busca = " ";
@@ -67,8 +35,6 @@ namespace OdontoCode.Presentation
             string buscaPcpf = "";
             string buscaDNome = " ";
             string buscaDC = " ";
-
-            //DateTime buscaDH = Convert.ToDateTime("2022-08-05T10:00:00");
 
             buscaPNome = txtNomePaciente.Text;
 
@@ -78,30 +44,58 @@ namespace OdontoCode.Presentation
 
             buscaDC = txtDescricao.Text;
 
-            //buscaDH = Convert.ToDateTime(txtDataEHora.Text);
             var x = new AgendamentoService();
             var agendamento = _agendamentoService.SearchForApointment(buscaPcpf, buscaPNome, buscaDNome, buscaDC);
             foreach (var item in agendamento)
             {
                 lstAgendamento.Items.Add($"{item.Show()} | Paciente: {x.GetPacientName(item.Id_paciente)} | Dentista: {x.GetDentistName(item.Id_dentista)}");
             }
-            
+
+            txtIdAgendamento.Text = agendamento[0].Id_agendamento.ToString();
+            txtNomePaciente.Text = _agendamentoService.GetPacientName(agendamento[0].Id_paciente);
+            txbCpfPaciente.Text = _agendamentoService.SearchPacintCPFForID(agendamento[0].Id_paciente);
+            txtNomeDentista.Text = _agendamentoService.GetDentistName(agendamento[0].Id_dentista);
+            txtDescricao.Text = agendamento[0].Desc_consulta;
+            txtData.Text = agendamento[0].Data.ToString();
+
             lblDentista.Visible = true;
             txtNomeDentista.Visible = true;
             lblDataAgendamento.Visible = true;
+            txtData.Enabled = true;
             txtData.Visible = true;
             lblDescricaoAgendamento.Visible = true;
             txtDescricao.Visible = true;
+            lstAgendamento.Visible = true;
+            lblId.Visible = true;
+            txtIdAgendamento.Visible = true;
             btnAlterarAgendamento.Visible = true;
+            btnLimpar.Visible = true;
         }
 
         private void btnAlterarAgendamento_Click(object sender, EventArgs e)
         {
-            var data = Convert.ToDateTime(txtData.Text);
-            var ds_consulta = txtDescricao.Text;
-            _agendamentoService.ChangeAppointment(ds_consulta,data);
+            int id_agendamento;
+            int.TryParse(txtIdAgendamento.Text, out id_agendamento);
+            Agendamento agendamento = _agendamentoService.BuscarAgendamentoPorID(id_agendamento);
 
-            MessageBox.Show("Agendamento alterado!");
+            var data = Convert.ToDateTime(txtData.Text);
+            var desc_consulta = txtDescricao.Text;
+
+            if (_agendamentoService.ChangeAppointment(id_agendamento, data, desc_consulta))
+            {
+                MessageBox.Show($"Agendamento Alterado para: {agendamento.Data}");
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNomePaciente.Text = String.Empty;
+            txbCpfPaciente.Text = String.Empty;
+            txtNomeDentista.Text = String.Empty;
+            txtData.Text = String.Empty;
+            txtDescricao.Text = String.Empty;
+            txtIdAgendamento.Text = String.Empty;
+            lstAgendamento.Items.Clear();
         }
     }
 }
