@@ -34,7 +34,7 @@ namespace OdontoCode.Presentation
             {
                 btnEncontrarDentista.Visible = false;
                 btnDesligarDentista.Visible = true;
-                lblVerificaEntradas.Visible = false;
+                lblMensagem.Visible = false;
                 
 
                 string busca = "";
@@ -46,7 +46,6 @@ namespace OdontoCode.Presentation
                     busca = txtDentistaCpfDesligar.Text;
                 else
                     busca = txtNomeDesligarDentista.Text;
-
 
 
                 dentista = _dentistService.BuscarDentista(busca);
@@ -72,18 +71,16 @@ namespace OdontoCode.Presentation
             }
             else
             {
-                lblVerificaEntradas.Visible = true;
-                lblVerificaEntradas.Text = $"Espera-se pelo menos um campo preenchido para realizar a busca.";
-                lblVerificaEntradas.ForeColor = Color.Red;
-                lblTelefoneDesligarDentista.Visible = false;
-                txtTelefoneDesligarDentista.Visible = false;
+                MessageBox.Show($"Espera-se pelo menos um campo preenchido para realizar a busca.", "Nenhum parâmetro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnDesligarDentista_Click(object sender, EventArgs e)
+        private async void btnDesligarDentista_Click(object sender, EventArgs e)
         {
+            await CarregarDesligamento(dentista.Nome);
+
             _dentistService.DesligarDentista(dentista);
-            MessageBox.Show($"Dentista {dentista.Nome} desligado com sucesso");
+            
 
             txtCroDentistaDesligar.Text = String.Empty;
             txtNomeDesligarDentista.Text = String.Empty;
@@ -101,6 +98,21 @@ namespace OdontoCode.Presentation
             DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(resposta == DialogResult.Yes)
                 this.Close();
+        }
+
+        public async Task CarregarDesligamento(string dentista)
+        {
+            lblMensagem.Visible = true;
+
+            lblMensagem.Text = $"Aguarde enquanto desligamos o dentista {dentista}!";
+            lblMensagem.ForeColor = Color.Red;
+
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+            MessageBox.Show($"Dentista {dentista} desligado com sucesso");
+
+            lblMensagem.Visible = false;
         }
     }
 }

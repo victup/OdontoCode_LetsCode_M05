@@ -22,18 +22,18 @@ namespace OdontoCode.Presentation
             _dentistService = dentistaService;  
         }
 
-        private void btnCadastrarDentista_Click(object sender, EventArgs e)
+        private async void btnCadastrarDentista_Click(object sender, EventArgs e)
         { 
             var entradaValida =  ValidaCamposNovoDentista();
 
             if( entradaValida)
             {
                bool sucessoCadastro = _dentistService.RegistrarDentista(new Dentista(_dentistService.GerarId(), txtNomeDentista.Text, txtDentistaCPF.Text, txtCroDentista.Text, txtTelDentista.Text, true));
-                
-                if(sucessoCadastro)
-                    MessageBox.Show($"Dentista {txtNomeDentista.Text} cadastrado com sucesso!");
-                else
+
+                if(!sucessoCadastro)
                     MessageBox.Show($"Já existe uma pessoa com o CPF {txtDentistaCPF.Text} ou CRO {txtCroDentista.Text} cadastrado!");
+                else
+                    await CarregarNovoRegistro(txtNomeDentista.Text);
 
                 txtNomeDentista.Text = String.Empty;
                 txtDentistaCPF.Text = String.Empty;
@@ -85,6 +85,20 @@ namespace OdontoCode.Presentation
             DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resposta == DialogResult.Yes)
                 this.Close();
+        }
+
+        public async Task CarregarNovoRegistro(string dentista)
+        {
+            lblMensagem.Visible = true;
+
+            lblMensagem.Text = $"Aguarde enquanto registramos o novo dentista {dentista}!";
+            lblMensagem.ForeColor = Color.Red;
+
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+            lblMensagem.Visible = false;
+            MessageBox.Show($"Dentista {dentista} cadastrado com sucesso!");
         }
     }
 }

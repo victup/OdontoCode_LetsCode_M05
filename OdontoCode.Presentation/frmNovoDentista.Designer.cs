@@ -44,6 +44,7 @@
             this.lblVerificaTelefone = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPaginaInicial = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,11 +195,23 @@
             this.menuPaginaInicial.Text = "Página Inicial";
             this.menuPaginaInicial.Click += new System.EventHandler(this.menuPaginaInicial_Click);
             // 
+            // lblMensagem
+            // 
+            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensagem.Location = new System.Drawing.Point(12, 255);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(563, 18);
+            this.lblMensagem.TabIndex = 64;
+            this.lblMensagem.Text = "label1";
+            this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMensagem.Visible = false;
+            // 
             // frmNovoDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 381);
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.lblVerificaTelefone);
             this.Controls.Add(this.lblVerificaCro);
             this.Controls.Add(this.lblVerificaCpf);
@@ -244,5 +257,6 @@
         private Label lblVerificaTelefone;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuPaginaInicial;
+        private Label lblMensagem;
     }
 }

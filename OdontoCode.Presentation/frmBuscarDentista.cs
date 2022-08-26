@@ -29,9 +29,8 @@ namespace OdontoCode.Presentation
         }
   
 
-        private void btnEncontrarDentista_Click(object sender, EventArgs e)
+        private async void btnEncontrarDentista_Click(object sender, EventArgs e)
         {
-
             
 
             if (!String.IsNullOrEmpty(txtNomeBuscarDentista.Text) ||
@@ -39,7 +38,7 @@ namespace OdontoCode.Presentation
                 !String.IsNullOrEmpty(txtDentistaCpfBuscar.Text)
                 )
             {
-                lblVerificaEntradas.Visible = false;
+                lblAguarde.Visible = false;
 
                 string busca = "";
 
@@ -52,8 +51,11 @@ namespace OdontoCode.Presentation
                     busca = txtNomeBuscarDentista.Text;
 
 
+                
 
                 dentista = _dentistaService.BuscarDentista(busca);
+
+                await CarregarBusca();
 
                 if (dentista.CPF != null)
                 {
@@ -87,9 +89,9 @@ namespace OdontoCode.Presentation
             }
             else
             {
-                lblVerificaEntradas.Visible = true;
-                lblVerificaEntradas.Text = $"Espera-se pelo menos um campo preenchido para realizar a busca.";
-                lblVerificaEntradas.ForeColor = Color.Red;
+
+                MessageBox.Show($"Espera-se pelo menos um campo preenchido para realizar a busca.", "Nenhum parâmetro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
@@ -115,6 +117,22 @@ namespace OdontoCode.Presentation
             DialogResult resposta = MessageBox.Show("Tem certeza que deseja sair? Procedimentos não confirmados poderão ser perdidos.", "Voltar para Tela Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resposta == DialogResult.Yes)
                 this.Close();
+        }
+
+        public async Task CarregarBusca()
+        {
+            lblAguarde.Visible = true;
+
+            lblAguarde.Text = $"Aguarde enquanto realizamos sua busca!";
+            lblAguarde.ForeColor = Color.Red;
+
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+            lblAguarde.Text = $"Busca finalizada!";
+            lblAguarde.ForeColor = Color.Green;
+            await Task.Delay(TimeSpan.FromSeconds(1));
+            lblAguarde.Visible = false;
         }
     }
 }
