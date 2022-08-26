@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEncontrarAgendamento = new System.Windows.Forms.Button();
+            this.btnEncontrarPaciente = new System.Windows.Forms.Button();
             this.lblDescricaoAgendamento = new System.Windows.Forms.Label();
             this.lblDataAgendamento = new System.Windows.Forms.Label();
             this.lblDentista = new System.Windows.Forms.Label();
@@ -41,55 +41,48 @@
             this.txtDataEHora = new System.Windows.Forms.TextBox();
             this.txtNomeDentista = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAgendamentoEncontrado = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // btnEncontrarAgendamento
+            // btnEncontrarPaciente
             // 
-            this.btnEncontrarAgendamento.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEncontrarAgendamento.Location = new System.Drawing.Point(395, 321);
-            this.btnEncontrarAgendamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEncontrarAgendamento.Name = "btnEncontrarAgendamento";
-            this.btnEncontrarAgendamento.Size = new System.Drawing.Size(101, 55);
-            this.btnEncontrarAgendamento.TabIndex = 76;
-            this.btnEncontrarAgendamento.Text = "Buscar";
-            this.btnEncontrarAgendamento.UseVisualStyleBackColor = false;
-            this.btnEncontrarAgendamento.Click += new System.EventHandler(this.btnEncontrarPaciente_Click);
+            this.btnEncontrarPaciente.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnEncontrarPaciente.Location = new System.Drawing.Point(395, 321);
+            this.btnEncontrarPaciente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEncontrarPaciente.Name = "btnEncontrarPaciente";
+            this.btnEncontrarPaciente.Size = new System.Drawing.Size(101, 55);
+            this.btnEncontrarPaciente.TabIndex = 76;
+            this.btnEncontrarPaciente.Text = "Buscar";
+            this.btnEncontrarPaciente.UseVisualStyleBackColor = false;
+            this.btnEncontrarPaciente.Click += new System.EventHandler(this.btnEncontrarPaciente_Click);
             // 
             // lblDescricaoAgendamento
             // 
             this.lblDescricaoAgendamento.AutoSize = true;
-            this.lblDescricaoAgendamento.Enabled = false;
             this.lblDescricaoAgendamento.Location = new System.Drawing.Point(62, 324);
             this.lblDescricaoAgendamento.Name = "lblDescricaoAgendamento";
             this.lblDescricaoAgendamento.Size = new System.Drawing.Size(180, 20);
             this.lblDescricaoAgendamento.TabIndex = 74;
             this.lblDescricaoAgendamento.Text = "Descrição/Procedimento: ";
-            this.lblDescricaoAgendamento.Visible = false;
             // 
             // lblDataAgendamento
             // 
             this.lblDataAgendamento.AutoSize = true;
-            this.lblDataAgendamento.Enabled = false;
             this.lblDataAgendamento.Location = new System.Drawing.Point(67, 249);
             this.lblDataAgendamento.Name = "lblDataAgendamento";
             this.lblDataAgendamento.Size = new System.Drawing.Size(263, 20);
             this.lblDataAgendamento.TabIndex = 70;
-            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-dd  hh:mm:ss) :";
-            this.lblDataAgendamento.Visible = false;
+            this.lblDataAgendamento.Text = "Data e Hora (yyyy-mm-ddThh:mm:ss) :";
             // 
             // lblDentista
             // 
             this.lblDentista.AutoSize = true;
-            this.lblDentista.Enabled = false;
             this.lblDentista.Location = new System.Drawing.Point(67, 179);
             this.lblDentista.Name = "lblDentista";
             this.lblDentista.Size = new System.Drawing.Size(138, 20);
             this.lblDentista.TabIndex = 68;
             this.lblDentista.Text = "Nome do Dentista :";
-            this.lblDentista.Visible = false;
             // 
             // lblCpfPaciente
             // 
@@ -139,13 +132,15 @@
             // 
             this.listAgendamento.FormattingEnabled = true;
             this.listAgendamento.ItemHeight = 20;
-            this.listAgendamento.Location = new System.Drawing.Point(62, 454);
+            this.listAgendamento.Location = new System.Drawing.Point(62, 432);
             this.listAgendamento.Name = "listAgendamento";
-            this.listAgendamento.Size = new System.Drawing.Size(541, 104);
+            this.listAgendamento.Size = new System.Drawing.Size(927, 104);
             this.listAgendamento.TabIndex = 77;
+            this.listAgendamento.Visible = false;
             // 
             // txtDataEHora
             // 
+            this.txtDataEHora.Enabled = false;
             this.txtDataEHora.Location = new System.Drawing.Point(67, 273);
             this.txtDataEHora.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDataEHora.Name = "txtDataEHora";
@@ -168,48 +163,42 @@
             this.txtDescricao.Size = new System.Drawing.Size(268, 27);
             this.txtDescricao.TabIndex = 80;
             // 
-            // label1
+            // lblAgendamentoEncontrado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(62, 431);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 20);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "Agendamento Encontrado : ";
-            this.label1.Visible = false;
+            this.lblAgendamentoEncontrado.AutoSize = true;
+            this.lblAgendamentoEncontrado.Enabled = false;
+            this.lblAgendamentoEncontrado.Location = new System.Drawing.Point(62, 409);
+            this.lblAgendamentoEncontrado.Name = "lblAgendamentoEncontrado";
+            this.lblAgendamentoEncontrado.Size = new System.Drawing.Size(195, 20);
+            this.lblAgendamentoEncontrado.TabIndex = 81;
+            this.lblAgendamentoEncontrado.Text = "Agendamento Encontrado : ";
+            this.lblAgendamentoEncontrado.Visible = false;
             // 
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
-            this.btnLimpar.Location = new System.Drawing.Point(662, 503);
+            this.btnLimpar.Location = new System.Drawing.Point(375, 570);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(101, 55);
             this.btnLimpar.TabIndex = 82;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(430, 273);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
-            this.dateTimePicker1.TabIndex = 84;
+            this.btnLimpar.Visible = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click_1);
             // 
             // frmBuscarAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 587);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1014, 675);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAgendamentoEncontrado);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtNomeDentista);
             this.Controls.Add(this.txtDataEHora);
             this.Controls.Add(this.listAgendamento);
-            this.Controls.Add(this.btnEncontrarAgendamento);
+            this.Controls.Add(this.btnEncontrarPaciente);
             this.Controls.Add(this.lblDescricaoAgendamento);
             this.Controls.Add(this.lblDataAgendamento);
             this.Controls.Add(this.lblDentista);
@@ -231,7 +220,7 @@
 
         #endregion
 
-        private Button btnEncontrarAgendamento;
+        private Button btnEncontrarPaciente;
         private Label lblDescricaoAgendamento;
         private Label lblDataAgendamento;
         private Label lblDentista;
@@ -244,8 +233,7 @@
         private TextBox txtDataEHora;
         private TextBox txtNomeDentista;
         private TextBox txtDescricao;
-        private Label label1;
+        private Label lblAgendamentoEncontrado;
         private Button btnLimpar;
-        private DateTimePicker dateTimePicker1;
     }
 }

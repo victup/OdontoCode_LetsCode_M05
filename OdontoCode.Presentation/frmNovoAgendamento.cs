@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace OdontoCode.Presentation
 {
@@ -28,24 +29,80 @@ namespace OdontoCode.Presentation
             
         }
 
-        private void GetInfos()
+        private int SetName()
         {
-            var aService = new AgendamentoService();
-            //var data = (forms campo data)
-            //var ds_consulta = (forms campo descrição consulta)
-            //var nomePaciente = (forms campo nome paciente)
-            //id_paciente = aService.SearchPacientIDForName(nomePaciente)
-            //var nomeDentista = (forms campo nome dentista)
-            //id_dentista = aService.SearchDentistID(nomeDentista)
+            var id_paciente = new List<int>() { 0 };
+            if (txbCpfPaciente.Text != "")
+            {
+                var CPFPaciente = txbCpfPaciente.Text;
+                id_paciente = _agendamentoService.SearchPacientIDForCPF(CPFPaciente);
+            }
+            if (txtNomePaciente.Text != "")
+            {
+                var nomePaciente = txtNomePaciente.Text;
+                id_paciente = _agendamentoService.SearchPacientIDForName(nomePaciente);
+            }
+            return id_paciente[0];
         }
 
-        private void NewApointment()
+        private int SetDentist()
+        {
+            var id_dentista = new List<int>() { 0 };
+            if (txtNomeDentista.Text != "")
+            {
+                var nomeDentista = txtNomeDentista.Text;
+                id_dentista = _agendamentoService.SearchDentistID(nomeDentista);
+            }
+
+            return id_dentista[0];
+        }
+
+        private Agendamento NewApointment()
         {
             var aService = new AgendamentoService();
-            //var id = aService.GerarNovoID();
+            var data = Convert.ToDateTime(txtData.Text);
+            var ds_consulta = txtDescricao.Text;
+            var nomePaciente = txtNomePaciente.Text;
+            var id_paciente = aService.SearchPacientIDForName(nomePaciente);
+            var nomeDentista = txtNomeDentista.Text;
+            var id_dentista = aService.SearchDentistID(nomeDentista);
 
-            //var agendamento = new Agendamento(id, data, ds_consulta, id_paciente, id_dentista);
+            var id = _agendamentoService.GerarNovoId();
 
+            return agendamento = new Agendamento(id, data, ds_consulta, id_paciente[0], id_dentista[0]);
+
+        }
+         
+        private void btnEncontrarPaciente_Click(object sender, EventArgs e)
+        {
+            var id_paciente = SetName();
+            txbCpfPaciente.Text = _agendamentoService.SearchPacintCPFForID(id_paciente);
+            txtNomePaciente.Text = _agendamentoService.GetPacientName(id_paciente);
+
+            var id_dentista = SetDentist();
+            txtNomeDentista.Text = _agendamentoService.GetDentistName(id_dentista);
+
+            lblDentista.Visible = true;
+            txtNomeDentista.Visible = true;
+            lblDataAgendamento.Visible = true;
+            txtData.Visible = true;
+            lblDescricaoAgendamento.Visible = true;
+            txtDescricao.Visible = true;    
+            btnAgendar.Visible = true;
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            var agendamento = NewApointment();
+            _agendamentoService.NewAppointment(agendamento);
+           
+            MessageBox.Show("Agendamento confirmado!");
+        }
+
+        private void btncount_Click(object sender, EventArgs e)
+        {
+            string x = _agendamentoService.AgendamentoCount();
+            MessageBox.Show(x);
         }
     }
 }

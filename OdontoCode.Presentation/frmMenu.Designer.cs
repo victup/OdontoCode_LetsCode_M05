@@ -174,32 +174,33 @@
             this.opcAlterarAgendamento.Name = "opcAlterarAgendamento";
             this.opcAlterarAgendamento.Size = new System.Drawing.Size(182, 22);
             this.opcAlterarAgendamento.Text = "Alterar/Reagendar";
+            this.opcAlterarAgendamento.Click += new System.EventHandler(this.opcAlterarAgendamento_Click);
             // 
             // opcAgendamentosBuscar
             // 
             this.opcAgendamentosBuscar.Name = "opcAgendamentosBuscar";
             this.opcAgendamentosBuscar.Size = new System.Drawing.Size(182, 22);
             this.opcAgendamentosBuscar.Text = "Buscar";
+            this.opcAgendamentosBuscar.Click += new System.EventHandler(this.opcAgendamentosBuscar_Click);
             // 
             // menuAgendamentoCancelar
             // 
             this.menuAgendamentoCancelar.Name = "menuAgendamentoCancelar";
             this.menuAgendamentoCancelar.Size = new System.Drawing.Size(182, 22);
             this.menuAgendamentoCancelar.Text = "Cancelar";
+            this.menuAgendamentoCancelar.Click += new System.EventHandler(this.menuAgendamentoCancelar_Click);
             // 
             // menuSobre
             // 
             this.menuSobre.Name = "menuSobre";
             this.menuSobre.Size = new System.Drawing.Size(49, 20);
             this.menuSobre.Text = "Sobre";
-            this.menuSobre.Click += new System.EventHandler(this.menuSobre_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
             this.menuSair.Size = new System.Drawing.Size(38, 20);
             this.menuSair.Text = "Sair";
-            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // pictureBox1
             // 

@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 namespace OdontoCode.Services
 {
     public class AgendamentoService : IAgendamentoService
-        
+
     {
 
-            private static List<Agendamento> listaAgendamento = new()
+        private static List<Agendamento> listaAgendamento = new()
             {
                 new Agendamento{Id_agendamento = 1, Data = Convert.ToDateTime("2022-08-05T10:00:00"), Desc_consulta = "LIMPEZA", Id_paciente = 1, Id_dentista = 1},
                 new Agendamento{Id_agendamento = 2, Data = Convert.ToDateTime("2022-08-06T10:00:00"), Desc_consulta = "LIMPEZA", Id_paciente = 2, Id_dentista = 1},
@@ -81,7 +81,7 @@ namespace OdontoCode.Services
         {
             foreach (var item in listaAgendamento)
             {
-            
+
                 Console.WriteLine($"{item.Desc_consulta} {item.Data}");
             }
         }
@@ -137,6 +137,18 @@ namespace OdontoCode.Services
                 }
             }
             return listApointmentID;
+        }
+        public string SearchPacintCPFForID(int id)
+        {
+            string cpf = "";
+            foreach (var item in listPacient)
+            {
+                if (item.Id_paciente == id)
+                {
+                    cpf = item.CPF;
+                }
+            }
+            return cpf;
         }
         public List<int> SearchPacientIDForCPF(string busca)
         {
@@ -210,10 +222,7 @@ namespace OdontoCode.Services
         #region Novo agendamento
         public void NewAppointment(Agendamento agendamento)
         {
-            
-       
             listaAgendamento.Add(agendamento);
-            
         }
         #endregion
 
@@ -227,14 +236,10 @@ namespace OdontoCode.Services
         #region Alterar agendamento
         public void ChangeAppointment(string info, DateTime data)
         {
-            var lista = listaAgendamento.Where(agnd => agnd.Desc_consulta == info || agnd.Data == data).ToList();
-            if (lista.Exists (agnd => agnd.Desc_consulta == info || agnd.Data == data))
+            foreach (var agendamento in listaAgendamento)
             {
-                foreach (var agendamento in listaAgendamento)
-                {
-                    agendamento.Desc_consulta = info;
-                    agendamento.Data = data;
-                }
+                agendamento.Desc_consulta = info;
+                agendamento.Data = data;
             }
         }
         #endregion
@@ -252,6 +257,7 @@ namespace OdontoCode.Services
         }
         #endregion
 
+        #region Retornar Nome Paciente
         public string GetPacientName(int id)
         {
             string name = "";
@@ -265,7 +271,9 @@ namespace OdontoCode.Services
             }
             return name;
         }
+        #endregion
 
+        #region Retornar Nome Dentista
         public string GetDentistName(int id)
         {
             string name = "";
@@ -279,8 +287,43 @@ namespace OdontoCode.Services
             }
             return name;
         }
+        #endregion
 
-        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag)
+        #region Busca por Agendamento
+        public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta)
+        {
+            var busca = new AgendamentoService();
+            var listForDentistName = busca.SearchApointmentForDentistID(busca.SearchDentistID(nomeDentista));
+            var listForPacientCPF = busca.SearchApointmentForPacientID(busca.SearchPacientIDForCPF(cpfPaciente));
+            var listForPacientName = busca.SearchApointmentForPacientID(busca.SearchPacientIDForName(nomePaciente));
+            var listForConsultDS = busca.SearchApointmentID(ds_consulta);
+
+
+            var list = new List<Agendamento>();
+            foreach (var item in listaAgendamento)
+            {
+                if ((listForDentistName.Contains(item.Id_agendamento) || nomeDentista == "") &&
+                    (listForPacientCPF.Contains(item.Id_agendamento) || cpfPaciente == "") &&
+                    (listForPacientName.Contains(item.Id_agendamento) || nomePaciente == "") &&
+                    (listForConsultDS.Contains(item.Id_agendamento) || ds_consulta == ""))
+
+                {
+                    list.Add(item);
+                }
+            }
+            return list;
+        }
+        #endregion
+
+        #region Método para Contagem (teste para add ou remover da lista)
+        public string AgendamentoCount()
+        {
+            return listaAgendamento.Count().ToString();
+        }
+        #endregion
+
+        #region Busca por Agendamento (com data)
+        /*public List<Agendamento> SearchForApointment(string cpfPaciente, string nomePaciente, string nomeDentista, string ds_consulta, DateTime data_ag)
         {
             var busca = new AgendamentoService();
             var listaImp = new List<int>();
@@ -302,7 +345,9 @@ namespace OdontoCode.Services
                     list.Add(item);
                 }
             }
-            return list;    
-        }
+            return list;
+      }*/
+        #endregion
     }
+
 }
