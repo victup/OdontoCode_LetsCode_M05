@@ -39,7 +39,7 @@
             this.txtDentistaCpfAtualizar = new System.Windows.Forms.TextBox();
             this.lblCroDentista = new System.Windows.Forms.Label();
             this.txtCroDentistaAtualizar = new System.Windows.Forms.TextBox();
-            this.lblValidaEntradas = new System.Windows.Forms.Label();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuPaginaInicial = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -146,16 +146,16 @@
             this.txtCroDentistaAtualizar.Size = new System.Drawing.Size(114, 23);
             this.txtCroDentistaAtualizar.TabIndex = 3;
             // 
-            // lblValidaEntradas
+            // lblMensagem
             // 
-            this.lblValidaEntradas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblValidaEntradas.Location = new System.Drawing.Point(12, 248);
-            this.lblValidaEntradas.Name = "lblValidaEntradas";
-            this.lblValidaEntradas.Size = new System.Drawing.Size(763, 18);
-            this.lblValidaEntradas.TabIndex = 63;
-            this.lblValidaEntradas.Text = "label1";
-            this.lblValidaEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblValidaEntradas.Visible = false;
+            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensagem.Location = new System.Drawing.Point(12, 248);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(763, 18);
+            this.lblMensagem.TabIndex = 63;
+            this.lblMensagem.Text = "label1";
+            this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMensagem.Visible = false;
             // 
             // menuStrip1
             // 
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblValidaEntradas);
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtDentistaCpfAtualizar);
             this.Controls.Add(this.lblCroDentista);
@@ -217,7 +217,7 @@
         private TextBox txtDentistaCpfAtualizar;
         private Label lblCroDentista;
         private TextBox txtCroDentistaAtualizar;
-        private Label lblValidaEntradas;
+        private Label lblMensagem;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuPaginaInicial;
     }
