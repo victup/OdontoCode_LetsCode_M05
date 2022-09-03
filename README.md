@@ -28,4 +28,3 @@ Com ele é possível otimizar a operação diária de uma clinica odontológica,
 ![Logo](https://user-images.githubusercontent.com/38474570/184048765-c7351818-b977-4e7e-84c6-37fa23d70020.png)
 
 ![image](https://user-images.githubusercontent.com/38474570/187754515-682326e9-4e8d-49ad-b310-d4cfd674874c.png)
-
